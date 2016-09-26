@@ -1,0 +1,106 @@
+/******************************************************************
+STYLESHEET: MIXINS
+
+    > BREAKPOINTS
+    > KEYFRAMES
+    > HORIZONTALLY_AND_VERTICALLY_CENTER_ABSOLUTE_BLOCK_ELEMENTS
+    > VERTICALLY_CENTER_RELATIVE_BLOCK_ELEMENTS
+    > CLEARFIX
+
+******************************************************************/
+
+
+
+/******************************************************************
+    BREAKPOINTS
+        --> @include medium {...}
+******************************************************************/
+
+@mixin small {
+    @media only screen and (min-width: #{$w-small}) {
+        @content;
+    }
+}
+
+@mixin medium {
+    @media only screen and (min-width: #{$w-medium}) {
+        @content;
+    }
+}
+
+@mixin large {
+    @media only screen and (min-width: #{$w-large}) {
+        @content;
+    }
+}
+
+
+
+/******************************************************************
+    KEYFRAMES
+        --> @include keyframes($name) {...}
+******************************************************************/
+
+@mixin keyframes($name) {
+    @-webkit-keyframes #{$name} {
+        @content;
+    }
+
+    @keyframes #{$name} {
+        @content;
+    }
+}
+
+
+
+/******************************************************************
+    HORIZONTALLY_AND_VERTICALLY_CENTER_ABSOLUTE_BLOCK_ELEMENTS
+        --> @include center-both;
+******************************************************************/
+
+@mixin center-abs-h {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@mixin center-abs-v {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@mixin center-abs-both {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+/******************************************************************
+    VERTICALLY_CENTER_RELATIVE_BLOCK_ELEMENTS
+        --> @include center-rel-v;
+******************************************************************/
+
+@mixin center-rel-v {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+
+/******************************************************************
+    CLEARFIX
+        --> @include clearfix;
+******************************************************************/
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}

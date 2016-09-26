@@ -1,0 +1,33 @@
+/******************************************************************
+STYLESHEET: STYLE
+
+This is the place where all scss files get imported.
+******************************************************************/
+
+// Includes
+@import "includes/wphead";
+@import "includes/normalize";
+@import "includes/print";
+
+// Settings
+@import "settings/typography";
+@import "settings/variables";
+
+// Tools
+@import "tools/mixins";
+@import "tools/placeholders";
+
+// Layout
+@import "layout/grid";
+@import "layout/content";
+@import "layout/header";
+@import "layout/footer";
+
+// Base
+@import "base/defaults";
+@import "base/text";
+@import "base/links";
+@import "base/helpers";
+
+// Modules
+@import "modules/module";
