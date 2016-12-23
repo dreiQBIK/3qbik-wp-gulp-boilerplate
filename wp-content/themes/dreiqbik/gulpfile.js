@@ -11,10 +11,12 @@ var gulpUtil     = require('gulp-util');
 var rename       = require('gulp-rename');
 var sourcemaps   = require('gulp-sourcemaps');
 var postcss      = require('gulp-postcss');
-var imagemin     = require('gulp-imagemin');
+// var imagemin     = require('gulp-imagemin');
 var autoprefixer = require('autoprefixer');
 var pixrem       = require('pixrem');
 var cssnano      = require('cssnano');
+// var svgstore     = require('gulp-svgstore');
+// var svgmin       = require('gulp-svgmin');
 var browserSync  = require('browser-sync').create();
 
 // make noise on js and scss errors
@@ -22,13 +24,6 @@ function errorHandler(error) {
     gulpUtil.beep();
     return true;
 }
-
-// Copy folders
-gulp.task('copy-folders', function() {
-    return gulp
-        .src(['src/img/**/*'], {base: 'src/'})
-        .pipe(gulp.dest(''));
-});
 
 
 // Lint JS-Files
@@ -42,7 +37,7 @@ gulp.task('lint', function() {
 // Concatenate & Minify JS
 gulp.task('scripts', function() {
     return gulp
-        .src('src/js/*.js')
+        .src('src/js/**/*.js')
         .pipe(concat('main.js'))
         .pipe(gulp.dest('js'))
         .pipe(rename('main.min.js'))
@@ -84,18 +79,27 @@ gulp.task('css', function () {
         .pipe(gulp.dest(''));
 });
 
+// Minify SVG and combine into one
+// gulp.task('svgstore', function () {
+//     return gulp
+//         .src('src/svg/*.svg', { base: 'src/svg' })
+//         .pipe(rename({prefix: 'icon-'}))
+//         .pipe(svgstore({ inlineSvg: true }))
+//         .pipe(gulp.dest('svg'));
+// });
+
 // Compress Images
-gulp.task('imagemin', function() {
-    return gulp
-        .src('src/img/*')
-        .pipe(imagemin())
-        .pipe(gulp.dest('img/'));
-});
+// gulp.task('imagemin', function() {
+//     return gulp
+//         .src('img/*')
+//         .pipe(imagemin())
+//         .pipe(gulp.dest('img/'));
+// });
 
 // Watch Files For Changes
 gulp.task('watch', function() {
     browserSync.init({
-      proxy: 'http://b-wp-gulp/'
+      proxy: 'p-CLIENTNAME.dev'
     });
     gulp.watch('src/js/*.js', ['lint', 'scripts']).on('change', browserSync.reload);
     gulp.watch('src/scss/**/*.scss', ['sass', 'css']);
@@ -103,7 +107,7 @@ gulp.task('watch', function() {
 });
 
 // Default Tasks
-gulp.task('default', ['lint', 'sass', 'css', 'scripts', 'copy-folders', 'watch']);
+gulp.task('default', ['sass', 'css', 'scripts', 'watch']);
 
 // Default Tasks
-gulp.task('build', ['lint', 'sass', 'css', 'scripts', 'imagemin', 'copy-folders']);
+// gulp.task('build', ['lint', 'sass', 'css', 'scripts', 'imagemin', 'copy-folders']);

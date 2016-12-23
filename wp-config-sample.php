@@ -10,7 +10,7 @@ if ( file_exists( dirname( __FILE__ ) . '/wp-config-local.php' ) ) {
     // Live Server Database Settings
     define('DB_NAME',     'db_DBCLIENTNAME'); // enter database name of client
     define('DB_USER',     'root');            // enter user name
-    define('DB_PASSWORD', '');                // enter password
+    define('DB_PASSWORD', 'root');                // enter password
     define('DB_HOST',     'localhost');
 
     // Overwrites the database to save keep edeting the DB

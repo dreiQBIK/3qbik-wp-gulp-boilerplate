@@ -131,9 +131,9 @@ function dreiqbik_scripts() {
 
 	/*wp_enqueue_script( 'jQuery', get_template_directory_uri() . '/js/jquery/dist/jquery.min.js', array('jquery'), '160921', true );*/
 
-	wp_enqueue_script( 'dreiqbik-navigation', get_template_directory_uri() . '/js/underscore/navigation.js', array(), '160921', true );
+	wp_enqueue_script( 'dreiqbik-navigation', get_template_directory_uri() . '/js/vendor/navigation.js', array(), '160921', true );
 
-	wp_enqueue_script( 'dreiqbik-skip-link-focus-fix', get_template_directory_uri() . '/js/underscore/skip-link-focus-fix.js', array(), '160921', true );
+	wp_enqueue_script( 'dreiqbik-skip-link-focus-fix', get_template_directory_uri() . '/js/vendor/skip-link-focus-fix.js', array(), '160921', true );
 
 	wp_enqueue_script( 'dreiqbik-main', get_template_directory_uri() . '/js/main.js', array('jquery'), '160921', true );
 
