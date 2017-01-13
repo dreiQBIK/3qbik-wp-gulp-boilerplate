@@ -99,7 +99,7 @@ gulp.task('css', function () {
 // Watch Files For Changes
 gulp.task('watch', function() {
     browserSync.init({
-      proxy: 'p-CLIENTNAME.dev'
+      proxy: 'b-wp-gulp.dev'
     });
     gulp.watch('src/js/*.js', ['lint', 'scripts']).on('change', browserSync.reload);
     gulp.watch('src/scss/**/*.scss', ['sass', 'css']);
