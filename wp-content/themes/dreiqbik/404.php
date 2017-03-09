@@ -10,10 +10,13 @@
 get_header(); ?>
 
 	<div id="primary" class="content-area">
-		<h3 class="file-path">404.php</h3>
+
+		<p class="file-path"><span class="file-path--highlight">Datei-Info:&nbsp;</span>404.php</p>
+
 		<main id="main" class="site-main" role="main">
 
 			<section class="error-404 not-found">
+
 				<header class="page-header">
 					<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'dreiqbik' ); ?></h1>
 				</header><!-- .page-header -->

@@ -9,9 +9,12 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<h3 class="file-path">template-parts/content.php</h3>
+<article id="post-<?php the_ID(); ?>" <?php post_class('post-article'); ?>>
+
+    <p class="file-path"><span class="file-path--highlight">Datei-Info:&nbsp;</span>content.php</p>
+
 	<header class="entry-header">
+
 		<?php
 		if ( is_single() ) :
 			the_title( '<h1 class="entry-title">', '</h1>' );
@@ -25,9 +28,11 @@
 		</div><!-- .entry-meta -->
 		<?php
 		endif; ?>
+
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
+
 		<?php
 			the_content( sprintf(
 				/* translators: %s: Name of current post. */
@@ -40,9 +45,7 @@
 				'after'  => '</div>',
 			) );
 		?>
+
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
-		<?php dreiqbik_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->

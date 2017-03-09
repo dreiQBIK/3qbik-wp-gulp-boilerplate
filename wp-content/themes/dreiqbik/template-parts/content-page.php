@@ -10,12 +10,15 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<h3 class="file-path">template-parts/content-page.php</h3>
+
+    <p class="file-path"><span class="file-path--highlight">Datei-Info:&nbsp;</span>content-page.php</p>
+
 	<header class="entry-header">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
+
 		<?php
 			the_content();
 
@@ -24,10 +27,12 @@
 				'after'  => '</div>',
 			) );
 		?>
+
 	</div><!-- .entry-content -->
 
 	<?php if ( get_edit_post_link() ) : ?>
 		<footer class="entry-footer">
+
 			<?php
 				edit_post_link(
 					sprintf(
@@ -39,6 +44,8 @@
 					'</span>'
 				);
 			?>
+
 		</footer><!-- .entry-footer -->
 	<?php endif; ?>
+
 </article><!-- #post-## -->

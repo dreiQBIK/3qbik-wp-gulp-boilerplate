@@ -13,4 +13,4 @@ define('WP_HOME','http://b-wp-gulp.dev/');    	// enter project name
 define('WP_SITEURL','http://b-wp-gulp.dev/'); 	// enter project name
 
 // Turn on debug for local environment
-define('WP_DEBUG', true);
+define('WP_DEBUG', false);

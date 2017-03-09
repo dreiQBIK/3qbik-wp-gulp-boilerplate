@@ -21,10 +21,13 @@ if ( post_password_required() ) {
 ?>
 
 <div id="comments" class="comments-area">
-	<h3 class="file-path">comments.php</h3>
+
+	<p class="file-path"><span class="file-path--highlight">Datei-Info:&nbsp;</span>comments.php</p>
+
 	<?php
 	// You can start editing here -- including this comment!
 	if ( have_comments() ) : ?>
+
 		<h2 class="comments-title">
 			<?php
 				printf( // WPCS: XSS OK.
@@ -37,13 +40,16 @@ if ( post_password_required() ) {
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>
 		<nav id="comment-nav-above" class="navigation comment-navigation" role="navigation">
+
 			<h2 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'dreiqbik' ); ?></h2>
+
 			<div class="nav-links">
 
 				<div class="nav-previous"><?php previous_comments_link( esc_html__( 'Older Comments', 'dreiqbik' ) ); ?></div>
 				<div class="nav-next"><?php next_comments_link( esc_html__( 'Newer Comments', 'dreiqbik' ) ); ?></div>
 
 			</div><!-- .nav-links -->
+
 		</nav><!-- #comment-nav-above -->
 		<?php endif; // Check for comment navigation. ?>
 
@@ -58,13 +64,16 @@ if ( post_password_required() ) {
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>
 		<nav id="comment-nav-below" class="navigation comment-navigation" role="navigation">
+
 			<h2 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'dreiqbik' ); ?></h2>
+
 			<div class="nav-links">
 
 				<div class="nav-previous"><?php previous_comments_link( esc_html__( 'Older Comments', 'dreiqbik' ) ); ?></div>
 				<div class="nav-next"><?php next_comments_link( esc_html__( 'Newer Comments', 'dreiqbik' ) ); ?></div>
 
 			</div><!-- .nav-links -->
+
 		</nav><!-- #comment-nav-below -->
 		<?php
 		endif; // Check for comment navigation.

@@ -1363,14 +1363,70 @@ STYLESHEET: PLACEHOLDERS
 STYLESHEET: CONTENT
 
 ******************************************************************/
+.site-content {
+  padding: 2em;
+}
+
+.site-content .content-area {
+  padding-right: 4em;
+  margin-bottom: 4em;
+}
+
 /******************************************************************
 STYLESHEET: HEADER
 
 ******************************************************************/
+.site-header {
+  background-color: #202A35;
+  color: #ffffff;
+  text-align: center;
+  padding: 2em;
+}
+
 /******************************************************************
 STYLESHEET: FOOTER
 
 ******************************************************************/
+.site-footer {
+  background-color: #202A35;
+  color: #ffffff;
+  text-align: center;
+  padding: 2em;
+}
+
+/******************************************************************
+STYLESHEET: SIDEBAR
+
+******************************************************************/
+.widget-area {
+  background-color: #fff191;
+  padding: 2em;
+}
+
+/******************************************************************
+STYLESHEET: COMMENTS
+
+******************************************************************/
+.comments-area {
+  background-color: #364250;
+  color: #ffffff;
+  padding: 2em;
+}
+
+/******************************************************************
+STYLESHEET: NAV
+
+******************************************************************/
+.menu ul {
+  display: inline-block;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.post-navigation {
+  margin: 2em 0;
+}
+
 /******************************************************************
 STYLESHEET: DEFAULTS
 
@@ -1475,6 +1531,21 @@ STYLESHEET: LINKS
 ******************************************************************/
 a {
   font-family: "Open Sans", "Helvetica", "Arial", sans-serif;
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 2px solid #fff191;
+}
+
+a:visited {
+  color: inherit;
+}
+
+a:hover, a:focus {
+  color: inherit;
+}
+
+a:active {
+  color: inherit;
 }
 
 /******************************************************************
@@ -1498,7 +1569,14 @@ STYLESHEET: MODULE
 
 ******************************************************************/
 .file-path {
-  color: #ff9900;
+  color: #62BF6D;
+  font-family: 'Consolas';
+  text-align: left;
+  margin: 0.5em 0 1em;
+}
+
+.file-path--highlight {
+  font-weight: 700;
 }
 
 /*# sourceMappingURL=maps/style.css.map */

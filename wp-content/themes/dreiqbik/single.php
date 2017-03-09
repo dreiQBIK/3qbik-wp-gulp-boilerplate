@@ -10,16 +10,22 @@
 get_header(); ?>
 
 	<div id="primary" class="content-area">
-		<h3 class="file-path">single.php</h3>
+
+		<p class="file-path"><span class="file-path--highlight">Datei-Info:&nbsp;</span>single.php</p>
+
 		<main id="main" class="site-main" role="main">
 
 		<?php
 		while ( have_posts() ) : the_post();
 
 			get_template_part( 'template-parts/content', get_post_format() );
+			?>
 
-			the_post_navigation();
+			<div class="post-navigation">
+				<?php the_post_navigation(); ?>
+			</div>
 
+			<?php
 			// If comments are open or we have at least one comment, load up the comment template.
 			if ( comments_open() || get_comments_number() ) :
 				comments_template();
@@ -29,6 +35,7 @@ get_header(); ?>
 		?>
 
 		</main><!-- #main -->
+
 	</div><!-- #primary -->
 
 <?php

@@ -1,11 +1,9 @@
 /******************************************************************
-STYLESHEET: FOOTER
+STYLESHEET: SIDEBAR
 
 ******************************************************************/
 
-.site-footer {
-    background-color: $c1-main;
-    color: $c-white;
-    text-align: center;
+.widget-area {
+    background-color: $c1-second;
     padding: 2em;
 }

@@ -4,5 +4,12 @@ STYLESHEET: MODULE
 ******************************************************************/
 
 .file-path {
-	color: #ff9900;
+    color: $c2-accent;
+    font-family: 'Consolas';
+    text-align: left;
+    margin: 0.5em 0 1em;
+
+    &--highlight {
+        font-weight: 700;
+    }
 }
