@@ -11,23 +11,29 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-    <p class="file-path"><span class="file-path--highlight">Datei-Info:&nbsp;</span>content-search.php</p>
+	<section class="container">
+		<div class="container--inner">
 
-	<header class="entry-header">
-		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+		    <p class="file-path"><span class="file-path--highlight">Datei-Info:&nbsp;</span>content-search.php</p>
 
-		<?php if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
+			<header class="entry-header">
+				<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
-			<?php dreiqbik_posted_on(); ?>
+				<?php if ( 'post' === get_post_type() ) : ?>
+				<div class="entry-meta">
 
-		</div><!-- .entry-meta -->
-		<?php endif; ?>
+					<?php dreiqbik_posted_on(); ?>
 
-	</header><!-- .entry-header -->
+				</div><!-- .entry-meta -->
+				<?php endif; ?>
 
-	<div class="entry-summary">
-		<?php the_excerpt(); ?>
-	</div><!-- .entry-summary -->
+			</header><!-- .entry-header -->
+
+			<div class="entry-summary">
+				<?php the_excerpt(); ?>
+			</div><!-- .entry-summary -->
+
+		</div>
+	</section>
 
 </article><!-- #post-## -->

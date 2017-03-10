@@ -564,36 +564,11 @@ STYLESHEET: PLACEHOLDERS
 /******************************************************************
 	GENERAL
 ******************************************************************/
-.full-width {
-  background-color: green;
-}
-
 .container {
-  overflow: hidden;
-  margin-right: auto;
-  margin-left: auto;
+  position: relative;
 }
 
-@media only screen and (min-width: 681px) {
-  .container {
-    width: 750px;
-  }
-}
-
-@media only screen and (min-width: 961px) {
-  .container {
-    width: 970px;
-  }
-}
-
-@media only screen and (min-width: 1361px) {
-  .container {
-    width: 1170px;
-  }
-}
-
-.container-fluid {
-  background-color: grey;
+.container--inner {
   overflow: hidden;
   margin-right: auto;
   margin-left: auto;
@@ -601,19 +576,19 @@ STYLESHEET: PLACEHOLDERS
 }
 
 @media only screen and (min-width: 681px) {
-  .container-fluid {
+  .container--inner {
     width: 90%;
   }
 }
 
 @media only screen and (min-width: 961px) {
-  .container-fluid {
+  .container--inner {
     width: 80%;
   }
 }
 
 @media only screen and (min-width: 1361px) {
-  .container-fluid {
+  .container--inner {
     max-width: 1400px;
     width: 70%;
   }
@@ -1363,13 +1338,8 @@ STYLESHEET: PLACEHOLDERS
 STYLESHEET: CONTENT
 
 ******************************************************************/
-.site-content {
-  padding: 2em;
-}
-
 .site-content .content-area {
-  padding-right: 4em;
-  margin-bottom: 4em;
+  margin-bottom: 2em;
 }
 
 /******************************************************************
@@ -1400,7 +1370,7 @@ STYLESHEET: SIDEBAR
 ******************************************************************/
 .widget-area {
   background-color: #fff191;
-  padding: 2em;
+  padding: 2em 0;
 }
 
 /******************************************************************
@@ -1408,9 +1378,8 @@ STYLESHEET: COMMENTS
 
 ******************************************************************/
 .comments-area {
-  background-color: #364250;
-  color: #ffffff;
-  padding: 2em;
+  background-color: #dddddd;
+  padding: 2em 0;
 }
 
 /******************************************************************
@@ -1454,7 +1423,7 @@ body {
 }
 
 ::selection {
-  background: #879cb1;
+  background: #B1C3D4;
   text-shadow: none;
 }
 
@@ -1564,19 +1533,42 @@ STYLESHEET: HELPERS
   margin-left: 0;
 }
 
-/******************************************************************
-STYLESHEET: MODULE
-
-******************************************************************/
 .file-path {
   color: #62BF6D;
   font-family: 'Consolas';
   text-align: left;
-  margin: 0.5em 0 1em;
+  margin: 0 0 1em;
 }
 
 .file-path--highlight {
   font-weight: 700;
+}
+
+/******************************************************************
+STYLESHEET: CARD
+
+******************************************************************/
+.card {
+  background-color: #eeeeee;
+  padding: 2em;
+}
+
+.card__heading {
+  margin-top: 0;
+}
+
+.card__text {
+  margin-bottom: 0;
+}
+
+/******************************************************************
+STYLESHEET: TEASER
+
+******************************************************************/
+.teaser--fullwidth {
+  background-color: #eeeeee;
+  margin: 2em 0 0;
+  padding: 2em 0;
 }
 
 /*# sourceMappingURL=maps/style.css.map */

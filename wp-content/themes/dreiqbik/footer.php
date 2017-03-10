@@ -19,7 +19,7 @@
 
 		<div class="site-info">
 
-			<p class="footer__copy">&copy; 2017 | <a href="" class="footer__link">dreiQBIK</a></p>
+			<p class="footer__copy">&copy; 2017 | <a href="http://dreiqbik.de" target="_blank" class="footer__link">dreiQBIK</a></p>
 
 		</div><!-- .site-info -->
 

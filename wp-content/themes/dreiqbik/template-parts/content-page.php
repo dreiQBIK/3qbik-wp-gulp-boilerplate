@@ -11,24 +11,73 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-    <p class="file-path"><span class="file-path--highlight">Datei-Info:&nbsp;</span>content-page.php</p>
+	<section class="container">
+		<div class="container--inner">
 
-	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-	</header><!-- .entry-header -->
+		    <p class="file-path"><span class="file-path--highlight">Datei-Info:&nbsp;</span>content-page.php</p>
 
-	<div class="entry-content">
+			<header class="entry-header">
+				<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+			</header><!-- .entry-header -->
 
-		<?php
-			the_content();
+			<div class="entry-content">
 
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'dreiqbik' ),
-				'after'  => '</div>',
-			) );
-		?>
+					<?php
+						the_content();
 
-	</div><!-- .entry-content -->
+						wp_link_pages( array(
+							'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'dreiqbik' ),
+							'after'  => '</div>',
+						) );
+					?>
+
+			</div><!-- .entry-content -->
+
+		</div>
+	</section>
+
+
+	<!-- GRID example -->
+	<section class="container">
+		<div class="container--inner">
+			<div class="row">
+				<div class="col col-xs-12 col-md-6">
+					<div class="card">
+						<h3 class="card__heading">Card</h3>
+						<p class="card__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+					</div>
+				</div>
+				<div class="col col-xs-12 col-md-6">
+					<div class="card">
+						<h3 class="card__heading">Card</h3>
+						<p class="card__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col col-xs-12 col-md-6">
+					<div class="card">
+						<h3 class="card__heading">Card</h3>
+						<p class="card__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+					</div>
+				</div>
+				<div class="col col-xs-12 col-md-6">
+					<div class="card">
+						<h3 class="card__heading">Card</h3>
+						<p class="card__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container teaser--fullwidth">
+			<div class="container--inner">
+				<h3>Full-Width-Section</h3>
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+			</div>
+		</div>
+	</section>
+	<!-- end GRID example -->
+
 
 	<?php if ( get_edit_post_link() ) : ?>
 		<footer class="entry-footer">

@@ -14,3 +14,14 @@ STYLESHEET: HELPERS
     margin-top: 0;
     margin-left: 0;
 }
+
+.file-path {
+    color: $c2-accent;
+    font-family: 'Consolas';
+    text-align: left;
+    margin: 0 0 1em;
+
+    &--highlight {
+        font-weight: 700;
+    }
+}

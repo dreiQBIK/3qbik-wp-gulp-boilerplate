@@ -15,24 +15,30 @@ get_header(); ?>
 
 		<main id="main" class="site-main" role="main">
 
-		<?php
-		while ( have_posts() ) : the_post();
-
-			get_template_part( 'template-parts/content', get_post_format() );
-			?>
-
-			<div class="post-navigation">
-				<?php the_post_navigation(); ?>
-			</div>
-
 			<?php
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
+			while ( have_posts() ) : the_post();
 
-		endwhile; // End of the loop.
-		?>
+				get_template_part( 'template-parts/content', get_post_format() );
+				?>
+
+				<section class="container">
+					<div class="container--inner">
+
+						<div class="post-navigation">
+							<?php the_post_navigation(); ?>
+						</div>
+
+					</div>
+				</section>
+
+				<?php
+				// If comments are open or we have at least one comment, load up the comment template.
+				if ( comments_open() || get_comments_number() ) :
+					comments_template();
+				endif;
+
+			endwhile; // End of the loop.
+			?>
 
 		</main><!-- #main -->
 

@@ -15,52 +15,33 @@
 	GENERAL
 ******************************************************************/
 
-.full-width {
-    background-color: green;
-}
-
 .container {
-    overflow: hidden;
-	margin-right: auto;
-	margin-left: auto;
-
-	@include small {
-		width: 750px;
-	}
-
-	@include medium {
-		width: 970px;
-	}
-
-	@include large {
-		width: 1170px;
-	}
+    position: relative;
 }
 
-.container-fluid {
-    background-color: grey;
+.container--inner {
     overflow: hidden;
-	margin-right: auto;
-	margin-left: auto;
-	width: 95%;
+  	margin-right: auto;
+  	margin-left: auto;
+  	width: 95%;
 
-	@include small {
+  	@include small {
         width: 90%;
-	}
+  	}
 
-	@include medium {
-		width: 80%;
-	}
+  	@include medium {
+  		  width: 80%;
+  	}
 
-	@include large {
-		max-width: 1400px;
-		width: 70%;
-	}
+  	@include large {
+    		max-width: 1400px;
+    		width: 70%;
+  	}
 }
 
 .col {
-	float: left;
-	position: relative;
+  	float: left;
+  	position: relative;
   	min-height: 1px;
   	padding-left: $g-vgap;
     padding-right: $g-vgap;
