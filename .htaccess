@@ -1,3 +1,9 @@
+# Deny access to anyone surfing for wp-config
+<files wp-config.php>
+order allow,deny
+deny from all
+</files>
+
 # Block the include-only files for  security reasons
 <IfModule mod_rewrite.c>
   RewriteEngine On
