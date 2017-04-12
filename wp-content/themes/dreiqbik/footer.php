@@ -14,13 +14,17 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
-		<h3 class="file-path">footer.php</h3>
+
+        <p class="file-path"><span class="file-path--highlight">Datei-Info:&nbsp;</span>footer.php</p>
+
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'dreiqbik' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'dreiqbik' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'dreiqbik' ), 'dreiqbik', '<a href="http://underscores.me/" rel="designer">dreiQbik</a>' ); ?>
+
+			<p class="footer__copy">&copy; 2017 | <a href="http://dreiqbik.de" target="_blank" class="footer__link">dreiQBIK</a></p>
+
 		</div><!-- .site-info -->
+
 	</footer><!-- #colophon -->
+
 </div><!-- #page -->
 
 <?php wp_footer(); ?>

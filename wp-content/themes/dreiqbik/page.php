@@ -15,7 +15,9 @@
 get_header(); ?>
 
 	<div id="primary" class="content-area">
-		<h3 class="file-path">page.php</h3>
+
+		<p class="file-path"><span class="file-path--highlight">Datei-Info:&nbsp;</span>page.php</p>
+
 		<main id="main" class="site-main" role="main">
 
 			<?php
@@ -32,6 +34,7 @@ get_header(); ?>
 			?>
 
 		</main><!-- #main -->
+
 	</div><!-- #primary -->
 
 <?php

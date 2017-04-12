@@ -564,36 +564,11 @@ STYLESHEET: PLACEHOLDERS
 /******************************************************************
 	GENERAL
 ******************************************************************/
-.full-width {
-  background-color: green;
-}
-
 .container {
-  overflow: hidden;
-  margin-right: auto;
-  margin-left: auto;
+  position: relative;
 }
 
-@media only screen and (min-width: 681px) {
-  .container {
-    width: 750px;
-  }
-}
-
-@media only screen and (min-width: 961px) {
-  .container {
-    width: 970px;
-  }
-}
-
-@media only screen and (min-width: 1361px) {
-  .container {
-    width: 1170px;
-  }
-}
-
-.container-fluid {
-  background-color: grey;
+.container--inner {
   overflow: hidden;
   margin-right: auto;
   margin-left: auto;
@@ -601,19 +576,19 @@ STYLESHEET: PLACEHOLDERS
 }
 
 @media only screen and (min-width: 681px) {
-  .container-fluid {
+  .container--inner {
     width: 90%;
   }
 }
 
 @media only screen and (min-width: 961px) {
-  .container-fluid {
+  .container--inner {
     width: 80%;
   }
 }
 
 @media only screen and (min-width: 1361px) {
-  .container-fluid {
+  .container--inner {
     max-width: 1400px;
     width: 70%;
   }
@@ -1363,14 +1338,64 @@ STYLESHEET: PLACEHOLDERS
 STYLESHEET: CONTENT
 
 ******************************************************************/
+.site-content .content-area {
+  margin: 4em 0;
+}
+
 /******************************************************************
 STYLESHEET: HEADER
 
 ******************************************************************/
+.site-header {
+  background-color: #202A35;
+  color: #ffffff;
+  text-align: center;
+  padding: 4em;
+}
+
 /******************************************************************
 STYLESHEET: FOOTER
 
 ******************************************************************/
+.site-footer {
+  background-color: #202A35;
+  color: #ffffff;
+  text-align: center;
+  padding: 2em;
+}
+
+/******************************************************************
+STYLESHEET: SIDEBAR
+
+******************************************************************/
+.widget-area {
+  background-color: #fff191;
+  padding: 4em 0;
+}
+
+/******************************************************************
+STYLESHEET: COMMENTS
+
+******************************************************************/
+.comments-area {
+  background-color: #dddddd;
+  padding: 2em 0;
+}
+
+/******************************************************************
+STYLESHEET: NAV
+
+******************************************************************/
+.menu ul {
+  display: inline-block;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.post-navigation {
+  margin: 4em 0;
+}
+
 /******************************************************************
 STYLESHEET: DEFAULTS
 
@@ -1398,7 +1423,7 @@ body {
 }
 
 ::selection {
-  background: #879cb1;
+  background: #B1C3D4;
   text-shadow: none;
 }
 
@@ -1475,6 +1500,21 @@ STYLESHEET: LINKS
 ******************************************************************/
 a {
   font-family: "Open Sans", "Helvetica", "Arial", sans-serif;
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 2px solid #fff191;
+}
+
+a:visited {
+  color: inherit;
+}
+
+a:hover, a:focus {
+  color: inherit;
+}
+
+a:active {
+  color: inherit;
 }
 
 /******************************************************************
@@ -1493,12 +1533,42 @@ STYLESHEET: HELPERS
   margin-left: 0;
 }
 
+.file-path {
+  color: #62BF6D;
+  font-family: 'Consolas';
+  text-align: left;
+  margin: 0 0 1em;
+}
+
+.file-path--highlight {
+  font-weight: 700;
+}
+
 /******************************************************************
-STYLESHEET: MODULE
+STYLESHEET: CARD
 
 ******************************************************************/
-.file-path {
-  color: #ff9900;
+.card {
+  background-color: #eeeeee;
+  padding: 3em;
+}
+
+.card__heading {
+  margin-top: 0;
+}
+
+.card__text {
+  margin-bottom: 0;
+}
+
+/******************************************************************
+STYLESHEET: TEASER
+
+******************************************************************/
+.teaser--fullwidth {
+  background-color: #eeeeee;
+  margin: 2em 0 0;
+  padding: 4em 0;
 }
 
 /*# sourceMappingURL=maps/style.css.map */

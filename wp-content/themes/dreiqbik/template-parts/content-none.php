@@ -10,7 +10,9 @@
 ?>
 
 <section class="no-results not-found">
-	<h3 class="file-path">template-parts/content-none.php</h3>
+
+	<p class="file-path"><span class="file-path--highlight">Datei-Info:&nbsp;</span>content-none.php</p>
+
 	<header class="page-header">
 		<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'dreiqbik' ); ?></h1>
 	</header><!-- .page-header -->

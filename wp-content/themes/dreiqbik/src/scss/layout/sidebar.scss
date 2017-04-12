@@ -1,11 +1,9 @@
 /******************************************************************
-STYLESHEET: HEADER
+STYLESHEET: SIDEBAR
 
 ******************************************************************/
 
-.site-header {
-    background-color: $c1-main;
-    color: $c-white;
-    text-align: center;
-    padding: 4em;
+.widget-area {
+    background-color: $c1-second;
+    padding: 4em 0;
 }
