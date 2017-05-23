@@ -13,9 +13,9 @@
 
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
+	<footer id="colophon" class="site-footer">
 
-        <p class="file-path"><span class="file-path--highlight">Datei-Info:&nbsp;</span>footer.php</p>
+        <p class="h-file-path"><span class="h-file-path--highlight">Datei-Info:&nbsp;</span>footer.php</p>
 
 		<div class="site-info">
 

@@ -70,18 +70,17 @@ STYLESHEET: VARIABLES
 		INITIALIZE
 	==================================== */
 
-	$opensans:     'Open Sans', 'Helvetica', 'Arial', sans-serif;
-	$merriweather: 'Merriweather', 'Times New Roman', serif;
+	$opensans:     'Open Sans', Helvetica, Arial, sans-serif;
 
 
 	/* ====================================
 		DECLARATION
 	==================================== */
 
-	$f-base:    $merriweather;
+	$f-base:    $opensans;
 	$f-heading: $opensans;
 	$f-link:    $opensans;
-	$f-text:    $merriweather;
+	$f-text:    $opensans;
 
 
 
@@ -98,6 +97,6 @@ $g-hgap: 20px;		// gaps between rows
 	BREAKPOINTS
 ******************************************************************/
 
-$w-small:  681px;
+$w-small:  481px;
 $w-medium: 961px;
 $w-large:  1361px;

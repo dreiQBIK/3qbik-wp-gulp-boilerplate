@@ -1,21 +1,41 @@
 /******************************************************************
 STYLESHEET: HELPERS
 
-    > GENERAL
+    > CSS_JS_BREAKPOINTS
+    > FILEPATH
+    > MARGINS
+    > PADDINGS
+    > TEXT
 
 ******************************************************************/
 
-.h-lastitem {
-    margin-bottom: 0;
-    margin-right: 0;
+
+/******************************************************************
+    CSS_JS_BREAKPOINTS
+******************************************************************/
+
+#h-breakpoint-js {
+    width: 0;
+
+    @include small {
+        width: $w-small;
+    }
+
+    @include medium {
+        width: $w-medium;
+    }
+
+    @include large {
+        width: $w-large;
+    }
 }
 
-.h-firstitem {
-    margin-top: 0;
-    margin-left: 0;
-}
 
-.file-path {
+/******************************************************************
+    FILEPATH
+******************************************************************/
+
+.h-file-path {
     color: $c2-accent;
     font-family: 'Consolas';
     text-align: left;
@@ -23,5 +43,85 @@ STYLESHEET: HELPERS
 
     &--highlight {
         font-weight: 700;
+    }
+}
+
+
+/******************************************************************
+    MARGINS
+******************************************************************/
+
+.h {
+
+    &-no-mtop {
+        margin-top: 0 !important;
+    }
+
+    &-no-mright {
+        margin-right: 0 !important;
+    }
+
+    &-no-mbottom {
+        margin-bottom: 0 !important;
+    }
+
+    &-no-mleft {
+        margin-left: 0 !important;
+    }
+}
+
+
+/******************************************************************
+    PADDINGS
+******************************************************************/
+
+.h {
+
+    &-no-ptop {
+        padding-top: 0 !important;
+    }
+
+    &-no-pright {
+        padding-right: 0 !important;
+    }
+
+    &-no-pbottom {
+        padding-bottom: 0 !important;
+    }
+
+    &-no-pleft {
+        padding-left: 0 !important;
+    }
+}
+
+
+/******************************************************************
+    TEXT
+******************************************************************/
+
+.h {
+
+    &-italic {
+        font-style: italic !important;
+    }
+
+    &-light {
+        font-weight: 300 !important;
+    }
+
+    &-semibold {
+        font-weight: 600 !important;
+    }
+
+    &-bold {
+        font-weight: 700 !important;
+    }
+
+    &-white {
+        color: $c-white !important;
+    }
+
+    &-black {
+        color: $c-black !important;
     }
 }

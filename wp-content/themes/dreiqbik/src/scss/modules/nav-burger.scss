@@ -1,0 +1,70 @@
+/******************************************************************
+STYLESHEET: NAV_BURGER
+
+******************************************************************/
+
+.nav-burger {
+    display: block;
+    position: absolute;
+    width: 50px;
+    height: 42px;
+    cursor: pointer;
+    right: 0.5rem;
+    top: 40px;
+    transition: all 0.25s ease-in-out;
+
+    @include medium {
+        display: none;
+    }
+
+    span,
+    span:before,
+    span:after {
+        content: '';
+        position: absolute;
+        display: block;
+        height: 5px;
+        width: 30px;
+        background: $c-white;
+        transition: all 0.15s ease-in-out;
+    }
+
+    span {
+        left: 8px;
+        top: 18px;
+    }
+
+    span:before {
+        top: -8px;
+
+        @include large {
+          top: -9px;
+        }
+    }
+
+    span:after {
+        bottom: -8px;
+
+        @include large {
+          bottom: -9px;
+        }
+    }
+
+    &.active {
+
+        span {
+          background-color: transparent;
+        }
+        span:before,
+        span:after {
+            top: 0;
+        }
+        span:before {
+
+            transform: rotate(45deg);
+        }
+        span:after {
+            transform: rotate(-45deg);
+        }
+    }
+}

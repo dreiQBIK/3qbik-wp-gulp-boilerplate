@@ -11,10 +11,9 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 
-		<p class="file-path"><span class="file-path--highlight">Datei-Info:&nbsp;</span>404.php</p>
+		<p class="h-file-path"><span class="h-file-path--highlight">Datei-Info:&nbsp;</span>404.php</p>
 
-		<main id="main" class="site-main" role="main">
-
+		<main id="main" class="site-main">
 			<section class="error-404 not-found">
 
 				<section class="container">

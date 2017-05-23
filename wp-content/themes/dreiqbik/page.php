@@ -16,9 +16,9 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 
-		<p class="file-path"><span class="file-path--highlight">Datei-Info:&nbsp;</span>page.php</p>
+		<p class="h-file-path"><span class="h-file-path--highlight">Datei-Info:&nbsp;</span>page.php</p>
 
-		<main id="main" class="site-main" role="main">
+		<main id="main" class="site-main">
 
 			<?php
 			while ( have_posts() ) : the_post();

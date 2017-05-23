@@ -14,7 +14,7 @@
 	<section class="container">
 		<div class="container--inner">
 
-		    <p class="file-path"><span class="file-path--highlight">Datei-Info:&nbsp;</span>content-search.php</p>
+		    <p class="h-file-path"><span class="h-file-path--highlight">Datei-Info:&nbsp;</span>content-search.php</p>
 
 			<header class="entry-header">
 				<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>

@@ -11,7 +11,7 @@
 
 <section class="no-results not-found">
 
-	<p class="file-path"><span class="file-path--highlight">Datei-Info:&nbsp;</span>content-none.php</p>
+	<p class="h-file-path"><span class="h-file-path--highlight">Datei-Info:&nbsp;</span>content-none.php</p>
 
 	<header class="page-header">
 		<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'dreiqbik' ); ?></h1>

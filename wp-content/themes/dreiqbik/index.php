@@ -16,9 +16,9 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 
-        <p class="file-path"><span class="file-path--highlight">Datei-Info:&nbsp;</span>index.php</p>
+        <p class="h-file-path"><span class="h-file-path--highlight">Datei-Info:&nbsp;</span>index.php</p>
 
-		<main id="main" class="site-main" role="main">
+		<main id="main" class="site-main">
 
 			<?php
 			if ( have_posts() ) :

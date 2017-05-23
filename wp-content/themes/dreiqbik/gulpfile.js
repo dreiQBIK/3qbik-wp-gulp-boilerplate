@@ -11,12 +11,9 @@ var gulpUtil     = require('gulp-util');
 var rename       = require('gulp-rename');
 var sourcemaps   = require('gulp-sourcemaps');
 var postcss      = require('gulp-postcss');
-// var imagemin     = require('gulp-imagemin');
 var autoprefixer = require('autoprefixer');
 var pixrem       = require('pixrem');
 var cssnano      = require('cssnano');
-// var svgstore     = require('gulp-svgstore');
-// var svgmin       = require('gulp-svgmin');
 var browserSync  = require('browser-sync').create();
 
 // make noise on js and scss errors
@@ -24,7 +21,6 @@ function errorHandler(error) {
     gulpUtil.beep();
     return true;
 }
-
 
 // Lint JS-Files
 gulp.task('lint', function() {
@@ -79,23 +75,6 @@ gulp.task('css', function () {
         .pipe(gulp.dest(''));
 });
 
-// Minify SVG and combine into one
-// gulp.task('svgstore', function () {
-//     return gulp
-//         .src('src/svg/*.svg', { base: 'src/svg' })
-//         .pipe(rename({prefix: 'icon-'}))
-//         .pipe(svgstore({ inlineSvg: true }))
-//         .pipe(gulp.dest('svg'));
-// });
-
-// Compress Images
-// gulp.task('imagemin', function() {
-//     return gulp
-//         .src('img/*')
-//         .pipe(imagemin())
-//         .pipe(gulp.dest('img/'));
-// });
-
 // Watch Files For Changes
 gulp.task('watch', function() {
     browserSync.init({
@@ -108,6 +87,3 @@ gulp.task('watch', function() {
 
 // Default Tasks
 gulp.task('default', ['sass', 'css', 'scripts', 'watch']);
-
-// Default Tasks
-// gulp.task('build', ['lint', 'sass', 'css', 'scripts', 'imagemin', 'copy-folders']);

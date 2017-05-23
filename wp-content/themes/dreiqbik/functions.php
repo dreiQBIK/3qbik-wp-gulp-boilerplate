@@ -127,13 +127,7 @@ add_action( 'widgets_init', 'dreiqbik_widgets_init' );
 ******************************************************************/
 
 function dreiqbik_scripts() {
-	wp_enqueue_style( 'dreiqbik-style', get_stylesheet_uri());
-
-	/*wp_enqueue_script( 'jQuery', get_template_directory_uri() . '/js/jquery/dist/jquery.min.js', array('jquery'), '160921', true );*/
-
-	wp_enqueue_script( 'dreiqbik-navigation', get_template_directory_uri() . '/js/vendor/navigation.js', array(), '160921', true );
-
-	wp_enqueue_script( 'dreiqbik-skip-link-focus-fix', get_template_directory_uri() . '/js/vendor/skip-link-focus-fix.js', array(), '160921', true );
+	wp_enqueue_style('dreiqbik-style', get_template_directory_uri() . '/style.css');
 
 	wp_enqueue_script( 'dreiqbik-main', get_template_directory_uri() . '/js/main.js', array('jquery'), '160921', true );
 
@@ -150,11 +144,6 @@ add_action( 'wp_enqueue_scripts', 'dreiqbik_scripts' );
 ******************************************************************/
 
 /**
- * Implement the Custom Header feature.
- */
-require get_template_directory() . '/inc/custom-header.php';
-
-/**
  * Custom template tags for this theme.
  */
 require get_template_directory() . '/inc/template-tags.php';
@@ -163,11 +152,6 @@ require get_template_directory() . '/inc/template-tags.php';
  * Custom functions that act independently of the theme templates.
  */
 require get_template_directory() . '/inc/extras.php';
-
-/**
- * Customizer additions.
- */
-require get_template_directory() . '/inc/customizer.php';
 
 /**
  * Load Jetpack compatibility file.

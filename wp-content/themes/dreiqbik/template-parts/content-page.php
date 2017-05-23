@@ -14,7 +14,7 @@
 	<section class="container">
 		<div class="container--inner">
 
-		    <p class="file-path"><span class="file-path--highlight">Datei-Info:&nbsp;</span>content-page.php</p>
+		    <p class="h-file-path"><span class="h-file-path--highlight">Datei-Info:&nbsp;</span>content-page.php</p>
 
 			<header class="entry-header">
 				<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
@@ -67,12 +67,6 @@
 						<p class="card__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
 					</div>
 				</div>
-			</div>
-		</div>
-		<div class="container teaser--fullwidth">
-			<div class="container--inner">
-				<h3>Full-Width-Section</h3>
-				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
 			</div>
 		</div>
 	</section>

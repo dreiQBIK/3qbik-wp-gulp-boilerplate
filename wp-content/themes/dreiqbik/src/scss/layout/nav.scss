@@ -3,15 +3,16 @@ STYLESHEET: NAV
 
 ******************************************************************/
 
-.menu {
+.site-navigation {
+    display: none;
+    margin-top: 2em;
+
+    @include medium {
+        display: block;
+    }
 
     ul {
-        display: inline-block;
-        list-style-type: none;
-        padding-left: 0;
+        margin: 0;
+        list-style: none;
     }
-}
-
-.post-navigation {
-    margin: 4em 0;
 }

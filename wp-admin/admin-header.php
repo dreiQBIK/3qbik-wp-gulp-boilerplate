@@ -219,7 +219,7 @@ if ( current_user_can( 'customize' ) ) {
 do_action( 'in_admin_header' );
 ?>
 
-<div id="wpbody" role="main">
+<div id="wpbody">
 <?php
 unset($title_class, $blog_name, $total_update_count, $update_title);
 

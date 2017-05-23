@@ -14,10 +14,9 @@
 	<section class="container">
 		<div class="container--inner">
 
-		    <p class="file-path"><span class="file-path--highlight">Datei-Info:&nbsp;</span>content.php</p>
+		    <p class="h-file-path"><span class="h-file-path--highlight">Datei-Info:&nbsp;</span>content.php</p>
 
 			<header class="entry-header">
-
 				<?php
 				if ( is_single() ) :
 					the_title( '<h1 class="entry-title">', '</h1>' );
@@ -31,7 +30,6 @@
 				</div><!-- .entry-meta -->
 				<?php
 				endif; ?>
-
 			</header><!-- .entry-header -->
 
 			<div class="entry-content">

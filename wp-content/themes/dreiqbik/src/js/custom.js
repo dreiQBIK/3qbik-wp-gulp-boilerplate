@@ -11,10 +11,4 @@
 
 (function($) {
 
-
 })( jQuery );
-
-
-
-
-
