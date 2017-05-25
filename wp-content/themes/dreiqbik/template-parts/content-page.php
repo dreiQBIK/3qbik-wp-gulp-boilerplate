@@ -38,40 +38,58 @@
 
 
 	<!-- GRID example -->
-	<section class="container">
+	<section class="container h-container--dom-rdy">
 		<div class="container--inner">
 			<div class="row">
 				<div class="col col-xs-12 col-md-6">
-					<div class="card">
+					<div class="card h-equal-01">
+						<img src="http://placehold.it/600x100" style="width:100%; height:auto; margin-bottom: 20px;">
+						<br>
 						<h3 class="card__heading">Card</h3>
-						<p class="card__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+						<p class="card__text">Aenean commodo ligula eget dolor. Aenean massa.</p>
 					</div>
 				</div>
 				<div class="col col-xs-12 col-md-6">
-					<div class="card">
+					<div class="card h-equal-01">
+						<img src="http://placehold.it/600x150" style="width:100%; height:auto; margin-bottom: 20px;">
 						<h3 class="card__heading">Card</h3>
-						<p class="card__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+						<p class="card__text">Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
 					</div>
 				</div>
-			</div>
-			<div class="row">
-				<div class="col col-xs-12 col-md-6">
-					<div class="card">
-						<h3 class="card__heading">Card</h3>
-						<p class="card__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-					</div>
-				</div>
-				<div class="col col-xs-12 col-md-6">
-					<div class="card">
-						<h3 class="card__heading">Card</h3>
-						<p class="card__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-					</div>
-				</div>
-			</div>
-		</div>
+			</div><!-- end row -->
+		</div><!-- end container-inner -->
 	</section>
-	<!-- end GRID example -->
 
+	<section class="container">
+		<div class="container--inner">
+			<div class="row">
+				<div class="col col-xs-12 col-sm-6 col-md-3">
+					<div class="card h-equal-02">
+						<h3 class="card__heading">Card</h3>
+						<p class="card__text">Aenean commodo ligula eget dolor. Aenean massa.</p>
+					</div>
+				</div>
+				<div class="col col-xs-12 col-sm-6 col-md-3">
+					<div class="card h-equal-02">
+						<h3 class="card__heading">Card</h3>
+						<p class="card__text">Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+					</div>
+				</div>
+				<div class="col col-xs-12 col-sm-6 col-md-3">
+					<div class="card h-equal-02">
+						<h3 class="card__heading">Card</h3>
+						<p class="card__text">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+					</div>
+				</div>
+				<div class="col col-xs-12 col-sm-6 col-md-3">
+					<div class="card h-equal-02">
+						<h3 class="card__heading">Card</h3>
+						<p class="card__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+					</div>
+				</div>
+			</div><!-- end row -->
+		</div><!-- end container-inner -->
+	</section>
 
 	<?php if ( get_edit_post_link() ) : ?>
 		<footer class="entry-footer">
