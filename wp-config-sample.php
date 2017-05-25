@@ -79,8 +79,6 @@ define('SECURE_AUTH_SALT', 'Füge hier deine Zeichenkette ein');
 define('LOGGED_IN_SALT',   'Füge hier deine Zeichenkette ein');
 define('NONCE_SALT',       'Füge hier deine Zeichenkette ein');
 
-define('WPLANG', 'de_DE');
-
 /**#@-*/
 
 /**

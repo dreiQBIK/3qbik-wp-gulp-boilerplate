@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Grundeinstellungen für WordPress
  *
