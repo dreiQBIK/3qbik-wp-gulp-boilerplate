@@ -1,8 +1,9 @@
 # Wordpress Boilerplate
-Wordpress-Boilerplate with dreiQbik Basic-Theme combined with Underscore
+WordPress-Boilerplate dreiQBIK based on Underscores
 
 ## Theme-Features
 - jQuery
 - SCSS
 - Gulp
 - Bootstrap-Grid
+- Pluginmanagement via WP-CLI und TGMPA
