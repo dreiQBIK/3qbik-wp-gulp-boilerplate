@@ -5,7 +5,6 @@ wp-content/themes/dreiqbik/maps/style.css.map
 
 # WP files
 *.log
-wp-config.php
 wp-content/advanced-cache.php
 wp-content/backup-db/
 wp-content/backups/
@@ -14,10 +13,9 @@ wp-content/cache/
 wp-content/upgrade/
 wp-content/uploads/
 wp-content/wp-cache-config.php
-wp-content/plugins/hello.php
 
 # Other
-/.htaccess
+#/.htaccess
 /license.txt
 /readme.html
 /sitemap.xml
