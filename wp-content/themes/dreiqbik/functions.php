@@ -157,8 +157,3 @@ require get_template_directory() . '/inc/extras.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
-
-/**
- * Load TGMPA Settings.
- */
-require get_template_directory() . '/inc/tgmpa-settings.php';
