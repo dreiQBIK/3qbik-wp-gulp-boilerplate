@@ -8,3 +8,37 @@ STYLESHEET: SIDEBAR
     padding: 2em;
     margin-top: 4em;
 }
+
+.widget_search {
+
+    label > span {
+        display: block;
+    }
+
+    .search-field {
+        border: none;
+        border-bottom: 2px solid $c13-grey;
+        padding: 1em;
+
+        &:focus {
+            outline: 0;
+            border-bottom: 2px solid $c1-third;
+        }
+    }
+
+    .search-submit {
+        background-color: $c1-third;
+        color: $c-white;
+        font-weight: 700;
+        text-transform: uppercase;
+        border: none;
+        border-bottom: 5px solid $c2-third;
+        border-radius: 5px;
+        padding: 1em 2em;
+
+        &:hover {
+            outline: 0;
+            background-color: $c3-third;
+        }
+    }
+}

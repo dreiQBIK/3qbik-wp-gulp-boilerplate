@@ -3,7 +3,41 @@ STYLESHEET: COMMENTS
 
 ******************************************************************/
 
-.comments-area {
-    background-color: $c13-grey;
-    padding: 2em 0;
+.comments {
+    background-color: $c14-grey;
+    padding: 2em;
+    margin-top: 2em;
+
+    input,
+    textarea {
+        border: none;
+        border-bottom: 2px solid $c13-grey;
+        padding: 1em;
+
+        &:focus {
+            outline: 0;
+            border-bottom: 2px solid $c1-third;
+        }
+    }
+
+    label {
+        display: block;
+    }
+
+    .form-submit > .submit {
+        background-color: $c1-third;
+        color: $c-white;
+        font-weight: 700;
+        text-transform: uppercase;
+        border: none;
+        border-bottom: 5px solid $c2-third;
+        border-radius: 5px;
+        padding: 1em 2em;
+        margin-top: 1em;
+
+        &:hover {
+            outline: 0;
+            background-color: $c3-third;
+        }
+    }
 }

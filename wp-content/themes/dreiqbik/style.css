@@ -1342,6 +1342,11 @@ STYLESHEET: CONTENT
   padding: 2em 0 4em;
 }
 
+.error-404 {
+  text-align: center;
+  margin: 4em 0;
+}
+
 /******************************************************************
 STYLESHEET: HEADER
 
@@ -1374,13 +1379,79 @@ STYLESHEET: SIDEBAR
   margin-top: 4em;
 }
 
+.widget_search label > span {
+  display: block;
+}
+
+.widget_search .search-field {
+  border: none;
+  border-bottom: 2px solid #dddddd;
+  padding: 1em;
+}
+
+.widget_search .search-field:focus {
+  outline: 0;
+  border-bottom: 2px solid #ec764d;
+}
+
+.widget_search .search-submit {
+  background-color: #ec764d;
+  color: #ffffff;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: none;
+  border-bottom: 5px solid #d96a44;
+  border-radius: 5px;
+  padding: 1em 2em;
+}
+
+.widget_search .search-submit:hover {
+  outline: 0;
+  background-color: #ff855b;
+}
+
 /******************************************************************
 STYLESHEET: COMMENTS
 
 ******************************************************************/
-.comments-area {
-  background-color: #dddddd;
-  padding: 2em 0;
+.comments {
+  background-color: #eeeeee;
+  padding: 2em;
+  margin-top: 2em;
+}
+
+.comments input,
+.comments textarea {
+  border: none;
+  border-bottom: 2px solid #dddddd;
+  padding: 1em;
+}
+
+.comments input:focus,
+.comments textarea:focus {
+  outline: 0;
+  border-bottom: 2px solid #ec764d;
+}
+
+.comments label {
+  display: block;
+}
+
+.comments .form-submit > .submit {
+  background-color: #ec764d;
+  color: #ffffff;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: none;
+  border-bottom: 5px solid #d96a44;
+  border-radius: 5px;
+  padding: 1em 2em;
+  margin-top: 1em;
+}
+
+.comments .form-submit > .submit:hover {
+  outline: 0;
+  background-color: #ff855b;
 }
 
 /******************************************************************
@@ -1716,14 +1787,24 @@ STYLESHEET: HELPERS
 STYLESHEET: BUTTON
 
 ******************************************************************/
-.btn {
-  background-color: #fff191;
-  padding: 1em;
+.btn,
+a.btn {
+  background-color: #ec764d;
+  color: #ffffff;
   display: inline-block;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: none;
+  border-bottom: 5px solid #d96a44;
+  border-radius: 5px;
+  padding: 1em 2em;
+  margin-top: 1em;
 }
 
-.btn:hover {
-  background-color: #EEDE70;
+.btn:hover,
+a.btn:hover {
+  outline: 0;
+  background-color: #ff855b;
 }
 
 /******************************************************************
