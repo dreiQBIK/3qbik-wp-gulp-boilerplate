@@ -82,7 +82,7 @@ gulp.task('watch', function() {
       proxy: 'b-wp-gulp.dev'
     });
     gulp.watch('src/js/*.js', ['lint', 'scripts']).on('change', browserSync.reload);
-    gulp.watch('src/scss/**/*.scss', ['sass', 'css']);
+    gulp.watch('src/scss/**/*.scss', ['sass']);
     gulp.watch('**/*.php').on('change', browserSync.reload);
 });
 
@@ -95,7 +95,7 @@ gulp.task('tinify', function() {
 
 
 // Default Tasks
-gulp.task('default', ['sass', 'css', 'scripts', 'watch']);
+gulp.task('default', ['sass', 'scripts', 'watch']);
 
 // Build
-gulp.task('build', ['tinify']);
+gulp.task('build', ['sass', 'css', 'lint', 'scripts', 'tinify']);
