@@ -9,45 +9,42 @@
 
 get_header(); ?>
 
-	<section id="primary" class="content-area">
+    <?php if ( TEMPLATE_PATH ): ?>
+    	<p class="h-file-path"><span class="h-file-path--highlight">Datei-Info:&nbsp;</span>search.php</p>
+    <?php endif ?>
 
-        <?php if ( TEMPLATE_PATH ): ?>
-        	<p class="h-file-path"><span class="h-file-path--highlight">Datei-Info:&nbsp;</span>search.php</p>
-        <?php endif ?>
+	<main class="site__main">
 
-		<main id="main" class="site-main">
+		<?php
+		if ( have_posts() ) : ?>
+
+			<section class="container">
+				<div class="container--inner">
+
+					<header class="search__header">
+						<h1 class="search__title"><?php printf( esc_html__( 'Suchergebnisse für: %s', 'dreiqbik' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+					</header><!-- .page-header -->
+
+				</div>
+			</section>
 
 			<?php
-			if ( have_posts() ) : ?>
+			/* Start the Loop */
+			while ( have_posts() ) : the_post();
 
-				<section class="container">
-					<div class="container--inner">
+				get_template_part( 'template-parts/content', 'search' );
 
-						<header class="page-header">
-							<h1 class="page-title"><?php printf( esc_html__( 'Search Results for: %s', 'dreiqbik' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
-						</header><!-- .page-header -->
+			endwhile;
 
-					</div>
-				</section>
+			the_posts_navigation();
 
-				<?php
-				/* Start the Loop */
-				while ( have_posts() ) : the_post();
+		else :
 
-					get_template_part( 'template-parts/content', 'search' );
+			get_template_part( 'template-parts/content', 'none' );
 
-				endwhile;
+		endif; ?>
 
-				the_posts_navigation();
-
-			else :
-
-				get_template_part( 'template-parts/content', 'none' );
-
-			endif; ?>
-
-		</main><!-- #main -->
-	</section><!-- #primary -->
+	</main>
 
 <?php
 get_sidebar();

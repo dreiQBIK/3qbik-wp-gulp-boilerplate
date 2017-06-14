@@ -3,9 +3,9 @@ STYLESHEET: CONTENT
 
 ******************************************************************/
 
-.site-content {
+.site {
 
-    .content-area {
-        margin: 4em 0;
+    &__content {
+        padding: 2em 0 4em;
     }
 }

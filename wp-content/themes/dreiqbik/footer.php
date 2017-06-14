@@ -11,23 +11,21 @@
 
 ?>
 
-	</div><!-- #content -->
+	</div><!-- .site__content -->
 
-	<footer id="colophon" class="site-footer">
+	<footer class="site__footer">
 
         <?php if ( TEMPLATE_PATH ): ?>
             <p class="h-file-path"><span class="h-file-path--highlight">Datei-Info:&nbsp;</span>footer.php</p>
         <?php endif ?>
 
-		<div class="site-info">
-
+		<div class="footer__info">
 			<p class="footer__copy">&copy; 2017 | <a href="http://dreiqbik.de" target="_blank" class="footer__link">dreiQBIK</a></p>
+		</div>
 
-		</div><!-- .site-info -->
+	</footer>
 
-	</footer><!-- #colophon -->
-
-</div><!-- #page -->
+</div><!-- .site -->
 
 <?php wp_footer(); ?>
 

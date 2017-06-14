@@ -12,10 +12,10 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 }
 ?>
 
-<aside id="secondary" class="widget-area" role="complementary">
+<section class="container">
+    <div class="container--inner">
 
-    <section class="container">
-        <div class="container--inner">
+        <aside class="widget-area" role="complementary">
 
             <?php if ( TEMPLATE_PATH ): ?>
                 <p class="h-file-path"><span class="h-file-path--highlight">Datei-Info:&nbsp;</span>sidebar.php</p>
@@ -23,7 +23,7 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 
         	<?php dynamic_sidebar( 'sidebar-1' ); ?>
 
-        </div>
-    </section>
+        </aside><!-- #secondary -->
 
-</aside><!-- #secondary -->
+    </div>
+</section>

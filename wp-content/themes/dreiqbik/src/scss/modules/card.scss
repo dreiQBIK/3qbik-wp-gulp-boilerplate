@@ -1,0 +1,37 @@
+/******************************************************************
+STYLESHEET: CARD
+
+******************************************************************/
+
+.card {
+    background-color: $c14-grey;
+
+    &__img {
+        width: 100%;
+        height: auto;
+
+        &-wrapper {
+            width: 100%;
+            height: auto;
+            max-height: 200px;
+            margin: 0;
+            overflow: hidden;
+
+            @include medium {
+                max-height: 300px;
+            }
+        }
+    }
+
+    &__content {
+        padding: 1em 2em 2em;
+    }
+
+    &__heading {
+
+    }
+
+    &__text {
+
+    }
+}

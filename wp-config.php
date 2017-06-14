@@ -117,4 +117,4 @@ require_once(ABSPATH . 'wp-settings.php');
 /**
  * Variable zum An- und Abschalten der Template-Names
  */
-define('TEMPLATE_PATH', true);
+define('TEMPLATE_PATH', false);

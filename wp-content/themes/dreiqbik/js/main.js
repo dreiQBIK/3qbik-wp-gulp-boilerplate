@@ -4,12 +4,9 @@
 ******************************************************************/
 
 
-
-/******************************************************************
-	CUSTOM_FUNCTION
-******************************************************************/
-
 (function($) {
+
+    // Your Code here
 
 })( jQuery );
 
@@ -121,8 +118,8 @@
     	NAV_BURGER
     ******************************************************************/
 
-    var $siteNavigation = $('#site-navigation');
-    var $siteNavigationBurger = $('#nav-burger');
+    var $siteNavigation = $('.nav-main');
+    var $siteNavigationBurger = $('.nav-main__burger');
 
     $siteNavigationBurger.on('click', function() {
         $siteNavigation.slideToggle('fast');

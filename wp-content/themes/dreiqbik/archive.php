@@ -9,49 +9,43 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
+    <?php if ( TEMPLATE_PATH ): ?>
+    	<p class="h-file-path"><span class="h-file-path--highlight">Datei-Info:&nbsp;</span>archive.php</p>
+    <?php endif ?>
 
-        <?php if ( TEMPLATE_PATH ): ?>
-        	<p class="h-file-path"><span class="h-file-path--highlight">Datei-Info:&nbsp;</span>archive.php</p>
-        <?php endif ?>
+	<main class="site__main">
 
-		<main id="main" class="site-main">
+		<?php
+		if ( have_posts() ) : ?>
+
+			<section class="container">
+				<div class="container--inner">
+
+					<header class="archive__header">
+						<h1 class="archive__heading"><?php the_archive_title(); ?></h1>
+						<div class="archive__description"><?php the_archive_description(); ?></div>
+					</header>
+
+				</div>
+			</section>
 
 			<?php
-			if ( have_posts() ) : ?>
+			/* Start the Loop */
+			while ( have_posts() ) : the_post();
 
-				<section class="container">
-					<div class="container--inner">
+				get_template_part( 'template-parts/content', get_post_format() );
 
-						<header class="page-header">
-							<?php
-								the_archive_title( '<h1 class="page-title">', '</h1>' );
-								the_archive_description( '<div class="archive-description">', '</div>' );
-							?>
-						</header><!-- .page-header -->
+			endwhile;
 
-					</div>
-				</section>
+			the_posts_navigation();
 
-				<?php
-				/* Start the Loop */
-				while ( have_posts() ) : the_post();
+		else :
 
-					get_template_part( 'template-parts/content', get_post_format() );
+			get_template_part( 'template-parts/content', 'none' );
 
-				endwhile;
+		endif; ?>
 
-				the_posts_navigation();
-
-			else :
-
-				get_template_part( 'template-parts/content', 'none' );
-
-			endif; ?>
-
-		</main><!-- #main -->
-
-	</div><!-- #primary -->
+	</main>
 
 <?php
 get_sidebar();

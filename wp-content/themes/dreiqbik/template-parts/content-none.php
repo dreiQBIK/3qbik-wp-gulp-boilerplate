@@ -15,11 +15,11 @@
 		<p class="h-file-path"><span class="h-file-path--highlight">Datei-Info:&nbsp;</span>content-none.php</p>
 	<?php endif ?>
 
-	<header class="page-header">
-		<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'dreiqbik' ); ?></h1>
-	</header><!-- .page-header -->
+	<header class="none-header">
+		<h1 class="none-title"><?php esc_html_e( 'Nothing Found', 'dreiqbik' ); ?></h1>
+	</header>
 
-	<div class="page-content">
+	<div class="none-content">
 		<?php
 		if ( is_home() && current_user_can( 'publish_posts' ) ) : ?>
 
@@ -38,5 +38,6 @@
 				get_search_form();
 
 		endif; ?>
-	</div><!-- .page-content -->
-</section><!-- .no-results -->
+	</div>
+
+</section>

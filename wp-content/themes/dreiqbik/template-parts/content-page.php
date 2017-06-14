@@ -11,29 +11,27 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
+    <?php if ( TEMPLATE_PATH ): ?>
+    	<p class="h-file-path"><span class="h-file-path--highlight">Datei-Info:&nbsp;</span>content-page.php</p>
+    <?php endif ?>
+
 	<section class="container">
 		<div class="container--inner">
 
-		    <?php if ( TEMPLATE_PATH ): ?>
-		    	<p class="h-file-path"><span class="h-file-path--highlight">Datei-Info:&nbsp;</span>content-page.php</p>
-		    <?php endif ?>
+			<header class="entry__header">
+				<h1 class="entry__title"><?php the_title(); ?></h1>
+			</header>
 
-			<header class="entry-header">
-				<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-			</header><!-- .entry-header -->
+			<div class="entry__content">
+				<?php
+					the_content();
 
-			<div class="entry-content">
-
-					<?php
-						the_content();
-
-						wp_link_pages( array(
-							'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'dreiqbik' ),
-							'after'  => '</div>',
-						) );
-					?>
-
-			</div><!-- .entry-content -->
+					wp_link_pages( array(
+						'before' => '<div class="site__links">' . esc_html__( 'Pages:', 'dreiqbik' ),
+						'after'  => '</div>',
+					) );
+				?>
+			</div>
 
 		</div>
 	</section>
@@ -42,59 +40,40 @@
 	<!-- GRID example -->
 	<section class="container h-container--dom-rdy">
 		<div class="container--inner">
+
 			<div class="row">
+
 				<div class="col col-xs-12 col-md-6">
 					<div class="card h-equal-01">
-						<img src="http://placehold.it/600x100" style="width:100%; height:auto; margin-bottom: 20px;">
-						<br>
-						<h3 class="card__heading">Card</h3>
-						<p class="card__text">Aenean commodo ligula eget dolor. Aenean massa.</p>
+						<figure class="card__img-wrapper">
+							<img src="http://placehold.it/600x400" class="card__img">
+						</figure>
+						<div class="card__content">
+							<h3 class="card__heading">Card</h3>
+							<p class="card__text">Aenean commodo ligula eget dolor. Aenean massa.</p>
+						</div>
 					</div>
 				</div>
 				<div class="col col-xs-12 col-md-6">
 					<div class="card h-equal-01">
-						<img src="http://placehold.it/600x150" style="width:100%; height:auto; margin-bottom: 20px;">
-						<h3 class="card__heading">Card</h3>
-						<p class="card__text">Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+						<figure class="card__img-wrapper">
+							<img src="http://placehold.it/600x400" class="card__img">
+						</figure>
+						<div class="card__content">
+							<h3 class="card__heading">Card</h3>
+							<p class="card__text">Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+						</div>
 					</div>
 				</div>
-			</div><!-- end row -->
-		</div><!-- end container-inner -->
+
+			</div>
+
+		</div>
 	</section>
 
-	<section class="container">
-		<div class="container--inner">
-			<div class="row">
-				<div class="col col-xs-12 col-sm-6 col-md-3">
-					<div class="card h-equal-02">
-						<h3 class="card__heading">Card</h3>
-						<p class="card__text">Aenean commodo ligula eget dolor. Aenean massa.</p>
-					</div>
-				</div>
-				<div class="col col-xs-12 col-sm-6 col-md-3">
-					<div class="card h-equal-02">
-						<h3 class="card__heading">Card</h3>
-						<p class="card__text">Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-					</div>
-				</div>
-				<div class="col col-xs-12 col-sm-6 col-md-3">
-					<div class="card h-equal-02">
-						<h3 class="card__heading">Card</h3>
-						<p class="card__text">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-					</div>
-				</div>
-				<div class="col col-xs-12 col-sm-6 col-md-3">
-					<div class="card h-equal-02">
-						<h3 class="card__heading">Card</h3>
-						<p class="card__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-					</div>
-				</div>
-			</div><!-- end row -->
-		</div><!-- end container-inner -->
-	</section>
 
 	<?php if ( get_edit_post_link() ) : ?>
-		<footer class="entry-footer">
+		<footer class="entry__footer">
 
 			<?php
 				edit_post_link(
@@ -108,7 +87,7 @@
 				);
 			?>
 
-		</footer><!-- .entry-footer -->
+		</footer>
 	<?php endif; ?>
 
-</article><!-- #post-## -->
+</article>
