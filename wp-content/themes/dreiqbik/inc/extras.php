@@ -7,6 +7,7 @@
  * @package dreiQbik
  */
 
+
 /**
  * Adds custom classes to the array of body classes.
  *
@@ -27,6 +28,7 @@ function dreiqbik_body_classes( $classes ) {
 	return $classes;
 }
 add_filter( 'body_class', 'dreiqbik_body_classes' );
+
 
 /**
  * Add a pingback url auto-discovery header for singularly identifiable articles.

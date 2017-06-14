@@ -7,6 +7,7 @@
  * @package dreiQbik
  */
 
+
 if ( ! function_exists( 'dreiqbik_posted_on' ) ) :
 /**
  * Prints HTML with meta information for the current post-date/time and author.
