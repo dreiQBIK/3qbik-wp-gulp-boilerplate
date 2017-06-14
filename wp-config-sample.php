@@ -113,3 +113,8 @@ if ( !defined('ABSPATH') )
 
 /** Definiert WordPress-Variablen und fügt Dateien ein.  */
 require_once(ABSPATH . 'wp-settings.php');
+
+/**
+ * Variable zum An- und Abschalten der Template-Names
+ */
+define('TEMPLATE_PATH', false);
