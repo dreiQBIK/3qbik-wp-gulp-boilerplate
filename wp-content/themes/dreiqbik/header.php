@@ -25,8 +25,12 @@
 
 <div id="page" class="site">
 	<header id="masthead" class="site-header">
+
 		<div id="h-breakpoint-js"></div>
-		<p class="h-file-path"><span class="h-file-path--highlight">Datei-Info:&nbsp;</span>header.php</p>
+
+		<?php if ( TEMPLATE_PATH ): ?>
+			<p class="h-file-path"><span class="h-file-path--highlight">Datei-Info:&nbsp;</span>header.php</p>
+		<?php endif ?>
 
 		<div class="site-branding">
 

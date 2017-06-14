@@ -25,7 +25,9 @@ if ( post_password_required() ) {
 	<section class="container">
 		<div class="container--inner">
 
-			<p class="h-file-path"><span class="h-file-path--highlight">Datei-Info:&nbsp;</span>comments.php</p>
+			<?php if ( TEMPLATE_PATH ): ?>
+				<p class="h-file-path"><span class="h-file-path--highlight">Datei-Info:&nbsp;</span>comments.php</p>
+			<?php endif ?>
 
 			<?php
 			// You can start editing here -- including this comment!

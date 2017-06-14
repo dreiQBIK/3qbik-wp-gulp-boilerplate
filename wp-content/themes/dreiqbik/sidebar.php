@@ -17,7 +17,9 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
     <section class="container">
         <div class="container--inner">
 
-            <p class="h-file-path"><span class="h-file-path--highlight">Datei-Info:&nbsp;</span>sidebar.php</p>
+            <?php if ( TEMPLATE_PATH ): ?>
+                <p class="h-file-path"><span class="h-file-path--highlight">Datei-Info:&nbsp;</span>sidebar.php</p>
+            <?php endif ?>
 
         	<?php dynamic_sidebar( 'sidebar-1' ); ?>
 

@@ -11,7 +11,9 @@ get_header(); ?>
 
 	<section id="primary" class="content-area">
 
-        <p class="h-file-path"><span class="h-file-path--highlight">Datei-Info:&nbsp;</span>search.php</p>
+        <?php if ( TEMPLATE_PATH ): ?>
+        	<p class="h-file-path"><span class="h-file-path--highlight">Datei-Info:&nbsp;</span>search.php</p>
+        <?php endif ?>
 
 		<main id="main" class="site-main">
 
