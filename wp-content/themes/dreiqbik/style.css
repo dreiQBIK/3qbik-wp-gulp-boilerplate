@@ -1708,7 +1708,7 @@ STYLESHEET: HELPERS
     FILEPATH
 ******************************************************************/
 .h-file-path {
-  color: #62BF6D;
+  color: #fff191;
   font-family: 'Consolas';
   text-align: left;
   margin: 0 0 1em;
@@ -1836,6 +1836,81 @@ STYLESHEET: CARD
 
 .card__content {
   padding: 1em 2em 2em;
+}
+
+/******************************************************************
+STYLESHEET: FORM
+
+******************************************************************/
+.wpcf7-form p {
+  position: relative;
+  width: 100%;
+}
+
+.wpcf7-form .form__label {
+  position: absolute;
+  left: 1em;
+  top: 1em;
+  z-index: 5;
+  user-select: none;
+  transition: font-size 0.1s ease-out;
+}
+
+.wpcf7-form .form__label.active, .wpcf7-form .form__label.done {
+  left: 1.2em;
+  top: 0.3em;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.wpcf7-form .form__label.done {
+  color: #364250;
+}
+
+.wpcf7-form .form__label.active {
+  color: #ec764d;
+}
+
+.wpcf7-form .form__input {
+  width: 100%;
+  max-width: 500px;
+  background-color: #eeeeee;
+  border: none;
+  border-bottom: 2px solid #dddddd;
+  padding: 1.4em 1em 0.6em;
+}
+
+.wpcf7-form .form__input:focus {
+  outline: 0;
+  border-bottom: 2px solid #ec764d;
+}
+
+.wpcf7-form .form__input--wide {
+  max-width: 1000px;
+}
+
+.wpcf7-form .wpcf7-response-output {
+  margin: 2em 0 1em;
+  padding: 1em;
+}
+
+.wpcf7-form .wpcf7-validation-errors {
+  border: none;
+  border-left: 3px solid #D6445C;
+  color: #D6445C;
+}
+
+.wpcf7-form .wpcf7-mail-sent-ok {
+  border: none;
+  border-left: 3px solid #202A35;
+  color: #202A35;
+}
+
+.wpcf7-form .wpcf7-not-valid-tip {
+  color: #D6445C;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding-left: 1em;
 }
 
 /*# sourceMappingURL=maps/style.css.map */

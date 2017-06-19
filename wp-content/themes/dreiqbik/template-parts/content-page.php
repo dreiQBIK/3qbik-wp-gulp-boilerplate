@@ -36,42 +36,6 @@
 		</div>
 	</section>
 
-
-	<!-- GRID example -->
-	<section class="container h-container--dom-rdy">
-		<div class="container--inner">
-
-			<div class="row">
-
-				<div class="col col-xs-12 col-md-6">
-					<div class="card h-equal-01">
-						<figure class="card__img-wrapper">
-							<img src="http://placehold.it/600x400" class="card__img">
-						</figure>
-						<div class="card__content">
-							<h3 class="card__heading">Card</h3>
-							<p class="card__text">Aenean commodo ligula eget dolor. Aenean massa.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col col-xs-12 col-md-6">
-					<div class="card h-equal-01">
-						<figure class="card__img-wrapper">
-							<img src="http://placehold.it/600x400" class="card__img">
-						</figure>
-						<div class="card__content">
-							<h3 class="card__heading">Card</h3>
-							<p class="card__text">Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-						</div>
-					</div>
-				</div>
-
-			</div>
-
-		</div>
-	</section>
-
-
 	<?php if ( get_edit_post_link() ) : ?>
 		<footer class="entry__footer">
 
