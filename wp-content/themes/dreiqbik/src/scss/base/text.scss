@@ -36,3 +36,25 @@ h6 {
 p {
     font-family: $f-text;
 }
+
+.heading {
+
+    &-1 {
+        color: $c1-third;
+        margin-bottom: 1em;
+    }
+
+    &-2 {
+        font-size: 1.8rem;
+        color: $c1-third;
+        margin: 2em 0 0.5em;
+    }
+
+    &-3 {
+        margin: 2em 0 1em;
+    }
+}
+
+.text {
+    line-height: 1.8;
+}

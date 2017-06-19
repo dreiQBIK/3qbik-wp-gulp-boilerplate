@@ -24,6 +24,8 @@ get_header(); ?>
 		<section class="container h-container--dom-rdy">
 			<div class="container--inner">
 
+				<h1 class="heading-1"><?php the_title(); ?></h1>
+
 				<div class="row">
 
 					<div class="col col-xs-12 col-md-6">

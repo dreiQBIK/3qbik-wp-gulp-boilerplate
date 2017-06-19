@@ -21,6 +21,7 @@ html {
 
 body {
     font-family: $f-base;
+    color: $c1-main;
 }
 
 *,
@@ -60,4 +61,8 @@ fieldset {
 
 textarea {
     resize: vertical;
+}
+
+address {
+    font-style: normal;
 }

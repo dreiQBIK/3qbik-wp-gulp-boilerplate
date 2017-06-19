@@ -11,30 +11,34 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('post-article'); ?>>
 
-	<section class="container">
+	<section class="container container--entry">
 		<div class="container--inner">
 
 		    <?php if ( TEMPLATE_PATH ): ?>
 		    	<p class="h-file-path"><span class="h-file-path--highlight">Datei-Info:&nbsp;</span>content.php</p>
 		    <?php endif ?>
 
-			<header class="entry-header">
+			<header class="entry__header">
 				<?php
-				if ( is_single() ) :
-					the_title( '<h1 class="entry-title">', '</h1>' );
-				else :
-					the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-				endif;
+				if ( is_single() ) : ?>
+
+					<h1 class="entry__heading"><?php the_title(); ?></h1>
+
+				<?php else : ?>
+
+					<h2 class="entry__title"><a href="<?php echo esc_url( get_permalink() ); ?>" class="entry__link link link--inline" rel="bookmark"></a></h2>
+
+				<?php endif;
 
 				if ( 'post' === get_post_type() ) : ?>
-				<div class="entry-meta">
+				<div class="entry__meta">
 					<?php dreiqbik_posted_on(); ?>
-				</div><!-- .entry-meta -->
+				</div>
 				<?php
 				endif; ?>
-			</header><!-- .entry-header -->
+			</header>
 
-			<div class="entry-content">
+			<div class="entry__content text">
 
 				<?php
 					the_content( sprintf(
@@ -44,14 +48,14 @@
 					) );
 
 					wp_link_pages( array(
-						'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'dreiqbik' ),
+						'before' => '<div class="link link--inline">' . esc_html__( 'Pages:', 'dreiqbik' ),
 						'after'  => '</div>',
 					) );
 				?>
 
-			</div><!-- .entry-content -->
+			</div>
 
 		</div>
 	</section>
 
-</article><!-- #post-## -->
+</article>

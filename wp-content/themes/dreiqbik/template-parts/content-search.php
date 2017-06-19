@@ -15,22 +15,24 @@
     	<p class="h-file-path"><span class="h-file-path--highlight">Datei-Info:&nbsp;</span>content-search.php</p>
     <?php endif ?>
 
-	<section class="container">
+	<section class="container container--search">
 		<div class="container--inner">
 
-			<header class="entry__header">
-				<h2 class="entry__title"><a href="<?php echo the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
+			<div class="search__box">
+				<header class="entry__header">
+					<h2 class="entry__title"><a href="<?php echo the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
 
-				<?php if ( 'post' === get_post_type() ) : ?>
-				<div class="entry__meta">
-					<?php dreiqbik_posted_on(); ?>
+					<?php if ( 'post' === get_post_type() ) : ?>
+					<div class="entry__meta">
+						<?php dreiqbik_posted_on(); ?>
+					</div>
+					<?php endif; ?>
+
+				</header>
+
+				<div class="entry__summary">
+					<?php the_excerpt(); ?>
 				</div>
-				<?php endif; ?>
-
-			</header>
-
-			<div class="entry__summary">
-				<?php the_excerpt(); ?>
 			</div>
 
 		</div>

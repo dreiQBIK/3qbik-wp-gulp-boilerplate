@@ -15,12 +15,10 @@
     	<p class="h-file-path"><span class="h-file-path--highlight">Datei-Info:&nbsp;</span>content-page.php</p>
     <?php endif ?>
 
-	<section class="container">
+	<section class="container container--entry">
 		<div class="container--inner">
 
-			<header class="entry__header">
-				<h1 class="entry__title"><?php the_title(); ?></h1>
-			</header>
+			<h1 class="heading-1 entry__heading"><?php the_title(); ?></h1>
 
 			<div class="entry__content">
 				<?php

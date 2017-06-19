@@ -1381,6 +1381,8 @@ STYLESHEET: SIDEBAR
 
 .widget_search label > span {
   display: block;
+  font-size: 0.8rem;
+  font-weight: 700;
 }
 
 .widget_search .search-field {
@@ -1437,6 +1439,8 @@ STYLESHEET: COMMENTS
 
 .comments label {
   display: block;
+  font-size: 0.8rem;
+  font-weight: 700;
 }
 
 .comments .form-submit > .submit {
@@ -1486,6 +1490,10 @@ STYLESHEET: NAV
     display: inline-block;
     padding: 0 1em;
   }
+}
+
+.nav-main ul li.current-menu-item {
+  color: #fff191;
 }
 
 .nav-main__burger {
@@ -1583,6 +1591,7 @@ html {
 
 body {
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  color: #202A35;
 }
 
 *,
@@ -1624,6 +1633,10 @@ textarea {
   resize: vertical;
 }
 
+address {
+  font-style: normal;
+}
+
 /******************************************************************
 STYLESHEET: TEXT
 
@@ -1642,6 +1655,25 @@ h6 {
 
 p {
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
+}
+
+.heading-1 {
+  color: #ec764d;
+  margin-bottom: 1em;
+}
+
+.heading-2 {
+  font-size: 1.8rem;
+  color: #ec764d;
+  margin: 2em 0 0.5em;
+}
+
+.heading-3 {
+  margin: 2em 0 1em;
+}
+
+.text {
+  line-height: 1.8;
 }
 
 /******************************************************************
@@ -1669,6 +1701,14 @@ a:focus {
 
 a:active {
   color: inherit;
+}
+
+.link--inline {
+  border-bottom: 3px solid #ff855b;
+}
+
+.link--inline:hover {
+  color: #ec764d;
 }
 
 /******************************************************************
@@ -1814,7 +1854,7 @@ STYLESHEET: CARD
 
 ******************************************************************/
 .card {
-  background-color: #eeeeee;
+  background-color: #F5F8FB;
 }
 
 .card__img {
@@ -1913,6 +1953,16 @@ STYLESHEET: FORM
   font-size: 0.8rem;
   font-weight: 700;
   padding-left: 1em;
+}
+
+/******************************************************************
+STYLESHEET: SEARCH
+
+******************************************************************/
+.search__box {
+  background-color: #F5F8FB;
+  padding: 1em 2em;
+  margin: 1em 0;
 }
 
 /*# sourceMappingURL=maps/style.css.map */

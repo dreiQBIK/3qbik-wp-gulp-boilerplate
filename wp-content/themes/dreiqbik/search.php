@@ -22,7 +22,7 @@ get_header(); ?>
 				<div class="container--inner">
 
 					<header class="search__header">
-						<h1 class="search__title"><?php printf( esc_html__( 'Suchergebnisse für: %s', 'dreiqbik' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+						<h1 class="heading-1 search__title"><?php printf( esc_html__( 'Suchergebnisse für: %s', 'dreiqbik' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
 					</header><!-- .page-header -->
 
 				</div>

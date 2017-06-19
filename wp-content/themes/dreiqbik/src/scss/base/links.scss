@@ -25,3 +25,14 @@ a {
         color: inherit;
     }
 }
+
+.link {
+
+    &--inline {
+        border-bottom: 3px solid $c3-third;
+
+        &:hover {
+            color: $c1-third;
+        }
+    }
+}
