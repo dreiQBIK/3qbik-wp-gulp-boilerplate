@@ -7,5 +7,9 @@ STYLESHEET: FOOTER
     background-color: $c1-main;
     color: $c-white;
     text-align: center;
-    padding: 2em 0;
+    padding: 1em 0;
+
+    @include small {
+        padding: 2em 0;
+    }
 }

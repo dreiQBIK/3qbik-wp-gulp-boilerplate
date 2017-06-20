@@ -15,24 +15,6 @@ h6 {
     font-family: $f-heading;
 }
 
-h1 {
-}
-
-h2 {
-}
-
-h3 {
-}
-
-h4 {
-}
-
-h5 {
-}
-
-h6 {
-}
-
 p {
     font-family: $f-text;
 }
@@ -57,4 +39,28 @@ p {
 
 .text {
     line-height: 1.8;
+
+    &--italic {
+        font-style: italic !important;
+    }
+
+    &--light {
+        font-weight: 300 !important;
+    }
+
+    &--semibold {
+        font-weight: 600 !important;
+    }
+
+    &--bold {
+        font-weight: 700 !important;
+    }
+
+    &--white {
+        color: $c-white !important;
+    }
+
+    &--black {
+        color: $c-black !important;
+    }
 }

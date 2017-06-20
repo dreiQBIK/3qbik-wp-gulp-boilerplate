@@ -23,8 +23,10 @@ get_header(); ?>
 		<section class="container container--intro">
 			<div class="container--inner">
 
-				<h1 class="heading-1"><?php the_title(); ?></h1>
-				<p class="text">Verwenden Sie dieses Formular, um uns eine Nachricht zu senden. Wir melden uns umgehend bei Ihnen!</p>
+				<div class="contact">
+					<h1 class="heading-1 contact__heading"><?php the_title(); ?></h1>
+					<p class="text contact__text">Verwenden Sie dieses Formular, um uns eine Nachricht zu senden. Wir melden uns umgehend bei Ihnen!</p>
+				</div>
 
 			</div>
 		</section>

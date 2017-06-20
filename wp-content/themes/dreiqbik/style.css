@@ -1342,9 +1342,36 @@ STYLESHEET: CONTENT
   padding: 2em 0 4em;
 }
 
+@media only screen and (min-width: 961px) {
+  .container--error {
+    margin: 10em 0;
+  }
+}
+
+/******************************************************************
+STYLESHEET: ERROR 404
+
+******************************************************************/
 .error-404 {
   text-align: center;
   margin: 4em 0;
+}
+
+.error404 .site__footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.error404 .error__title {
+  font-size: 1.4rem;
+}
+
+@media only screen and (min-width: 961px) {
+  .error404 .error__title {
+    font-size: 1.8rem;
+  }
 }
 
 /******************************************************************
@@ -1366,7 +1393,13 @@ STYLESHEET: FOOTER
   background-color: #202A35;
   color: #ffffff;
   text-align: center;
-  padding: 2em 0;
+  padding: 1em 0;
+}
+
+@media only screen and (min-width: 481px) {
+  .site__footer {
+    padding: 2em 0;
+  }
 }
 
 /******************************************************************
@@ -1574,6 +1607,37 @@ STYLESHEET: NAV
 }
 
 /******************************************************************
+STYLESHEET: IMPRINT
+
+******************************************************************/
+.imprint h1 {
+  color: #ec764d;
+  margin-bottom: 1em;
+}
+
+.imprint h2 {
+  font-size: 1.8rem;
+  color: #ec764d;
+  margin: 2em 0 0.5em;
+}
+
+.imprint h3 {
+  margin: 2em 0 1em;
+}
+
+.imprint p {
+  line-height: 1.8;
+}
+
+.imprint a {
+  border-bottom: 3px solid #ff855b;
+}
+
+.imprint a:hover {
+  color: #ec764d;
+}
+
+/******************************************************************
 STYLESHEET: DEFAULTS
 
 ******************************************************************/
@@ -1674,6 +1738,30 @@ p {
 
 .text {
   line-height: 1.8;
+}
+
+.text--italic {
+  font-style: italic !important;
+}
+
+.text--light {
+  font-weight: 300 !important;
+}
+
+.text--semibold {
+  font-weight: 600 !important;
+}
+
+.text--bold {
+  font-weight: 700 !important;
+}
+
+.text--white {
+  color: #ffffff !important;
+}
+
+.text--black {
+  color: #000000 !important;
 }
 
 /******************************************************************
@@ -1796,33 +1884,6 @@ STYLESHEET: HELPERS
 
 .h-no-pleft {
   padding-left: 0 !important;
-}
-
-/******************************************************************
-    TEXT
-******************************************************************/
-.h-italic {
-  font-style: italic !important;
-}
-
-.h-light {
-  font-weight: 300 !important;
-}
-
-.h-semibold {
-  font-weight: 600 !important;
-}
-
-.h-bold {
-  font-weight: 700 !important;
-}
-
-.h-white {
-  color: #ffffff !important;
-}
-
-.h-black {
-  color: #000000 !important;
 }
 
 /******************************************************************

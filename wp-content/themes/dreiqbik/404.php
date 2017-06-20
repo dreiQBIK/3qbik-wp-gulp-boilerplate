@@ -17,14 +17,13 @@ get_header(); ?>
 
 		<div class="error-404 not-found">
 
-			<section class="container">
+			<section class="container container--error">
 				<div class="container--inner">
 
-					<header class="error__header">
+					<div class="error">
 						<h1 class="error__title"><?php esc_html_e( 'Ups! Diese Seite wurde nicht gefunden.', 'dreiqbik' ); ?></h1>
-					</header>
-
-					<a href="/" class="btn">Zurück zur Startseite</a>
+						<a href="/" class="btn">Zurück zur Startseite</a>
+					</div>
 
 				</div>
 			</section>

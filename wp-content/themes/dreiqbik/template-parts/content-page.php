@@ -15,20 +15,22 @@
     	<p class="h-file-path"><span class="h-file-path--highlight">Datei-Info:&nbsp;</span>content-page.php</p>
     <?php endif ?>
 
-	<section class="container container--entry">
+	<section class="container">
 		<div class="container--inner">
 
-			<h1 class="heading-1 entry__heading"><?php the_title(); ?></h1>
+			<div class="entry">
+				<h1 class="heading-1 entry__heading"><?php the_title(); ?></h1>
 
-			<div class="entry__content">
-				<?php
-					the_content();
+				<div class="entry__content">
+					<?php
+						the_content();
 
-					wp_link_pages( array(
-						'before' => '<div class="site__links">' . esc_html__( 'Pages:', 'dreiqbik' ),
-						'after'  => '</div>',
-					) );
-				?>
+						wp_link_pages( array(
+							'before' => '<div class="site__links">' . esc_html__( 'Pages:', 'dreiqbik' ),
+							'after'  => '</div>',
+						) );
+					?>
+				</div>
 			</div>
 
 		</div>

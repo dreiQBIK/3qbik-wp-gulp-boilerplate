@@ -20,11 +20,13 @@ This is the place where all scss files get imported.
 // Layout
 @import "layout/grid";
 @import "layout/content";
+@import "layout/error-404";
 @import "layout/header";
 @import "layout/footer";
 @import "layout/sidebar";
 @import "layout/comments";
 @import "layout/nav";
+@import "layout/imprint";
 
 // Base
 @import "base/defaults";

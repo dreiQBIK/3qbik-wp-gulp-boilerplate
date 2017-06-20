@@ -1,6 +1,5 @@
-# Getting started with this boilerplate
-
-## Code for a standard CF7 form
+# Code for a standard CF7 form
+Copy and paste the following code into your basic CF7 form.
 
 ```
 <label for="name" class="form__label">Ihr Name</label>[text* form-name id:name class:form__input]

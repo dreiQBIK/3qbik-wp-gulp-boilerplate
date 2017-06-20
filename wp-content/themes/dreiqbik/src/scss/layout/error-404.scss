@@ -1,0 +1,30 @@
+/******************************************************************
+STYLESHEET: ERROR 404
+
+******************************************************************/
+
+.error-404 {
+    text-align: center;
+    margin: 4em 0;
+}
+
+.error404 {
+
+    .site__footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
+    .error {
+
+        &__title {
+            font-size: 1.4rem;
+
+            @include medium {
+                font-size: 1.8rem;
+            }
+        }
+    }
+}

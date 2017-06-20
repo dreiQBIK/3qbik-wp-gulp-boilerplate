@@ -93,35 +93,3 @@ STYLESHEET: HELPERS
         padding-left: 0 !important;
     }
 }
-
-
-/******************************************************************
-    TEXT
-******************************************************************/
-
-.h {
-
-    &-italic {
-        font-style: italic !important;
-    }
-
-    &-light {
-        font-weight: 300 !important;
-    }
-
-    &-semibold {
-        font-weight: 600 !important;
-    }
-
-    &-bold {
-        font-weight: 700 !important;
-    }
-
-    &-white {
-        color: $c-white !important;
-    }
-
-    &-black {
-        color: $c-black !important;
-    }
-}

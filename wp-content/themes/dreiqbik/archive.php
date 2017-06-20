@@ -21,10 +21,12 @@ get_header(); ?>
 			<section class="container">
 				<div class="container--inner">
 
-					<header class="archive__header">
-						<h1 class="archive__heading"><?php the_archive_title(); ?></h1>
-						<div class="archive__description"><?php the_archive_description(); ?></div>
-					</header>
+					<div class="archive">
+						<header class="archive__header">
+							<h1 class="archive__heading"><?php the_archive_title(); ?></h1>
+							<div class="archive__description"><?php the_archive_description(); ?></div>
+						</header>
+					</div>
 
 				</div>
 			</section>

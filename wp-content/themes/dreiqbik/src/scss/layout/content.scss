@@ -10,7 +10,12 @@ STYLESHEET: CONTENT
     }
 }
 
-.error-404 {
-    text-align: center;
-    margin: 4em 0;
+.container {
+
+    &--error {
+
+        @include medium {
+            margin: 10em 0;
+        }
+    }
 }
