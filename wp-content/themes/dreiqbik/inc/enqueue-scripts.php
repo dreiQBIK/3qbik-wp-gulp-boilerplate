@@ -22,3 +22,31 @@ function dreiqbik_scripts() {
     }
 }
 add_action( 'wp_enqueue_scripts', 'dreiqbik_scripts' );
+
+
+
+/**
+ * Change the login screen appearance
+ */
+function dreiqbik_login_logo() { ?>
+    <style type="text/css">
+        #login h1 a, .login h1 a {
+            background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/img/dreiqbik-logo.png);
+            height: 100px;
+            width: 100px;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+    </style>
+<?php }
+add_action( 'login_enqueue_scripts', 'dreiqbik_login_logo' );
+
+function dreiqbik_login_stylesheet() {
+    wp_enqueue_style( 'dreiqbik-login', get_stylesheet_directory_uri() . '/login.css' );
+}
+add_action( 'login_enqueue_scripts', 'dreiqbik_login_stylesheet' );
+
+function dreiqbik_login_logo_url() {
+    return home_url();
+}
+add_filter( 'login_headerurl', 'dreiqbik_login_logo_url' );

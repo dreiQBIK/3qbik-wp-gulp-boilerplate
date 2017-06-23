@@ -1,0 +1,71 @@
+/******************************************************************
+STYLESHEET: LOGIN
+
+******************************************************************/
+
+body.login {
+    background-color: #202A35;
+}
+
+body.login #login {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 400px;
+}
+
+body.login form {
+    margin-top: 3em;
+    padding: 3em;
+}
+
+body.login label {
+    color: #364250;
+    font-weight: 700;
+}
+
+body.login .submit {
+    display: block;
+}
+
+body.login .submit .button {
+    background: none;
+    background-color: #ec764d;
+    color: #fff;
+    display: inline-block;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: none;
+    border-bottom: 5px solid #d96a44;
+    border-radius: 5px;
+    padding: 1em 2em;
+    margin-top: 1em;
+    width: 100%;
+
+    height: auto;
+    text-shadow: none;
+    box-shadow: none;
+    float: none;
+}
+
+body.login .submit .button:hover {
+    outline: 0;
+    background-color: #ff855b;
+}
+
+body.login #nav a,
+body.login #backtoblog a {
+    color: #B1C3D4;
+}
+
+body.login #nav a:hover,
+body.login #backtoblog a:hover {
+    color: #fff191;
+}
+
+body.login .message {
+    border-left: 5px solid #ff855b;
+    font-size: 0.9rem;
+    padding: 2em;
+    margin-top: 3em;
+}
