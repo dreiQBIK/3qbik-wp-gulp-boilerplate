@@ -24,6 +24,11 @@ body.login label {
     font-weight: 700;
 }
 
+body.login label input {
+    font-weight: normal;
+    padding: 0.5em !important;
+}
+
 body.login .submit {
     display: block;
 }
