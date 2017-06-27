@@ -30,7 +30,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:700,600,400,300);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:700,600,400,300|Merriweather:700,400,300);
 html {
   font-family: sans-serif;
   /* 1 */
@@ -1714,7 +1714,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-family: "Merriweather", "Times New Roman", Times, serif;
 }
 
 p {

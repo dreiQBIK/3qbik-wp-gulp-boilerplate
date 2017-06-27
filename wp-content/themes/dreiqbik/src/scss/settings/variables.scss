@@ -72,17 +72,18 @@ STYLESHEET: VARIABLES
 		INITIALIZE
 	==================================== */
 
-	$opensans:     'Open Sans', Helvetica, Arial, sans-serif;
+	$font-1: 'Open Sans', Helvetica, Arial, sans-serif;
+	$font-2: 'Merriweather', 'Times New Roman', Times, serif;
 
 
 	/* ====================================
 		DECLARATION
 	==================================== */
 
-	$f-base:    $opensans;
-	$f-heading: $opensans;
-	$f-link:    $opensans;
-	$f-text:    $opensans;
+	$f-base:    $font-1;
+	$f-heading: $font-2;
+	$f-link:    $font-1;
+	$f-text:    $font-1;
 
 
 

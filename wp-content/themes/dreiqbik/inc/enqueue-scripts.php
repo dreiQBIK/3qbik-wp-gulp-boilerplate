@@ -10,6 +10,9 @@
  */
 
 
+/**
+ * Enqueue dreiQBIK theme scripts
+ */
 function dreiqbik_scripts() {
     // CSS files
     wp_enqueue_style('dreiqbik-style', get_template_directory_uri() . '/style.css');
