@@ -102,7 +102,7 @@ $table_prefix  = 'wp_';
  *
  * @link https://codex.wordpress.org/Debugging_in_WordPress
  */
-define('WP_DEBUG', false);
+define('WP_DEBUG', FALSE);
 
 /* Das war’s, Schluss mit dem Bearbeiten! Viel Spaß beim Bloggen. */
 /* That's all, stop editing! Happy blogging. */
@@ -117,4 +117,9 @@ require_once(ABSPATH . 'wp-settings.php');
 /**
  * Variable zum An- und Abschalten der Template-Names
  */
-define('TEMPLATE_PATH', false);
+define('TEMPLATE_PATH', FALSE);
+
+/**
+ * Post Revisions abschalten
+ */
+define('WP_POST_REVISIONS', FALSE);
