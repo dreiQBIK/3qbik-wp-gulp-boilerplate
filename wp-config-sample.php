@@ -123,3 +123,8 @@ define('TEMPLATE_PATH', FALSE);
  * Post Revisions abschalten
  */
 define('WP_POST_REVISIONS', FALSE);
+
+/**
+ * Automatisches Löschen des Papierkorbs festlegen
+ */
+define('EMPTY_TRASH_DAYS', 10 );
