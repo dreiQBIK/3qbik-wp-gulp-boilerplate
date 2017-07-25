@@ -22,7 +22,7 @@ get_header(); ?>
 			?>
 
 			<section class="container">
-				<div class="container--inner">
+				<div class="container__inner">
 
 					<div class="nav__post">
 						<?php the_post_navigation(); ?>

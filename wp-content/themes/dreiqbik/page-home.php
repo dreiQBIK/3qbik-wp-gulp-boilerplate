@@ -1,21 +1,24 @@
 <?php
 /* *********************************************************************
 
- 		PAGE_ERROR_404
-			> GET_H_HEADER
-			> S_ERROR_404
+		Template Name: Page: Home
+
+ 		PAGE_HOME
+ 			> GET_H_HEADER
+ 			> GET_S_EXAMPLE
+			> GET_SIDEBAR
 			> GET_F_FOOTER
 
 ************************************************************************ */
 get_header();
 ?>
 <?php if ( TEMPLATE_PATH ): ?>
-	<p class="h-file-path"><span class="h-file-path--highlight">Datei-Info:&nbsp;</span>page-404.php</p>
+	<p class="h-file-path"><span class="h-file-path--highlight">Datei-Info:&nbsp;</span>page-home.php</p>
 <?php endif ?>
 
 
 
-<div class="page p_error-404">
+<div class="page p_home">
 
 	<?php
 	/* ************************************************************************
@@ -29,21 +32,21 @@ get_header();
 
 		<?php
 		/* ************************************************************************
-					S_ERROR_404
+					GET_S_EXAMPLE
 		*************************************************************************** */
 		?>
-		<section class="container container--s_error-404 s_error-404">
-			<div class="container__inner container__inner--s_error-404">
+		<?php get_template_part( 'template-sections/s_example'); ?>
 
-				<div class="s_error-404__content">
-					<h1 class="heading-1 s_error-404__heading"><?php esc_html_e( 'Ups! Diese Seite wurde nicht gefunden.', 'dreiqbik' ); ?></h1>
-					<a class="btn s_error-404__btn" href="/">Zurück zur Startseite</a>
-				</div>
+	</main><!-- end page__main -->
 
-			</div><!-- end container__inner -->
-		</section>
 
-	</main>
+	<?php
+	/* ************************************************************************
+				GET_SIDEBAR
+	*************************************************************************** */
+	?>
+	<?php get_sidebar(); ?>
+
 
 	<?php
 	/* ************************************************************************

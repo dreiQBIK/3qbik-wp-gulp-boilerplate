@@ -1,54 +1,85 @@
 <?php
-/**
- * The template for displaying archive pages.
- *
- * @link https://codex.wordpress.org/Template_Hierarchy
- *
- * @package dreiQbik
- */
+/* *********************************************************************
 
-get_header(); ?>
+ 		PAGE_ARCHIVE
+			> GET_H_HEADER
+			> S_ARCHIVE
+            > GET_CONTENT
+            > GET_SIDEBAR
+			> GET_F_FOOTER
 
-    <?php if ( TEMPLATE_PATH ): ?>
-    	<p class="h-file-path"><span class="h-file-path--highlight">Datei-Info:&nbsp;</span>archive.php</p>
-    <?php endif ?>
+************************************************************************ */
+get_header();
+?>
+<?php if ( TEMPLATE_PATH ): ?>
+	<p class="h-file-path"><span class="h-file-path--highlight">Datei-Info:&nbsp;</span>page-archive.php</p>
+<?php endif ?>
 
-	<main class="site__main">
 
-		<?php
-		if ( have_posts() ) : ?>
 
-			<section class="container">
-				<div class="container--inner">
+<div class="page p_archive">
 
-					<div class="archive">
-						<header class="archive__header">
-							<h1 class="archive__heading"><?php the_archive_title(); ?></h1>
-							<div class="archive__description"><?php the_archive_description(); ?></div>
-						</header>
-					</div>
+	<?php
+	/* ************************************************************************
+				GET_H_HEADER
+	*************************************************************************** */
+	?>
+	<?php get_template_part( 'template-header/h_header'); ?>
 
-				</div>
-			</section>
 
-			<?php
-			/* Start the Loop */
-			while ( have_posts() ) : the_post();
+	<main class="page-main">
 
-				get_template_part( 'template-parts/content', get_post_format() );
+        <?php
+		/* ************************************************************************
+					S_ARCHIVE
+		*************************************************************************** */
+		?>
+    	<?php if ( have_posts() ) : ?>
+    		<section class="container container--s_archive">
+    			<div class="container__inner container__inner--s_archive">
 
-			endwhile;
+    				<div class="s_archive__content">
+						<h1 class="heading-1 s_archive__heading"><?php the_archive_title(); ?></h1>
+						<div class="s_archive__description"><?php the_archive_description(); ?></div>
+    				</div>
 
-			the_posts_navigation();
+    			</div><!-- end container__inner -->
+    		</section>
 
-		else :
 
-			get_template_part( 'template-parts/content', 'none' );
+        <?php
+        /* ************************************************************************
+                    GET_CONTENT
+        *************************************************************************** */
+        ?>
+        <?php
+    			/* Start the Loop */
+    			while ( have_posts() ) : the_post();
+    				get_template_part( 'template-parts/content', get_post_format() );
+    			endwhile;
 
-		endif; ?>
+    			the_posts_navigation();
 
-	</main>
+    		else :
+    			get_template_part( 'template-parts/content', 'none' );
+    		endif;
+        ?>
 
-<?php
-get_sidebar();
-get_footer();
+    </main>
+
+
+    <?php
+    /* ************************************************************************
+                GET_SIDEBAR
+    *************************************************************************** */
+    ?>
+    <?php get_sidebar(); ?>
+
+
+    <?php
+    /* ************************************************************************
+                GET_F_FOOTER
+    *************************************************************************** */
+    ?>
+    <?php get_template_part( 'template-footer/f_footer'); ?>
+    <?php get_footer(); ?>

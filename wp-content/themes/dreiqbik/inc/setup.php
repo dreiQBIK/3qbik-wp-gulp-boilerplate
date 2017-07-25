@@ -80,3 +80,10 @@ function dreiqbik_content_width() {
     $GLOBALS['content_width'] = apply_filters( 'dreiqbik_content_width', 640 );
 }
 add_action( 'after_setup_theme', 'dreiqbik_content_width', 0 );
+
+
+
+// Remove unwanted HTML comments
+function remove_html_comments($content = '') {
+	return preg_replace('/<!--(.|\s)*?-->/', '', $content);
+}

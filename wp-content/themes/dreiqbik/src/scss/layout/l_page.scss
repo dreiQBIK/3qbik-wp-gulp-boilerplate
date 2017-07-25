@@ -1,18 +1,17 @@
 /******************************************************************
-STYLESHEET: CONTENT
+    STYLESHEET: SITE
 
 ******************************************************************/
 
-.site {
-
-    &__content {
-        padding: 2em 0 4em;
-    }
+.page-wrapper {
 }
 
-.container {
+.page {
 
-    &--error {
+    &--p_startseite{
+    }
+
+    &--p_error-404 {
 
         @include medium {
             margin: 10em 0;

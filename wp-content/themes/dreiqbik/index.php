@@ -1,45 +1,66 @@
 <?php
-/**
- * The main template file.
- *
- * This is the most generic template file in a WordPress theme
- * and one of the two required files for a theme (the other being style.css).
- * It is used to display a page when nothing more specific matches a query.
- * E.g., it puts together the home page when no home.php file exists.
- *
- * @link https://codex.wordpress.org/Template_Hierarchy
- *
- * @package dreiQbik
- */
+/* *********************************************************************
 
-get_header(); ?>
+ 		WP_INDEX
+            > GET_H_HEADER
+            > GET_CONTENT
+            > GET_SIDEBAR
+            > GET_F_FOOTER
 
-    <?php if ( TEMPLATE_PATH ): ?>
-    	<p class="h-file-path"><span class="h-file-path--highlight">Datei-Info:&nbsp;</span>index.php</p>
-    <?php endif ?>
+************************************************************************ */
+get_header();
+?>
+<?php if ( TEMPLATE_PATH ): ?>
+	<p class="h-file-path"><span class="h-file-path--highlight">Datei-Info:&nbsp;</span>index.php</p>
+<?php endif ?>
 
-	<main class="site__main">
 
-		<?php
-		if ( have_posts() ) :
 
-			/* Start the Loop */
-			while ( have_posts() ) : the_post();
+<div class="page p_index">
 
-				get_template_part( 'template-parts/content', get_post_format() );
+	<?php
+	/* ************************************************************************
+				GET_H_HEADER
+	*************************************************************************** */
+	?>
+	<?php get_template_part( 'template-header/h_header'); ?>
 
-			endwhile;
 
-			the_posts_navigation();
+	<main class="page-main">
 
-		else :
+        <?php
+    	/* ************************************************************************
+    				GET_CONTENT
+    	*************************************************************************** */
+    	?>
+		<?php if ( have_posts() ) :
 
-			get_template_part( 'template-parts/content', 'none' );
+    			/* Start the Loop */
+    			while ( have_posts() ) : the_post();
+    				get_template_part( 'template-parts/content', get_post_format() );
+    			endwhile;
 
-		endif; ?>
+    			the_posts_navigation();
+
+    		else :
+    			get_template_part( 'template-parts/content', 'none' );
+    		endif; ?>
 
 	</main>
 
-<?php
-get_sidebar();
-get_footer();
+
+    <?php
+	/* ************************************************************************
+				GET_SIDEBAR
+	*************************************************************************** */
+	?>
+	<?php get_sidebar(); ?>
+
+
+	<?php
+	/* ************************************************************************
+				GET_F_FOOTER
+	*************************************************************************** */
+	?>
+	<?php get_template_part( 'template-footer/f_footer'); ?>
+	<?php get_footer(); ?>

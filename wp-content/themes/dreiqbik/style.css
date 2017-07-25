@@ -568,7 +568,7 @@ STYLESHEET: PLACEHOLDERS
   position: relative;
 }
 
-.container--inner {
+.container__inner {
   overflow: hidden;
   margin-right: auto;
   margin-left: auto;
@@ -576,19 +576,19 @@ STYLESHEET: PLACEHOLDERS
 }
 
 @media only screen and (min-width: 481px) {
-  .container--inner {
+  .container__inner {
     width: 90%;
   }
 }
 
 @media only screen and (min-width: 961px) {
-  .container--inner {
+  .container__inner {
     width: 80%;
   }
 }
 
 @media only screen and (min-width: 1361px) {
-  .container--inner {
+  .container__inner {
     max-width: 1400px;
     width: 70%;
   }

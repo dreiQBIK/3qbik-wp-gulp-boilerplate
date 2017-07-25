@@ -16,7 +16,7 @@
     <?php endif ?>
 
 	<section class="container">
-		<div class="container--inner">
+		<div class="container__inner">
 
 			<div class="entry">
 				<h1 class="heading-1 entry__heading"><?php the_title(); ?></h1>

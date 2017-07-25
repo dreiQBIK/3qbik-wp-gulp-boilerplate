@@ -87,11 +87,11 @@ gulp.task('watch', function() {
 });
 
 // Compress JPG, PNG, GIF and SVG Images
-gulp.task('tinify', function() {
-    gulp.src('src/img/**/*')
-        .pipe(tinify('5sbQH3B1Yvei62VfdgmbTQPcohUkTM8F'))
-        .pipe(gulp.dest('img'));
-});
+// gulp.task('tinify', function() {
+//     gulp.src('src/img/**/*')
+//         .pipe(tinify('5sbQH3B1Yvei62VfdgmbTQPcohUkTM8F'))
+//         .pipe(gulp.dest('img'));
+// });
 
 
 // Default Tasks

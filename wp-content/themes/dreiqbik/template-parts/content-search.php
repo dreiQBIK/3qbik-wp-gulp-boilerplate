@@ -16,7 +16,7 @@
     <?php endif ?>
 
 	<section class="container container--search">
-		<div class="container--inner">
+		<div class="container__inner">
 
 			<div class="search__box">
 				<header class="entry__header">

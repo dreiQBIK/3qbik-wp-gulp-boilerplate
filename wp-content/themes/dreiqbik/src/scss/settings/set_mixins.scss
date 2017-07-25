@@ -1,0 +1,47 @@
+/******************************************************************
+
+    SETTINGS: MIXINS
+        > BREAKPOINTS
+        > CLEARFIX
+
+******************************************************************/
+
+
+/******************************************************************
+    BREAKPOINTS
+    --> @include medium {...}
+
+******************************************************************/
+
+@mixin small {
+    @media only screen and (min-width: #{$w-small}) {
+        @content;
+    }
+}
+
+@mixin medium {
+    @media only screen and (min-width: #{$w-medium}) {
+        @content;
+    }
+}
+
+@mixin large {
+    @media only screen and (min-width: #{$w-large}) {
+        @content;
+    }
+}
+
+
+/******************************************************************
+    CLEARFIX
+    --> @include clearfix;
+
+******************************************************************/
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}

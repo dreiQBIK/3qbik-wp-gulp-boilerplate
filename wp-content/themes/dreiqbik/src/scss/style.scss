@@ -5,37 +5,46 @@ This is the place where all scss files get imported.
 ******************************************************************/
 
 // Includes
-@import "includes/wphead";
-@import "includes/normalize";
-@import "includes/print";
+@import "includes/inc_wphead";
+@import "includes/inc_normalize";
+@import "includes/inc_print";
 
 // Settings
-@import "settings/typography";
-@import "settings/variables";
-
-// Tools
-@import "tools/mixins";
-@import "tools/placeholders";
+@import "settings/set_typography";
+@import "settings/set_variables";
+@import "settings/set_mixins";
 
 // Layout
-@import "layout/grid";
-@import "layout/content";
-@import "layout/error-404";
-@import "layout/header";
-@import "layout/footer";
-@import "layout/sidebar";
-@import "layout/comments";
-@import "layout/nav";
-@import "layout/imprint";
+@import "layout/l_grid";
+@import "layout/l_container";
+@import "layout/l_site";
 
 // Base
-@import "base/defaults";
-@import "base/text";
-@import "base/links";
-@import "base/helpers";
+@import "base/b_defaults";
+@import "base/b_text";
+@import "base/b_links";
+@import "base/b_helpers";
 
 // Modules
-@import "modules/btn";
-@import "modules/card";
-@import "modules/form";
-@import "modules/search";
+@import "modules/m_btn";
+@import "modules/m_card";
+@import "modules/m_form";
+@import "modules/m_search";
+
+// Page
+@import "page/p_error-404";
+@import "page/p_imprint";
+
+// Navigation
+@import "navigation/n_nav";
+
+// Header
+@import "header/h_header";
+
+// Footer
+@import "footer/f_footer";
+
+// Sections
+@import "sections/s_comments";
+@import "sections/s_example";
+@import "sections/s_sidebar";

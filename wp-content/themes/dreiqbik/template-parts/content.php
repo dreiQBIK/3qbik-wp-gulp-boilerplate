@@ -12,7 +12,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class('post-article'); ?>>
 
 	<section class="container container--entry">
-		<div class="container--inner">
+		<div class="container__inner">
 
 		    <?php if ( TEMPLATE_PATH ): ?>
 		    	<p class="h-file-path"><span class="h-file-path--highlight">Datei-Info:&nbsp;</span>content.php</p>

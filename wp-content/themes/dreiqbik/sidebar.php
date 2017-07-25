@@ -13,7 +13,7 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 ?>
 
 <section class="container">
-    <div class="container--inner">
+    <div class="container__inner">
 
         <aside class="widget-area" role="complementary">
 

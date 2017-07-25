@@ -1,27 +1,39 @@
 <?php
-/**
- * The template for displaying all pages.
- *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages
- * and that other 'pages' on your WordPress site may use a
- * different template.
- *
- * @link https://codex.wordpress.org/Template_Hierarchy
- *
- * @package dreiQbik
- */
+/* *********************************************************************
 
-get_header(); ?>
+ 		PAGE
+ 			> GET_H_HEADER
+ 			> GET_CONTENT
+			> GET_SIDEBAR
+			> GET_F_FOOTER
 
-	<?php if ( TEMPLATE_PATH ): ?>
-		<p class="h-file-path"><span class="h-file-path--highlight">Datei-Info:&nbsp;</span>page.php</p>
-	<?php endif ?>
+************************************************************************ */
+get_header();
+?>
+<?php if ( TEMPLATE_PATH ): ?>
+	<p class="h-file-path"><span class="h-file-path--highlight">Datei-Info:&nbsp;</span>page.php</p>
+<?php endif ?>
 
-	<main class="site__main">
+
+
+<div class="page">
+
+	<?php
+	/* ************************************************************************
+				GET_H_HEADER
+	*************************************************************************** */
+	?>
+	<?php get_template_part( 'template-header/h_header'); ?>
+
+
+	<main class="page-main">
 
 		<?php
-		while ( have_posts() ) : the_post();
+		/* ************************************************************************
+					GET_CONTENT
+		*************************************************************************** */
+		?>
+		<?php while ( have_posts() ) : the_post();
 
 			get_template_part( 'template-parts/content', 'page' );
 
@@ -30,11 +42,23 @@ get_header(); ?>
 				comments_template();
 			endif;
 
-		endwhile; // End of the loop.
-		?>
+		endwhile; // End of the loop. ?>
 
 	</main>
 
-<?php
-get_sidebar();
-get_footer();
+
+	<?php
+	/* ************************************************************************
+				GET_SIDEBAR
+	*************************************************************************** */
+	?>
+	<?php get_sidebar(); ?>
+
+
+	<?php
+	/* ************************************************************************
+				GET_F_FOOTER
+	*************************************************************************** */
+	?>
+	<?php get_template_part( 'template-footer/f_footer'); ?>
+	<?php get_footer(); ?>
