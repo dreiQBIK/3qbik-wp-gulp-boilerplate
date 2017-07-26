@@ -1,41 +1,53 @@
 <?php
-/**
- * Template part for displaying results in search pages.
- *
- * @link https://codex.wordpress.org/Template_Hierarchy
- *
- * @package dreiQbik
- */
+/* *********************************************************************
 
+ 		CONTENT_C_SEARCH
+			> HEADER
+			> EXCERPT
+
+************************************************************************ */
 ?>
+<?php if ( TEMPLATE_PATH ): ?>
+	<p class="h-file-path"><span class="h-file-path--highlight">Datei-Info:&nbsp;</span>content-search.php</p>
+<?php endif ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-    <?php if ( TEMPLATE_PATH ): ?>
-    	<p class="h-file-path"><span class="h-file-path--highlight">Datei-Info:&nbsp;</span>content-search.php</p>
-    <?php endif ?>
 
-	<section class="container container--search">
-		<div class="container__inner">
+<article id="post-<?php the_ID(); ?>" <?php post_class('container container--c_search c_search'); ?>>
+	<div class="container__inner">
 
-			<div class="search__box">
-				<header class="entry__header">
-					<h2 class="entry__title"><a href="<?php echo the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
+		<div class="c_search__wrapper">
 
-					<?php if ( 'post' === get_post_type() ) : ?>
-					<div class="entry__meta">
-						<?php dreiqbik_posted_on(); ?>
-					</div>
-					<?php endif; ?>
+            <?php
+            /* ************************************************************************
+                        HEADER
+            *************************************************************************** */
+            ?>
+			<header class="c_search__header">
+				<h2 class="heading-2 c_search__heading">
+                    <a href="<?php echo the_permalink(); ?>" rel="bookmark">
+                        <?php the_title(); ?>
+                    </a>
+                </h2>
 
-				</header>
+				<?php if ( 'post' === get_post_type() ) : ?>
 
-				<div class="entry__summary">
-					<?php the_excerpt(); ?>
-				</div>
+    				<div class="m_wp-meta c_search__wp-meta">
+    					<?php dreiqbik_posted_on(); ?>
+    				</div>
+				<?php endif; ?>
+			</header>
+
+
+            <?php
+            /* ************************************************************************
+                        EXCERPT
+            *************************************************************************** */
+            ?>
+			<div class="m_wp-excerpt c_search__wp-excerpt">
+				<?php the_excerpt(); ?>
 			</div>
 
-		</div>
-	</section>
-
+		</div><!-- end c_search__wrapper -->
+	</div><!-- end container__inner -->
 </article>

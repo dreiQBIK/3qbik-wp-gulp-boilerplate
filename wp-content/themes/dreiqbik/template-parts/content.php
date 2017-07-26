@@ -1,45 +1,56 @@
 <?php
-/**
- * Template part for displaying posts.
- *
- * @link https://codex.wordpress.org/Template_Hierarchy
- *
- * @package dreiQbik
- */
+/* *********************************************************************
 
+ 		CONTENT_C_CONTENT
+			> HEADER
+			> EXCERPT
+
+************************************************************************ */
 ?>
+<?php if ( TEMPLATE_PATH ): ?>
+	<p class="h-file-path"><span class="h-file-path--highlight">Datei-Info:&nbsp;</span>content.php</p>
+<?php endif ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class('post-article'); ?>>
 
-	<section class="container container--entry">
-		<div class="container__inner">
 
-		    <?php if ( TEMPLATE_PATH ): ?>
-		    	<p class="h-file-path"><span class="h-file-path--highlight">Datei-Info:&nbsp;</span>content.php</p>
-		    <?php endif ?>
+<article id="post-<?php the_ID(); ?>" <?php post_class('container container--c_content c_content'); ?>>
+	<div class="container__inner">
 
-			<header class="entry__header">
+		<div class="c_content__wrapper">
+
+			<?php
+			/* ************************************************************************
+						HEADER
+			*************************************************************************** */
+			?>
+			<header class="c_content__header">
 				<?php
-				if ( is_single() ) : ?>
 
-					<h1 class="entry__heading"><?php the_title(); ?></h1>
+				if ( is_single() ) : ?>
+					<h1 class="heading-1 c_content__heading"><?php the_title(); ?></h1>
 
 				<?php else : ?>
-
-					<h2 class="entry__title"><a href="<?php echo esc_url( get_permalink() ); ?>" class="entry__link link link--inline" rel="bookmark"></a></h2>
+					<h2 class="heading-2">
+						<a class="link c_content__link" href="<?php echo esc_url( get_permalink() ); ?>"  rel="bookmark">Titel?</a>
+					</h2>
 
 				<?php endif;
 
 				if ( 'post' === get_post_type() ) : ?>
-				<div class="entry__meta">
-					<?php dreiqbik_posted_on(); ?>
-				</div>
+					<div class="m_wp-meta c_content_wp-meta">
+						<?php dreiqbik_posted_on(); ?>
+					</div>
 				<?php
 				endif; ?>
 			</header>
 
-			<div class="entry__content text">
 
+			<?php
+			/* ************************************************************************
+						CONTENT
+			*************************************************************************** */
+			?>
+			<div class="m_wp-content c_content__content">
 				<?php
 					the_content( sprintf(
 						/* translators: %s: Name of current post. */
@@ -48,14 +59,12 @@
 					) );
 
 					wp_link_pages( array(
-						'before' => '<div class="link link--inline">' . esc_html__( 'Pages:', 'dreiqbik' ),
+						'before' => '<div class="m_wp-content__links">' . esc_html__( 'Pages:', 'dreiqbik' ),
 						'after'  => '</div>',
 					) );
 				?>
-
 			</div>
 
-		</div>
-	</section>
-
+		</div><!-- end c_content__wrapper -->
+	</div><!-- end container__inner -->
 </article>

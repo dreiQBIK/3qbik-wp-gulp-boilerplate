@@ -1,6 +1,6 @@
 /******************************************************************
-	STYLESHEET: GRID
 
+    LAYOUT: L_GRID
 		> GENERAL
         > GRID_XS
         > GRID_SM
@@ -16,78 +16,271 @@
 
 .container {
     position: relative;
-}
+    padding: 0;
+    margin: 0;
+    margin-top: $sgap-xs;
 
-.container__inner {
-    overflow: hidden;
-  	margin-right: auto;
-  	margin-left: auto;
-  	width: 95%;
+    @include small {
+        margin-top: $sgap-sm;
+    }
 
-  	@include small {
-        width: 90%;
-  	}
+    @include medium {
+        margin-top: $sgap-md;
+    }
 
-  	@include medium {
-  		  width: 80%;
-  	}
+    @include large {
+        margin-top: $sgap-lg;
+    }
 
-  	@include large {
-    		max-width: 1400px;
-    		width: 70%;
-  	}
+    &--no-hgap {
+        margin-top: 0;
+
+        &-xs {
+            @include base-only {
+                margin-top: 0;
+            }
+        }
+        &-sm {
+            @include small-only {
+                margin-top: 0;
+            }
+        }
+        &-md {
+            @include medium-only {
+                margin-top: 0;
+            }
+        }
+        &-lg {
+            @include large-only {
+                margin-top: 0;
+            }
+        }
+    }
+
+    &__inner {
+        padding: 0;
+        margin: 0 auto;
+
+        @include base-only {
+            width: $width-xs;
+            min-width: $width-min-xs;
+            max-width: $width-max-xs;
+        }
+
+      	@include small-only {
+            width: $width-sm;
+            min-width: $width-min-sm;
+            max-width: $width-max-sm;
+      	}
+
+      	@include medium-only {
+            width: $width-md;
+            min-width: $width-min-md;
+            max-width: $width-max-md;
+      	}
+
+      	@include large {
+            width: $width-lg;
+            min-width: $width-min-lg;
+            max-width: $width-max-lg;
+      	}
+    }
 }
 
 .col {
   	float: left;
   	position: relative;
   	min-height: 1px;
-  	padding-left: $g-vgap;
-    padding-right: $g-vgap;
-  	margin-top: $g-hgap;
+    padding-left : $wgap-xs;
+    padding-right: $wgap-xs;
+    margin: 0;
+    margin-top   : $hgap-xs;
 
-    &--no-vgap {
+    @include small {
+        padding-left : $wgap-sm;
+        padding-right: $wgap-sm;
+        margin-top   : $hgap-sm;
+    }
+    @include medium {
+        padding-left : $wgap-md;
+        padding-right: $wgap-md;
+        margin-top   : $hgap-md;
+    }
+    @include large {
+        padding-left : $wgap-lg;
+        padding-right: $wgap-lg;
+        margin-top   : $hgap-lg;
+    }
+
+    &--no-wgap {
         padding-left: 0px;
         padding-right: 0px;
+
+        &-xs {
+            @include base-only {
+                padding-left: 0px;
+                padding-right: 0px;
+            }
+        }
+        &-sm {
+            @include small-only {
+                padding-left: 0px;
+                padding-right: 0px;
+            }
+        }
+        &-md {
+            @include medium-only {
+                padding-left: 0px;
+                padding-right: 0px;
+            }
+        }
+        &-lg {
+            @include large {
+                padding-left: 0px;
+                padding-right: 0px;
+            }
+        }
     }
 
     &--no-hgap {
-        margin-top: 0px;
+        margin-top: 0;
+
+        &-xs {
+            @include base-only {
+                margin-top: 0;
+            }
+        }
+        &-sm {
+            @include small-only {
+                margin-top: 0;
+            }
+        }
+        &-md {
+            @include medium-only {
+                margin-top: 0;
+            }
+        }
+        &-lg {
+            @include large {
+                margin-top: 0;
+            }
+        }
+    }
+
+    &--flex {
+        display: flex;
+        flex-wrap: wrap;
+
+        &-xs {
+            @include base-only {
+                display: flex;
+                flex-wrap: wrap;
+            }
+        }
+        &-sm {
+            @include small-only {
+                display: flex;
+                flex-wrap: wrap;
+            }
+        }
+        &-md {
+            @include medium-only {
+                display: flex;
+                flex-wrap: wrap;
+            }
+        }
+        &-lg {
+            @include large {
+                display: flex;
+                flex-wrap: wrap;
+            }
+        }
     }
 }
 
 .row {
-	margin-left: -$g-vgap;
-    margin-right: -$g-vgap;
+    margin: 0 -$wgap-xs;
 
-    &--no-vgap {
-        margin-left: 0;
-        margin-right: 0;
+    @include small {
+        margin: 0 -$wgap-sm;
     }
 
-    &--no-hgap {
-        margin-top: $g-hgap;
+    @include medium {
+        margin: 0 -$wgap-md;
     }
 
-    &--first {
-        margin-top: -$g-hgap;
+    @include large {
+        margin: 0 -$wgap-lg;
+    }
+
+    &--no-wgap {
+        margin: 0;
+
+        &-xs {
+            @include base-only {
+                margin: 0;
+            }
+        }
+        &-sm {
+            @include small-only {
+                margin: 0;
+            }
+        }
+        &-md {
+            @include medium-only {
+                margin: 0;
+            }
+        }
+        &-lg {
+            @include large {
+                margin: 0;
+            }
+        }
+    }
+
+    &--flex {
+        display: flex;
+        flex-wrap: wrap;
+
+        &-xs {
+            @include base-only {
+                display: flex;
+                flex-wrap: wrap;
+            }
+        }
+        &-sm {
+            @include small-only {
+                display: flex;
+                flex-wrap: wrap;
+            }
+        }
+        &-md {
+            @include medium-only {
+                display: flex;
+                flex-wrap: wrap;
+            }
+        }
+        &-lg {
+            @include large {
+                display: flex;
+                flex-wrap: wrap;
+            }
+        }
     }
 }
 
 .container:before,
 .container:after,
-.container-fluid:before,
-.container-fluid:after,
 .row:before,
 .row:after {
-  content: " ";
-  display: table;
+    content: " ";
+    display: table;
+    width: 0;
 }
 
 .container:after,
-.container-fluid:after,
 .row:after {
-  clear: both;
+    clear: both;
 }
 
 

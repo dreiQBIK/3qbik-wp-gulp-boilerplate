@@ -1,11 +1,10 @@
 /******************************************************************
-STYLESHEET: HELPERS
 
-    > CSS_JS_BREAKPOINTS
-    > FILEPATH
-    > MARGINS
-    > PADDINGS
-    > TEXT
+    BASE: B_HELPERS
+        > CSS_JS_BREAKPOINTS
+        > FILEPATH
+        > MARGINS
+        > PADDINGS
 
 ******************************************************************/
 
@@ -18,15 +17,15 @@ STYLESHEET: HELPERS
     width: 0;
 
     @include small {
-        width: $w-small;
+        width: $w-small-min;
     }
 
     @include medium {
-        width: $w-medium;
+        width: $w-medium-min;
     }
 
     @include large {
-        width: $w-large;
+        width: $w-large-min;
     }
 }
 

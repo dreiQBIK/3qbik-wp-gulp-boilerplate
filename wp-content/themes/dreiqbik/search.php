@@ -39,7 +39,7 @@ get_header();
 			<section class="container container--s_saerch s_search">
 				<div class="container__inner container__inner--s_saerch">
 
-					<header class="search__header">
+					<header class="s_search__header">
 						<h1 class="heading-1 s_saerch__heading">
                             <?php printf( esc_html__( 'Suchergebnisse für: %s', 'dreiqbik' ), '<span>' . get_search_query() . '</span>' ); ?>
                         </h1>

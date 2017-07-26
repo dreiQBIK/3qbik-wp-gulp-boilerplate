@@ -1,44 +1,52 @@
 <?php
-/**
- * Template part for displaying page content in page.php.
- *
- * @link https://codex.wordpress.org/Template_Hierarchy
- *
- * @package dreiQbik
- */
+/* *********************************************************************
 
+ 		CONTENT_C_PAGE
+			> CONTENT
+			> FOOTER
+
+************************************************************************ */
 ?>
+<?php if ( TEMPLATE_PATH ): ?>
+	<p class="h-file-path"><span class="h-file-path--highlight">Datei-Info:&nbsp;</span>content-page.php</p>
+<?php endif ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-    <?php if ( TEMPLATE_PATH ): ?>
-    	<p class="h-file-path"><span class="h-file-path--highlight">Datei-Info:&nbsp;</span>content-page.php</p>
-    <?php endif ?>
 
-	<section class="container">
-		<div class="container__inner">
+<article id="post-<?php the_ID(); ?>" <?php post_class('container container--c_page c_page'); ?>>
+	<div class="container__inner">
 
-			<div class="entry">
-				<h1 class="heading-1 entry__heading"><?php the_title(); ?></h1>
+        <?php
+        /* ************************************************************************
+                    CONTENT
+        *************************************************************************** */
+        ?>
+		<div class="c_page__wrapper">
+			<h1 class="heading-1 c_page__heading">
+                <?php the_title(); ?>
+            </h1>
 
-				<div class="entry__content">
-					<?php
-						the_content();
+			<div class="m_wp-content c_page__content">
+				<?php
+					the_content();
 
-						wp_link_pages( array(
-							'before' => '<div class="site__links">' . esc_html__( 'Pages:', 'dreiqbik' ),
-							'after'  => '</div>',
-						) );
-					?>
-				</div>
+					wp_link_pages( array(
+						'before' => '<div class="m_wp-content__links">' . esc_html__( 'Pages:', 'dreiqbik' ),
+						'after'  => '</div>',
+					) );
+				?>
 			</div>
+		</div><!-- end c_page__wrapper -->
+	</div><!-- end container__inner -->
 
-		</div>
-	</section>
 
+    <?php
+    /* ************************************************************************
+                FOOTER
+    *************************************************************************** */
+    ?>
 	<?php if ( get_edit_post_link() ) : ?>
-		<footer class="entry__footer">
-
+		<footer class="c_page__footer">
 			<?php
 				edit_post_link(
 					sprintf(
@@ -50,8 +58,6 @@
 					'</span>'
 				);
 			?>
-
 		</footer>
 	<?php endif; ?>
-
 </article>

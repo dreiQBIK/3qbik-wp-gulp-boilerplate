@@ -1,10 +1,11 @@
 /******************************************************************
-STYLESHEET: VARIABLES
 
-    > COLORS
-    > FONTS
-    > GRID_GAPS
-    > BREAKPOINTS
+	SETTINGS: SET_VARIABLES
+	    > COLORS
+	    > FONTS
+	    > GRID_GAPS
+		> GRID_WIDTH
+	    > BREAKPOINTS
 
 ******************************************************************/
 
@@ -91,15 +92,62 @@ STYLESHEET: VARIABLES
 	GRID_GAPS
 ******************************************************************/
 
-$g-vgap: 20px /2;	// gaps between columns
-$g-hgap: 20px;		// gaps between rows
+	$wgap-xs: 			1rem /2;	// gaps between columns
+	$hgap-xs: 			1rem;		// gaps between rows
+	$sgap-xs: 			2rem;		// gaps between sections
 
+	$wgap-sm: 			1rem /2;	// gaps between columns
+	$hgap-sm: 			1rem;		// gaps between rows
+	$sgap-sm: 			3rem;		// gaps between sections
+
+	$wgap-md: 			2rem /2;	// gaps between columns
+	$hgap-md: 			2rem;		// gaps between rows
+	$sgap-md: 			4rem;		// gaps between sections
+
+	$wgap-lg: 			2rem /2;	// gaps between columns
+	$hgap-lg: 			2rem;		// gaps between rows
+	$sgap-lg: 			6rem;		// gaps between sections
+
+
+
+/******************************************************************
+	GRID_WIDTH
+******************************************************************/
+
+	$width-xs: 			95%;
+	$width-min-xs: 		0;
+	$width-max-xs: 		none;
+
+	$width-sm: 			90%;
+	$width-min-sm: 		0;
+	$width-max-sm: 		none;
+
+	$width-md: 			80%;
+	$width-min-md: 		0;
+	$width-max-md: 		none;
+
+	$width-lg: 			70%;
+	$width-min-lg: 		0;
+	$width-max-lg: 		1400px;
+
+	$width-xl: 			60%;
+	$width-min-xl: 		0;
+	$width-max-xl: 		none;
 
 
 /******************************************************************
 	BREAKPOINTS
 ******************************************************************/
 
-$w-small:  481px;
-$w-medium: 961px;
-$w-large:  1361px;
+	$w-base-max: 		480px;
+
+	$w-small-min: 		481px;
+	$w-small-max: 		960px;
+
+	$w-medium-min: 		961px;
+	$w-medium-max: 		1360px;
+
+	$w-large-min: 		1361px;
+	$w-large-max: 		1920px;
+
+	$w-xlarge-min: 		1921px;
