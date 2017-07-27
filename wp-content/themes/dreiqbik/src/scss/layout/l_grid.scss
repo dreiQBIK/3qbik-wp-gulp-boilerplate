@@ -62,6 +62,7 @@
         margin: 0 auto;
 
         @include base-only {
+            padding: 0 $wgap-xs;
             width: $width-xs;
             min-width: $width-min-xs;
             max-width: $width-max-xs;

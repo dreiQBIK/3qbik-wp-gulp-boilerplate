@@ -1,0 +1,30 @@
+/******************************************************************
+
+    MODULE: M_GRID_ITEM
+
+******************************************************************/
+
+.s_grid {
+
+    &__wrapper {
+        background: $c9-grey;
+    }
+
+    &__heading {
+        color: $c-black;
+        padding: 2rem 0 0 2rem;
+    }
+
+    &__item {
+        display: flex;
+        width: 100%;
+        background: $c12-grey;
+        padding: 2rem;
+        align-items: center;
+        justify-content: center;
+
+        &--dark {
+            background: $c11-grey;
+        }
+    }
+}

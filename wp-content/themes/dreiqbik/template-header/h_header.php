@@ -12,7 +12,7 @@
 
 
 
-<header class="container container--h_header h_header">
+<header class="container container--h_header container--no-hgap h_header">
     <div class="container__inner container__inner--h_header">
 
         <?php

@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WordPress - 4.8.x package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2017-06-14 00:09:17+0000\n"
+"PO-Revision-Date: 2017-07-04 12:57:51+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -321,10 +321,6 @@ msgctxt "plugin"
 msgid "Install %s now"
 msgstr "%s jetzt installieren"
 
-#: wp-includes/widgets/class-wp-widget-media-video.php:27
-msgid "Displays a video from the media library or from YouTube, Vimeo, or another provider."
-msgstr "Zeigt ein Video aus der Mediathek oder von YouTube, Vimeo, oder einem anderen Anbieter."
-
 #. translators: placeholder is URL to media library
 #: wp-includes/widgets/class-wp-widget-media-image.php:38
 msgid "We can&#8217;t find that image. Check your <a href=\"%s\">media library</a> and make sure it wasn&#8217;t deleted."
@@ -360,6 +356,10 @@ msgid "Audio Widget (%d)"
 msgid_plural "Audio Widget (%d)"
 msgstr[0] "Audio-Widget (%d)"
 msgstr[1] "Audio-Widgets (%d)"
+
+#: wp-includes/widgets/class-wp-widget-media-video.php:27
+msgid "Displays a video from the media library or from YouTube, Vimeo, or another provider."
+msgstr "Zeigt ein Video aus der Mediathek oder von YouTube, Vimeo oder einem anderen Anbieter."
 
 #: wp-includes/script-loader.php:648
 msgctxt "plugin"
@@ -8960,10 +8960,6 @@ msgstr "Ungültige Objekt-ID"
 msgid "Stylesheet is missing."
 msgstr "Es fehlt ein Stylesheet."
 
-#: wp-includes/functions.php:5274 wp-includes/user.php:280
-msgid "Please log in again."
-msgstr "Bitte melde dich nochmal an."
-
 #: wp-includes/class-wp-editor.php:1258
 msgid "Action"
 msgstr "Aktion"
@@ -10132,10 +10128,6 @@ msgstr "Das Argument wurde durch ein Array ersetzt, um dem Verhalten der anderen
 msgid "new WordPress Loop"
 msgstr "Neue WordPress-Loop"
 
-#: wp-includes/functions.php:2602 wp-includes/ms-functions.php:2011
-msgid "Please try again."
-msgstr "Bitte nochmal versuchen."
-
 #: wp-includes/comment.php:658 wp-includes/comment.php:661
 #: wp-includes/comment.php:664
 msgid "Duplicate comment detected; it looks as though you&#8217;ve already said that!"
@@ -10208,6 +10200,14 @@ msgstr "Sprache"
 #: wp-includes/widgets/class-wp-widget-categories.php:167
 msgid "Show post counts"
 msgstr "Beitragsanzahl anzeigen"
+
+#: wp-includes/functions.php:5274 wp-includes/user.php:280
+msgid "Please log in again."
+msgstr "Bitte melde dich erneut an."
+
+#: wp-includes/functions.php:2602 wp-includes/ms-functions.php:2011
+msgid "Please try again."
+msgstr "Bitte versuche es noch einmal."
 
 #: wp-includes/link-template.php:2300 wp-includes/link-template.php:2352
 msgid "&laquo; Previous Page"

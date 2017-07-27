@@ -37,7 +37,7 @@ get_header();
 
 				<div class="s_error-404__content">
 					<h1 class="heading-1 s_error-404__heading"><?php esc_html_e( 'Ups! Diese Seite wurde nicht gefunden.', 'dreiqbik' ); ?></h1>
-					<a class="btn s_error-404__btn" href="/">Zurück zur Startseite</a>
+					<a class="btn btn--light s_error-404__btn" href="/">Zurück zur Startseite</a>
 				</div>
 
 			</div><!-- end container__inner -->

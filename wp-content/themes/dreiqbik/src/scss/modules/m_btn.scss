@@ -4,20 +4,42 @@
 
 ******************************************************************/
 
-.btn {
-    background-color: $c1-third;
-    color: $c-white;
+.btn,
+a.btn {
     display: inline-block;
     font-weight: 700;
     text-transform: uppercase;
     border: none;
-    border-bottom: 5px solid $c2-third;
     border-radius: 5px;
     padding: 1em 2em;
     margin-top: 1em;
+    transition: 0.1s ease-in-out;
 
-    &:hover {
-        outline: 0;
-        background-color: $c3-third;
+    &--light {
+        background-color: $c12-grey;
+        border-bottom: 5px solid  $c10-grey;
+        color: $c1-main;
+
+        &:hover {
+
+            @include medium {
+                outline: 0;
+                background-color: $c11-grey;
+            }
+        }
+    }
+
+    &--dark {
+        background-color: $c1-third;
+        border-bottom: 5px solid $c2-third;
+        color: $c-white;
+
+        &:hover {
+
+            @include medium {
+                outline: 0;
+                background-color: $c3-third;
+            }
+        }
     }
 }

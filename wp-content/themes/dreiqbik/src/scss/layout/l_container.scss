@@ -15,6 +15,11 @@
 
 .container__inner {
 
+    &--s_sidebar {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
     &--s_example {
     }
 

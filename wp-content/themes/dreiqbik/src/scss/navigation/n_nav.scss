@@ -4,9 +4,10 @@
 
 ******************************************************************/
 
-.nav-main {
+.n_nav {
     display: none;
     margin-top: 2em;
+    margin-bottom: 1.2em;
 
     @include medium {
         display: block;
@@ -29,75 +30,79 @@
                 color: $c1-second;
             }
         }
+
+        a {
+            color: $c-white;
+        }
+    }
+}
+
+.n_nav-burger {
+    display: block;
+    position: absolute;
+    width: 40px;
+    height: 42px;
+    cursor: pointer;
+    right: 2.5%;
+    top: 0.7em;
+    transition: all 0.25s ease-in-out;
+
+    @include small {
+        right: 5%;
     }
 
-    &__burger {
-        display: block;
+    @include medium {
+        display: none;
+    }
+
+    span,
+    span:before,
+    span:after {
+        content: '';
         position: absolute;
-        width: 40px;
-        height: 42px;
-        cursor: pointer;
-        right: 2.5%;
-        top: 0.7em;
-        transition: all 0.25s ease-in-out;
+        display: block;
+        height: 5px;
+        width: 30px;
+        background: $c-white;
+        transition: all 0.15s ease-in-out;
+    }
 
-        @include small {
-            right: 5%;
-        }
+    span {
+        left: 8px;
+        top: 18px;
+    }
 
-        @include medium {
-            display: none;
-        }
+    span:before {
+        top: -8px;
 
-        span,
-        span:before,
-        span:after {
-            content: '';
-            position: absolute;
-            display: block;
-            height: 5px;
-            width: 30px;
-            background: $c-white;
-            transition: all 0.15s ease-in-out;
+        @include large {
+          top: -9px;
         }
+    }
+
+    span:after {
+        bottom: -8px;
+
+        @include large {
+          bottom: -9px;
+        }
+    }
+
+    &.active {
 
         span {
-            left: 8px;
-            top: 18px;
+          background-color: transparent;
         }
-
-        span:before {
-            top: -8px;
-
-            @include large {
-              top: -9px;
-            }
-        }
-
+        span:before,
         span:after {
-            bottom: -8px;
-
-            @include large {
-              bottom: -9px;
-            }
+            top: 0;
         }
+        span:before {
 
-        &.active {
-
-            span {
-              background-color: transparent;
-            }
-            span:before,
-            span:after {
-                top: 0;
-            }
-            span:before {
-
-                transform: rotate(45deg);
-            }
-            span:after {
-                transform: rotate(-45deg);
-            }
+            transform: rotate(45deg);
+        }
+        span:after {
+            transform: rotate(-45deg);
         }
     }
 }

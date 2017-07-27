@@ -92,7 +92,7 @@
 	GRID_GAPS
 ******************************************************************/
 
-	$wgap-xs: 			1rem /2;	// gaps between columns
+	$wgap-xs: 			1rem;	// gaps between columns
 	$hgap-xs: 			1rem;		// gaps between rows
 	$sgap-xs: 			2rem;		// gaps between sections
 
@@ -114,13 +114,13 @@
 	GRID_WIDTH
 ******************************************************************/
 
-	$width-xs: 			95%;
+	$width-xs: 			100%;
 	$width-min-xs: 		0;
-	$width-max-xs: 		none;
+	$width-max-xs: 		360px;
 
 	$width-sm: 			90%;
 	$width-min-sm: 		0;
-	$width-max-sm: 		none;
+	$width-max-sm: 		600px;
 
 	$width-md: 			80%;
 	$width-min-md: 		0;

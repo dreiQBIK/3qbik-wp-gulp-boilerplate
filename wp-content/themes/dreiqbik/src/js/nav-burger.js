@@ -29,8 +29,8 @@
     	NAV_BURGER
     ******************************************************************/
 
-    var $siteNavigation = $('.nav-main');
-    var $siteNavigationBurger = $('.nav-main__burger');
+    var $siteNavigation = $('.n_nav');
+    var $siteNavigationBurger = $('.n_nav-burger');
 
     $siteNavigationBurger.on('click', function() {
         $siteNavigation.slideToggle('fast');

@@ -16,13 +16,10 @@
     				HEADING
     	*************************************************************************** */
         ?>
-        <div class="row">
-            <div class="col col-xs-12">
-                <div class="s_example__heading-wrapper">
-                    <h1 class="heading-1 s_example__heading"><?php the_title(); ?></h1>
-                </div>
-            </div><!-- end col -->
-        </div><!-- end row -->
+
+        <div class="s_example__heading-wrapper">
+            <h1 class="heading-1 s_example__heading"><?php the_title(); ?></h1>
+        </div>
 
 
         <?php

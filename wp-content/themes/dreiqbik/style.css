@@ -592,7 +592,7 @@ th {
   margin-top: 0;
 }
 
-@media only screen and (min-width: 480px) {
+@media only screen and (max-width: 480px) {
   .container--no-hgap-xs {
     margin-top: 0;
   }
@@ -621,11 +621,12 @@ th {
   margin: 0 auto;
 }
 
-@media only screen and (min-width: 480px) {
+@media only screen and (max-width: 480px) {
   .container__inner {
-    width: 95%;
+    padding: 0 1rem;
+    width: 100%;
     min-width: 0;
-    max-width: none;
+    max-width: 360px;
   }
 }
 
@@ -633,7 +634,7 @@ th {
   .container__inner {
     width: 90%;
     min-width: 0;
-    max-width: none;
+    max-width: 600px;
   }
 }
 
@@ -657,8 +658,8 @@ th {
   float: left;
   position: relative;
   min-height: 1px;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   margin: 0;
   margin-top: 1rem;
 }
@@ -692,7 +693,7 @@ th {
   padding-right: 0px;
 }
 
-@media only screen and (min-width: 480px) {
+@media only screen and (max-width: 480px) {
   .col--no-wgap-xs {
     padding-left: 0px;
     padding-right: 0px;
@@ -724,7 +725,7 @@ th {
   margin-top: 0;
 }
 
-@media only screen and (min-width: 480px) {
+@media only screen and (max-width: 480px) {
   .col--no-hgap-xs {
     margin-top: 0;
   }
@@ -753,7 +754,7 @@ th {
   flex-wrap: wrap;
 }
 
-@media only screen and (min-width: 480px) {
+@media only screen and (max-width: 480px) {
   .col--flex-xs {
     display: flex;
     flex-wrap: wrap;
@@ -782,7 +783,7 @@ th {
 }
 
 .row {
-  margin: -0.5rem;
+  margin: -1rem;
 }
 
 @media only screen and (min-width: 481px) {
@@ -807,7 +808,7 @@ th {
   margin: 0;
 }
 
-@media only screen and (min-width: 480px) {
+@media only screen and (max-width: 480px) {
   .row--no-wgap-xs {
     margin: 0;
   }
@@ -836,7 +837,7 @@ th {
   flex-wrap: wrap;
 }
 
-@media only screen and (min-width: 480px) {
+@media only screen and (max-width: 480px) {
   .row--flex-xs {
     display: flex;
     flex-wrap: wrap;
@@ -1571,6 +1572,11 @@ th {
     LAYOUT: L_CONTAINER
 
 ******************************************************************/
+.container__inner--s_sidebar {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
 /******************************************************************
 
     LAYOUT: L_PAGE
@@ -1669,13 +1675,13 @@ p {
 
 .heading-1 {
   color: #ec764d;
-  margin-bottom: 1em;
+  margin: 0;
 }
 
 .heading-2 {
   font-size: 1.8rem;
   color: #ec764d;
-  margin: 2em 0 0.5em;
+  margin: 0;
 }
 
 .heading-3 {
@@ -1837,22 +1843,46 @@ a:active {
     MODULE: M_BUTTON
 
 ******************************************************************/
-.btn {
-  background-color: #ec764d;
-  color: #ffffff;
+.btn,
+a.btn {
   display: inline-block;
   font-weight: 700;
   text-transform: uppercase;
   border: none;
-  border-bottom: 5px solid #d96a44;
   border-radius: 5px;
   padding: 1em 2em;
   margin-top: 1em;
+  transition: 0.1s ease-in-out;
 }
 
-.btn:hover {
-  outline: 0;
-  background-color: #ff855b;
+.btn--light,
+a.btn--light {
+  background-color: #cccccc;
+  border-bottom: 5px solid #aaaaaa;
+  color: #202A35;
+}
+
+@media only screen and (min-width: 961px) {
+  .btn--light:hover,
+  a.btn--light:hover {
+    outline: 0;
+    background-color: #bbbbbb;
+  }
+}
+
+.btn--dark,
+a.btn--dark {
+  background-color: #ec764d;
+  border-bottom: 5px solid #d96a44;
+  color: #ffffff;
+}
+
+@media only screen and (min-width: 961px) {
+  .btn--dark:hover,
+  a.btn--dark:hover {
+    outline: 0;
+    background-color: #ff855b;
+  }
 }
 
 /******************************************************************
@@ -1860,30 +1890,29 @@ a:active {
     MODULE: M_CARD
 
 ******************************************************************/
-.card {
+.m_card {
   background-color: #F5F8FB;
 }
 
-.card__img {
+.m_card__img {
   width: 100%;
   height: auto;
 }
 
-.card__img-wrapper {
+.m_card__img-wrapper {
   width: 100%;
   height: auto;
-  max-height: 200px;
   margin: 0;
   overflow: hidden;
 }
 
 @media only screen and (min-width: 961px) {
-  .card__img-wrapper {
+  .m_card__img-wrapper {
     max-height: 300px;
   }
 }
 
-.card__content {
+.m_card__content {
   padding: 1em 2em 2em;
 }
 
@@ -1968,12 +1997,6 @@ a:active {
     MODULE: M_SEARCH
 
 ******************************************************************/
-.search__box {
-  background-color: #F5F8FB;
-  padding: 1em 2em;
-  margin: 1em 0;
-}
-
 /******************************************************************
 
     PAGE: P_ERROR_404
@@ -1981,7 +2004,6 @@ a:active {
 ******************************************************************/
 .p_error-404 {
   text-align: center;
-  margin: 4em 0;
 }
 
 /******************************************************************
@@ -2021,39 +2043,44 @@ a:active {
     NAVIGATION: N_NAV
 
 ******************************************************************/
-.nav-main {
+.n_nav {
   display: none;
   margin-top: 2em;
+  margin-bottom: 1.2em;
 }
 
 @media only screen and (min-width: 961px) {
-  .nav-main {
+  .n_nav {
     display: block;
   }
 }
 
-.nav-main ul {
+.n_nav ul {
   list-style-type: none;
   padding-left: 0;
   margin: 0;
 }
 
-.nav-main ul li {
+.n_nav ul li {
   padding: 0.5em 0;
 }
 
 @media only screen and (min-width: 961px) {
-  .nav-main ul li {
+  .n_nav ul li {
     display: inline-block;
     padding: 0 1em;
   }
 }
 
-.nav-main ul li.current-menu-item {
+.n_nav ul li.current-menu-item {
   color: #fff191;
 }
 
-.nav-main__burger {
+.n_nav ul a {
+  color: #ffffff;
+}
+
+.n_nav-burger {
   display: block;
   position: absolute;
   width: 40px;
@@ -2065,20 +2092,20 @@ a:active {
 }
 
 @media only screen and (min-width: 481px) {
-  .nav-main__burger {
+  .n_nav-burger {
     right: 5%;
   }
 }
 
 @media only screen and (min-width: 961px) {
-  .nav-main__burger {
+  .n_nav-burger {
     display: none;
   }
 }
 
-.nav-main__burger span,
-.nav-main__burger span:before,
-.nav-main__burger span:after {
+.n_nav-burger span,
+.n_nav-burger span:before,
+.n_nav-burger span:after {
   content: '';
   position: absolute;
   display: block;
@@ -2088,45 +2115,45 @@ a:active {
   transition: all 0.15s ease-in-out;
 }
 
-.nav-main__burger span {
+.n_nav-burger span {
   left: 8px;
   top: 18px;
 }
 
-.nav-main__burger span:before {
+.n_nav-burger span:before {
   top: -8px;
 }
 
 @media only screen and (min-width: 1361px) {
-  .nav-main__burger span:before {
+  .n_nav-burger span:before {
     top: -9px;
   }
 }
 
-.nav-main__burger span:after {
+.n_nav-burger span:after {
   bottom: -8px;
 }
 
 @media only screen and (min-width: 1361px) {
-  .nav-main__burger span:after {
+  .n_nav-burger span:after {
     bottom: -9px;
   }
 }
 
-.nav-main__burger.active span {
+.n_nav-burger.active span {
   background-color: transparent;
 }
 
-.nav-main__burger.active span:before,
-.nav-main__burger.active span:after {
+.n_nav-burger.active span:before,
+.n_nav-burger.active span:after {
   top: 0;
 }
 
-.nav-main__burger.active span:before {
+.n_nav-burger.active span:before {
   transform: rotate(45deg);
 }
 
-.nav-main__burger.active span:after {
+.n_nav-burger.active span:after {
   transform: rotate(-45deg);
 }
 
@@ -2135,11 +2162,11 @@ a:active {
     HEADER: H_HEADER
 
 ******************************************************************/
-.header-example {
+.h_header {
   background-color: #202A35;
   color: #ffffff;
   text-align: center;
-  padding: 2em 0;
+  min-height: 70px;
 }
 
 /******************************************************************
@@ -2151,13 +2178,6 @@ a:active {
   background-color: #202A35;
   color: #ffffff;
   text-align: center;
-  padding: 1em 0;
-}
-
-@media only screen and (min-width: 481px) {
-  .f_footer {
-    padding: 2em 0;
-  }
 }
 
 /******************************************************************
@@ -2218,10 +2238,8 @@ a:active {
     SECTION: S_SIDEBAR
 
 ******************************************************************/
-.widget-area {
+.s_sidebar {
   background-color: #fff191;
-  padding: 2em;
-  margin-top: 4em;
 }
 
 .widget_search label > span {
@@ -2256,6 +2274,33 @@ a:active {
 .widget_search .search-submit:hover {
   outline: 0;
   background-color: #ff855b;
+}
+
+/******************************************************************
+
+    MODULE: M_GRID_ITEM
+
+******************************************************************/
+.s_grid__wrapper {
+  background: #999999;
+}
+
+.s_grid__heading {
+  color: #000000;
+  padding: 2rem 0 0 2rem;
+}
+
+.s_grid__item {
+  display: flex;
+  width: 100%;
+  background: #cccccc;
+  padding: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.s_grid__item--dark {
+  background: #bbbbbb;
 }
 
 /*# sourceMappingURL=maps/style.css.map */
