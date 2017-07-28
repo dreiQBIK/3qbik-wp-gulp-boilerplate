@@ -1,14 +1,23 @@
 <?php
 /**
- * Register widget area.
+ * ***********************************************************************************************
+ * WIDGETS
  *
- * Eventually, some of the functionality here could be replaced by core features.
+ *  > REGISTER_WIDGETS
+ *  >
+ *
+ * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  *
  * @package dreiQbik
- */
+ *********************************************************************************************** */
 
+
+/**
+ * ***********************************************************************************************
+ * REGISTER_WIDGETS
+ *********************************************************************************************** */
 
 function dreiqbik_widgets_init() {
     register_sidebar( array(

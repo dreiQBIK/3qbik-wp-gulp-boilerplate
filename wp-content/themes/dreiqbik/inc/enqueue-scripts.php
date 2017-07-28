@@ -1,18 +1,23 @@
 <?php
 /**
+ * ***********************************************************************************************
+ * ENQUEUE_SCRIPTS
+ *
+ *  > ENQUEUE_THEME_SCRIPTS
+ *  > CHANGE_LOGIN_SCREEN_APPEARANCE
+ *  >
+ *
  * Enqueue Scripts and Stylesheets
  *
- * Eventually, some of the functionality here could be replaced by core features.
- *
- * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
- *
  * @package dreiQbik
- */
+ *********************************************************************************************** */
 
 
 /**
- * Enqueue dreiQBIK theme scripts
- */
+ * ***********************************************************************************************
+ * ENQUEUE_THEME_SCRIPTS
+ *********************************************************************************************** */
+
 function dreiqbik_scripts() {
     // CSS files
     wp_enqueue_style('dreiqbik-style', get_template_directory_uri() . '/style.css');
@@ -29,8 +34,10 @@ add_action( 'wp_enqueue_scripts', 'dreiqbik_scripts' );
 
 
 /**
- * Change the login screen appearance
- */
+ * ***********************************************************************************************
+ * CHANGE_LOGIN_SCREEN_APPEARANCE
+ *********************************************************************************************** */
+
 // Change logo img
 function dreiqbik_login_logo() { ?>
     <style type="text/css">
@@ -50,9 +57,3 @@ function dreiqbik_login_stylesheet() {
     wp_enqueue_style( 'dreiqbik-login', get_stylesheet_directory_uri() . '/login.css' );
 }
 add_action( 'login_enqueue_scripts', 'dreiqbik_login_stylesheet' );
-
-// Change logo URL
-function dreiqbik_login_logo_url() {
-    return home_url();
-}
-add_filter( 'login_headerurl', 'dreiqbik_login_logo_url' );

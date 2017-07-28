@@ -2,13 +2,13 @@
 Copy and paste the following code into your basic CF7 form.
 
 ```
-<label for="name" class="form__label">Ihr Name</label>[text* form-name id:name class:form__input]
+<label for="name" class="m_form__label">Ihr Name</label>[text* form-name id:name class:m_form__input]
 
-<label for="email" class="form__label">Ihre E-Mail-Adresse</label>[email* form-email id:email class:form__input]
+<label for="email" class="m_form__label">Ihre E-Mail-Adresse</label>[email* form-email id:email class:m_form__input]
 
-<label for="subject" class="form__label">Betreff</label>[text form-subject id:subject class:form__input]
+<label for="subject" class="m_form__label">Betreff</label>[text form-subject id:subject class:m_form__input]
 
-<label for="message" class="form__label">Ihre Nachricht</label>[textarea* form-message id:message class:form__input class:form__input--wide]
+<label for="message" class="m_form__label">Ihre Nachricht</label>[textarea* form-message id:message class:m_form__input class:m_form__input--wide]
 
-[submit class:btn class:btn--light class:form__btn "Abschicken"]
+[submit class:m_btn class:m_btn--light class:m_form__btn "Abschicken"]
 ```
