@@ -6,7 +6,19 @@
 
 (function($) {
 
-    // Your Code here
+
+    /******************************************************************
+        VARS
+    ******************************************************************/
+
+    // your code here
+
+
+    /******************************************************************
+        FUNCTIONS
+    ******************************************************************/
+
+    // your code here
 
 })( jQuery );
 
@@ -37,11 +49,11 @@
     var container = $('.container');
 
     if(!$(container).hasClass('h-container--dom-rdy')) {
-        //set card height on document.ready for fast results
+        // set card height on document.ready for fast results
         equalHeight('.h-equal-01', 961);
         equalHeight('.h-equal-02', 481);
     } else {
-        //BUGFIX: set height after fully loading the DOM including images
+        // BUGFIX: set height after fully loading the DOM including images
         $(window).load(function() {
             equalHeight('.h-equal-01', 961);
             equalHeight('.h-equal-02', 481);
@@ -95,20 +107,35 @@
 
 (function($) {
 
+
+    /******************************************************************
+        RESET_AFTER_SENDING
+    ******************************************************************/
+
     // remove label classes and return to initial state after form was sent successfully
     $(document).on('mailsent.wpcf7', function () {
         returnToInitialState();
     });
 
+
+    /******************************************************************
+        VARS
+    ******************************************************************/
+
     // get all input fields and trigger float labels on focus
-    var $formInputs = $('.form__input');
+    var $formInputs = $('.m_form__input');
     $formInputs.on('focusin', makeLabelActive);
     $formInputs.on('focusout', makeLabelInactive);
+
+
+    /******************************************************************
+        FUNCTIONS
+    ******************************************************************/
 
     function makeLabelActive() {
 
         var $activeInput = $(this);
-        var $activeFormLabel = $activeInput.parents('p').find('.form__label');
+        var $activeFormLabel = $activeInput.parents('p').find('.m_form__label');
 
         // add active state
         $activeFormLabel.addClass('active');
@@ -117,7 +144,7 @@
     function makeLabelInactive() {
 
         var $activeInput = $(this);
-        var $activeFormLabel = $activeInput.parents('p').find('.form__label');
+        var $activeFormLabel = $activeInput.parents('p').find('.m_form__label');
 
         // remove active state
         $activeFormLabel.removeClass('active');
@@ -133,7 +160,7 @@
     }
 
     function returnToInitialState() {
-        var $formLabels = $('.form__label');
+        var $formLabels = $('.m_form__label');
         $formLabels.removeClass('active done');
     }
 
@@ -147,7 +174,7 @@
 (function($) {
 
     /******************************************************************
-    	FIRE_RESIZE_ON_CSS_BREAKPOINTS
+    	RESIZE_ON_CSS_BREAKPOINTS
     ******************************************************************/
 
     // get variables for setting js breakpoints equal to css breakpoints
@@ -170,8 +197,8 @@
     	NAV_BURGER
     ******************************************************************/
 
-    var $siteNavigation = $('.n_nav');
-    var $siteNavigationBurger = $('.n_nav-burger');
+    var $siteNavigation = $('.n_main');
+    var $siteNavigationBurger = $('.n_main-burger');
 
     $siteNavigationBurger.on('click', function() {
         $siteNavigation.slideToggle('fast');

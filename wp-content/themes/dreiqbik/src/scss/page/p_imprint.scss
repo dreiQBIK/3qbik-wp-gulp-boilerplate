@@ -4,7 +4,7 @@
 
 ******************************************************************/
 
-.imprint {
+.p_imprint {
 
     h1 {
         color: $c1-third;
@@ -23,13 +23,5 @@
 
     p {
         line-height: 1.8;
-    }
-
-    a {
-        border-bottom: 3px solid $c3-third;
-
-        &:hover {
-            color: $c1-third;
-        }
     }
 }

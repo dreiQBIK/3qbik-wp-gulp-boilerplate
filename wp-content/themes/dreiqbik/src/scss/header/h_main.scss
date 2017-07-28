@@ -1,5 +1,12 @@
 /******************************************************************
 
-    MODULE: M_WP_EXCERPT
+    HEADER: H_MAIN
 
 ******************************************************************/
+
+.h_main {
+    background-color: $c1-main;
+    color: $c-white;
+    text-align: center;
+    min-height: 70px;
+}

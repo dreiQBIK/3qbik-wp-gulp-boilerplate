@@ -10,5 +10,5 @@ Copy and paste the following code into your basic CF7 form.
 
 <label for="message" class="form__label">Ihre Nachricht</label>[textarea* form-message id:message class:form__input class:form__input--wide]
 
-[submit class:btn class:form__btn "Abschicken"]
+[submit class:btn class:btn--light class:form__btn "Abschicken"]
 ```

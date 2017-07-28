@@ -6,7 +6,7 @@
 (function($) {
 
     /******************************************************************
-    	FIRE_RESIZE_ON_CSS_BREAKPOINTS
+    	RESIZE_ON_CSS_BREAKPOINTS
     ******************************************************************/
 
     // get variables for setting js breakpoints equal to css breakpoints
@@ -29,8 +29,8 @@
     	NAV_BURGER
     ******************************************************************/
 
-    var $siteNavigation = $('.n_nav');
-    var $siteNavigationBurger = $('.n_nav-burger');
+    var $siteNavigation = $('.n_main');
+    var $siteNavigationBurger = $('.n_main-burger');
 
     $siteNavigationBurger.on('click', function() {
         $siteNavigation.slideToggle('fast');

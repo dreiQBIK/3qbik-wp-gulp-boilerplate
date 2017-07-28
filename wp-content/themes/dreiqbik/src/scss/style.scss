@@ -36,16 +36,17 @@ This is the place where all scss files get imported.
 @import "page/p_imprint";
 
 // Navigation
-@import "navigation/n_nav";
+@import "navigation/n_main";
 
 // Header
-@import "header/h_header";
+@import "header/h_main";
 
 // Footer
-@import "footer/f_footer";
+@import "footer/f_main";
 
 // Sections
-@import "sections/s_comments";
 @import "sections/s_example";
+@import "sections/s_comments";
+@import "sections/s_imprint";
 @import "sections/s_sidebar";
 @import "sections/s_grid";

@@ -51,7 +51,7 @@ define('DB_HOST', 'localhost');
  * Der Datenbankzeichensatz, der beim Erstellen der
  * Datenbanktabellen verwendet werden soll
  */
-define('DB_CHARSET', 'utf8');
+define('DB_CHARSET', 'utf8mb4');
 
 /**
  * Der Collate-Type sollte nicht geändert werden.
@@ -70,14 +70,14 @@ define('DB_COLLATE', '');
  *
  * @since 2.6.0
  */
-define('AUTH_KEY',         'Füge hier deine Zeichenkette ein');
-define('SECURE_AUTH_KEY',  'Füge hier deine Zeichenkette ein');
-define('LOGGED_IN_KEY',    'Füge hier deine Zeichenkette ein');
-define('NONCE_KEY',        'Füge hier deine Zeichenkette ein');
-define('AUTH_SALT',        'Füge hier deine Zeichenkette ein');
-define('SECURE_AUTH_SALT', 'Füge hier deine Zeichenkette ein');
-define('LOGGED_IN_SALT',   'Füge hier deine Zeichenkette ein');
-define('NONCE_SALT',       'Füge hier deine Zeichenkette ein');
+define('AUTH_KEY',         'hQoTb_|1xX#cPw&?K`akk&e2!H[lA:DF&r,XQip|S(|jB!3Kvox0T F!4ZUTL/=X');
+define('SECURE_AUTH_KEY',  'w_5@yJ Yyq9Dr(D@HV`8F^K::B38]]kHp;9<X,Og$cW5hhH`#wNrF;$uO^S{eJG[');
+define('LOGGED_IN_KEY',    'vQ|P|3_(nn$Z?5wq<H@Ja.v)dYm:JeUl0Gp<]LIA;7>nZ$}:X/s1eMp.5TA=x]at');
+define('NONCE_KEY',        'r%@p`QvQl^)#Bj ]#h}a_-B=QVjK/fkPYVZ2c=f|skVZ*{U|tfH_<u[0]TS/|Y||');
+define('AUTH_SALT',        'bxI2Xs_PC}(MUszQL2gpzIq$[&swN[tijHOn#g~1kw_(:Lo?TO8AQ0]fzY]{tm}r');
+define('SECURE_AUTH_SALT', '<D5#=p*5.pn!>mo^=,.[wo.v;QJk::2#9!#l)reG|2 VY:^_mfdKrYZ` r38Jf2I');
+define('LOGGED_IN_SALT',   'C(B-.Lauf,fGktbu<{T YC[0N8@e+Ll0E,v-+*%)B%3?2 ig3!dj0$h2#-+2 I&&');
+define('NONCE_SALT',       '4vFW`skVFX&A ]cvX+NJ^?1H94)rH3ccHW9cPe^R%KVvsu<78%C)GJ%)E_8+_XS*');
 
 /**#@-*/
 
@@ -88,7 +88,7 @@ define('NONCE_SALT',       'Füge hier deine Zeichenkette ein');
  * verschiedene WordPress-Installationen betreiben.
  * Bitte verwende nur Zahlen, Buchstaben und Unterstriche!
  */
-$table_prefix  = 'wp_';
+$table_prefix  = 'bwgp_';
 
 /**
  * Für Entwickler: Der WordPress-Debug-Modus.

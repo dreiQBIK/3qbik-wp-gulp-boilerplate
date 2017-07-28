@@ -2,11 +2,11 @@
 /* *********************************************************************
 
  		PAGE_ARCHIVE
-			> GET_H_HEADER
+			> GET_H_MAIN
 			> S_ARCHIVE
             > GET_CONTENT
             > GET_SIDEBAR
-			> GET_F_FOOTER
+			> GET_F_MAIN
 
 ************************************************************************ */
 get_header();
@@ -21,10 +21,10 @@ get_header();
 
 	<?php
 	/* ************************************************************************
-				GET_H_HEADER
+				GET_H_MAIN
 	*************************************************************************** */
 	?>
-	<?php get_template_part( 'template-header/h_header'); ?>
+	<?php get_template_part( 'template-header/h_main'); ?>
 
 
 	<main class="page-main">
@@ -78,8 +78,8 @@ get_header();
 
     <?php
     /* ************************************************************************
-                GET_F_FOOTER
+                GET_F_MAIN
     *************************************************************************** */
     ?>
-    <?php get_template_part( 'template-footer/f_footer'); ?>
+    <?php get_template_part( 'template-footer/f_main'); ?>
     <?php get_footer(); ?>

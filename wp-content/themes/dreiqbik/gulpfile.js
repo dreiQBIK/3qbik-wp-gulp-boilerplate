@@ -98,4 +98,4 @@ gulp.task('watch', function() {
 gulp.task('default', ['sass', 'scripts', 'watch']);
 
 // Build
-gulp.task('build', ['sass', 'css', 'lint', 'scripts', 'tinify']);
+gulp.task('build', ['sass', 'css', 'lint', 'scripts']);

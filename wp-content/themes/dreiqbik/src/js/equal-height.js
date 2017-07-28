@@ -25,11 +25,11 @@
     var container = $('.container');
 
     if(!$(container).hasClass('h-container--dom-rdy')) {
-        //set card height on document.ready for fast results
+        // set card height on document.ready for fast results
         equalHeight('.h-equal-01', 961);
         equalHeight('.h-equal-02', 481);
     } else {
-        //BUGFIX: set height after fully loading the DOM including images
+        // BUGFIX: set height after fully loading the DOM including images
         $(window).load(function() {
             equalHeight('.h-equal-01', 961);
             equalHeight('.h-equal-02', 481);

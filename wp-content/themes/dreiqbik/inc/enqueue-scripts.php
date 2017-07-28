@@ -31,6 +31,7 @@ add_action( 'wp_enqueue_scripts', 'dreiqbik_scripts' );
 /**
  * Change the login screen appearance
  */
+// Change logo img
 function dreiqbik_login_logo() { ?>
     <style type="text/css">
         #login h1 a, .login h1 a {
@@ -44,11 +45,13 @@ function dreiqbik_login_logo() { ?>
 <?php }
 add_action( 'login_enqueue_scripts', 'dreiqbik_login_logo' );
 
+// Enqueue CSS file
 function dreiqbik_login_stylesheet() {
     wp_enqueue_style( 'dreiqbik-login', get_stylesheet_directory_uri() . '/login.css' );
 }
 add_action( 'login_enqueue_scripts', 'dreiqbik_login_stylesheet' );
 
+// Change logo URL
 function dreiqbik_login_logo_url() {
     return home_url();
 }

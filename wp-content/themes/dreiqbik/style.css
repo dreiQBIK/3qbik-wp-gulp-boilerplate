@@ -1843,8 +1843,8 @@ a:active {
     MODULE: M_BUTTON
 
 ******************************************************************/
-.btn,
-a.btn {
+.m_btn,
+a.m_btn {
   display: inline-block;
   font-weight: 700;
   text-transform: uppercase;
@@ -1855,31 +1855,31 @@ a.btn {
   transition: 0.1s ease-in-out;
 }
 
-.btn--light,
-a.btn--light {
+.m_btn--light,
+a.m_btn--light {
   background-color: #cccccc;
   border-bottom: 5px solid #aaaaaa;
   color: #202A35;
 }
 
 @media only screen and (min-width: 961px) {
-  .btn--light:hover,
-  a.btn--light:hover {
+  .m_btn--light:hover,
+  a.m_btn--light:hover {
     outline: 0;
     background-color: #bbbbbb;
   }
 }
 
-.btn--dark,
-a.btn--dark {
+.m_btn--dark,
+a.m_btn--dark {
   background-color: #ec764d;
   border-bottom: 5px solid #d96a44;
   color: #ffffff;
 }
 
 @media only screen and (min-width: 961px) {
-  .btn--dark:hover,
-  a.btn--dark:hover {
+  .m_btn--dark:hover,
+  a.m_btn--dark:hover {
     outline: 0;
     background-color: #ff855b;
   }
@@ -1926,7 +1926,7 @@ a.btn--dark {
   width: 100%;
 }
 
-.wpcf7-form .form__label {
+.wpcf7-form .m_form__label {
   position: absolute;
   left: 1em;
   top: 1em;
@@ -1935,22 +1935,22 @@ a.btn--dark {
   transition: font-size 0.1s ease-out;
 }
 
-.wpcf7-form .form__label.active, .wpcf7-form .form__label.done {
+.wpcf7-form .m_form__label.active, .wpcf7-form .m_form__label.done {
   left: 1.2em;
   top: 0.3em;
   font-size: 0.8rem;
   font-weight: 700;
 }
 
-.wpcf7-form .form__label.done {
+.wpcf7-form .m_form__label.done {
   color: #364250;
 }
 
-.wpcf7-form .form__label.active {
+.wpcf7-form .m_form__label.active {
   color: #ec764d;
 }
 
-.wpcf7-form .form__input {
+.wpcf7-form .m_form__input {
   width: 100%;
   max-width: 500px;
   background-color: #F5F8FB;
@@ -1959,12 +1959,12 @@ a.btn--dark {
   padding: 1.4em 1em 0.6em;
 }
 
-.wpcf7-form .form__input:focus {
+.wpcf7-form .m_form__input:focus {
   outline: 0;
   border-bottom: 2px solid #ec764d;
 }
 
-.wpcf7-form .form__input--wide {
+.wpcf7-form .m_form__input--wide {
   max-width: 1000px;
 }
 
@@ -2011,76 +2011,68 @@ a.btn--dark {
     PAGE: P_IMPRINT
 
 ******************************************************************/
-.imprint h1 {
+.p_imprint h1 {
   color: #ec764d;
   margin-bottom: 1em;
 }
 
-.imprint h2 {
+.p_imprint h2 {
   font-size: 1.8rem;
   color: #ec764d;
   margin: 2em 0 0.5em;
 }
 
-.imprint h3 {
+.p_imprint h3 {
   margin: 2em 0 1em;
 }
 
-.imprint p {
+.p_imprint p {
   line-height: 1.8;
-}
-
-.imprint a {
-  border-bottom: 3px solid #ff855b;
-}
-
-.imprint a:hover {
-  color: #ec764d;
 }
 
 /******************************************************************
 
-    NAVIGATION: N_NAV
+    NAVIGATION: N_MAIN
 
 ******************************************************************/
-.n_nav {
+.n_main {
   display: none;
   margin-top: 2em;
   margin-bottom: 1.2em;
 }
 
 @media only screen and (min-width: 961px) {
-  .n_nav {
+  .n_main {
     display: block;
   }
 }
 
-.n_nav ul {
+.n_main ul {
   list-style-type: none;
   padding-left: 0;
   margin: 0;
 }
 
-.n_nav ul li {
+.n_main ul li {
   padding: 0.5em 0;
 }
 
 @media only screen and (min-width: 961px) {
-  .n_nav ul li {
+  .n_main ul li {
     display: inline-block;
     padding: 0 1em;
   }
 }
 
-.n_nav ul li.current-menu-item {
+.n_main ul li.current-menu-item {
   color: #fff191;
 }
 
-.n_nav ul a {
+.n_main ul a {
   color: #ffffff;
 }
 
-.n_nav-burger {
+.n_main-burger {
   display: block;
   position: absolute;
   width: 40px;
@@ -2092,20 +2084,20 @@ a.btn--dark {
 }
 
 @media only screen and (min-width: 481px) {
-  .n_nav-burger {
+  .n_main-burger {
     right: 5%;
   }
 }
 
 @media only screen and (min-width: 961px) {
-  .n_nav-burger {
+  .n_main-burger {
     display: none;
   }
 }
 
-.n_nav-burger span,
-.n_nav-burger span:before,
-.n_nav-burger span:after {
+.n_main-burger span,
+.n_main-burger span:before,
+.n_main-burger span:after {
   content: '';
   position: absolute;
   display: block;
@@ -2115,54 +2107,54 @@ a.btn--dark {
   transition: all 0.15s ease-in-out;
 }
 
-.n_nav-burger span {
+.n_main-burger span {
   left: 8px;
   top: 18px;
 }
 
-.n_nav-burger span:before {
+.n_main-burger span:before {
   top: -8px;
 }
 
 @media only screen and (min-width: 1361px) {
-  .n_nav-burger span:before {
+  .n_main-burger span:before {
     top: -9px;
   }
 }
 
-.n_nav-burger span:after {
+.n_main-burger span:after {
   bottom: -8px;
 }
 
 @media only screen and (min-width: 1361px) {
-  .n_nav-burger span:after {
+  .n_main-burger span:after {
     bottom: -9px;
   }
 }
 
-.n_nav-burger.active span {
+.n_main-burger.active span {
   background-color: transparent;
 }
 
-.n_nav-burger.active span:before,
-.n_nav-burger.active span:after {
+.n_main-burger.active span:before,
+.n_main-burger.active span:after {
   top: 0;
 }
 
-.n_nav-burger.active span:before {
+.n_main-burger.active span:before {
   transform: rotate(45deg);
 }
 
-.n_nav-burger.active span:after {
+.n_main-burger.active span:after {
   transform: rotate(-45deg);
 }
 
 /******************************************************************
 
-    HEADER: H_HEADER
+    HEADER: H_MAIN
 
 ******************************************************************/
-.h_header {
+.h_main {
   background-color: #202A35;
   color: #ffffff;
   text-align: center;
@@ -2171,10 +2163,10 @@ a.btn--dark {
 
 /******************************************************************
 
-    FOOTER: F_FOOTER
+    FOOTER: F_MAIN
 
 ******************************************************************/
-.f_footer {
+.f_main {
   background-color: #202A35;
   color: #ffffff;
   text-align: center;
@@ -2182,36 +2174,41 @@ a.btn--dark {
 
 /******************************************************************
 
+    SECTION: S_EXAMPLE
+
+******************************************************************/
+/******************************************************************
+
     SECTION: S_COMMENTS
 
 ******************************************************************/
-.comments {
+.s_comments {
   background-color: #eeeeee;
   padding: 2em;
   margin-top: 2em;
 }
 
-.comments input,
-.comments textarea {
+.s_comments input,
+.s_comments textarea {
   border: none;
   background-color: #F5F8FB;
   border-bottom: 2px solid #dddddd;
   padding: 1em;
 }
 
-.comments input:focus,
-.comments textarea:focus {
+.s_comments input:focus,
+.s_comments textarea:focus {
   outline: 0;
   border-bottom: 2px solid #ec764d;
 }
 
-.comments label {
+.s_comments label {
   display: block;
   font-size: 0.8rem;
   font-weight: 700;
 }
 
-.comments .form-submit > .submit {
+.s_comments .form-submit > .submit {
   background-color: #ec764d;
   color: #ffffff;
   font-weight: 700;
@@ -2223,16 +2220,24 @@ a.btn--dark {
   margin-top: 1em;
 }
 
-.comments .form-submit > .submit:hover {
+.s_comments .form-submit > .submit:hover {
   outline: 0;
   background-color: #ff855b;
 }
 
 /******************************************************************
 
-    SECTION: S_EXAMPLE
+    SECTION: S_IMPRINT
 
 ******************************************************************/
+.s_imprint a {
+  border-bottom: 3px solid #ff855b;
+}
+
+.s_imprint a:hover {
+  color: #ec764d;
+}
+
 /******************************************************************
 
     SECTION: S_SIDEBAR

@@ -2,9 +2,9 @@
 /* *********************************************************************
 
  		PAGE_ERROR_404
-			> GET_H_HEADER
+			> GET_H_MAIN
 			> S_ERROR_404
-			> GET_F_FOOTER
+			> GET_F_MAIN
 
 ************************************************************************ */
 get_header();
@@ -19,10 +19,10 @@ get_header();
 
 	<?php
 	/* ************************************************************************
-				GET_H_HEADER
+				GET_H_MAIN
 	*************************************************************************** */
 	?>
-	<?php get_template_part( 'template-header/h_header'); ?>
+	<?php get_template_part( 'template-header/h_main'); ?>
 
 
 	<main class="page-main">
@@ -37,7 +37,7 @@ get_header();
 
 				<div class="s_error-404__content">
 					<h1 class="heading-1 s_error-404__heading"><?php esc_html_e( 'Ups! Diese Seite wurde nicht gefunden.', 'dreiqbik' ); ?></h1>
-					<a class="btn btn--light s_error-404__btn" href="/">Zurück zur Startseite</a>
+					<a class="m_btn m_btn--light s_error-404__btn" href="/"><?php esc_html_e( 'Zurück zur Startseite', 'dreiqbik' ); ?></a>
 				</div>
 
 			</div><!-- end container__inner -->
@@ -47,8 +47,8 @@ get_header();
 
 	<?php
 	/* ************************************************************************
-				GET_F_FOOTER
+				GET_F_MAIN
 	*************************************************************************** */
 	?>
-	<?php get_template_part( 'template-footer/f_footer'); ?>
+	<?php get_template_part( 'template-footer/f_main'); ?>
 	<?php get_footer(); ?>
