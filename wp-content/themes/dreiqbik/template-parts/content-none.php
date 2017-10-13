@@ -1,7 +1,7 @@
 <?php
 /* *********************************************************************
 
- 		CONTENT_C_NONE
+ 		CONTENT-NONE.PHP
 			> HEADER
 			> CONTENT
 
@@ -11,7 +11,7 @@
 	<p class="h-file-path"><span class="h-file-path--highlight">Datei-Info:&nbsp;</span>content-none.php</p>
 <?php endif ?>
 
-<section class="container container--c_none c_none no-results not-found">
+<section class="container c_none">
 	<div class="container__inner container__inner--c_none">
 
 

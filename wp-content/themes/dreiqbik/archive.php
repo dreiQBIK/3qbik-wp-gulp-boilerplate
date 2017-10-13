@@ -1,7 +1,7 @@
 <?php
 /* *********************************************************************
 
- 		PAGE_ARCHIVE
+ 		ARCHIVE.PHP
 			> GET_H_MAIN
 			> S_ARCHIVE
             > GET_CONTENT

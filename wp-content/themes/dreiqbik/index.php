@@ -1,7 +1,7 @@
 <?php
 /* *********************************************************************
 
- 		WP_INDEX
+ 		INDEX.PHP
             > GET_H_MAIN
             > GET_CONTENT
             > GET_SIDEBAR

@@ -1,7 +1,7 @@
 <?php
 /* *********************************************************************
 
- 		CONTENT_C_CONTENT
+ 		CONTENT.PHP
 			> HEADER
 			> EXCERPT
 
@@ -13,7 +13,7 @@
 
 
 
-<article id="post-<?php the_ID(); ?>" <?php post_class('container container--c_content c_content'); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class('container c_content'); ?>>
 	<div class="container__inner">
 
 		<div class="c_content__wrapper">

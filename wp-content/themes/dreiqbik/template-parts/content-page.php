@@ -1,7 +1,7 @@
 <?php
 /* *********************************************************************
 
- 		CONTENT_C_PAGE
+ 		CONTENT-PAGE.PHP
 			> CONTENT
 			> FOOTER
 
@@ -13,7 +13,7 @@
 
 
 
-<article id="post-<?php the_ID(); ?>" <?php post_class('container container--c_page c_page'); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class('container c_page'); ?>>
 	<div class="container__inner">
 
         <?php

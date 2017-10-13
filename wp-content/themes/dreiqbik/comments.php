@@ -1,7 +1,7 @@
 <?php
 /* *********************************************************************
 
- 		SECTION_S_COMMENTS
+ 		COMMENTS.PHP
 			> NAV_COMMENTS_ABOVE
 			> COMMENTS_LIST
 			> NAV_COMMENTS_BELOW
@@ -27,7 +27,7 @@
 
 
 
-<section class="container container--s_comments s_comments">
+<section class="container s_comments">
 	<div class="container__inner container__inner--s_comments">
 		<div class="s_comments__content">
 

@@ -103,6 +103,6 @@ add_action( 'after_setup_theme', 'dreiqbik_content_width', 0 );
  * REMOVE_UNWANTED_HTML_COMMENTS
  *********************************************************************************************** */
 
-function remove_html_comments($content = '') {
+function dreiqbik_remove_html_comments($content = '') {
 	return preg_replace('/<!--(.|\s)*?-->/', '', $content);
 }

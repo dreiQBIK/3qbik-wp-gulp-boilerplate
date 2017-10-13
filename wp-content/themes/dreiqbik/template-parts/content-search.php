@@ -1,7 +1,7 @@
 <?php
 /* *********************************************************************
 
- 		CONTENT_C_SEARCH
+ 		CONTENT-SEARCH.PHP
 			> HEADER
 			> EXCERPT
 
@@ -13,7 +13,7 @@
 
 
 
-<article id="post-<?php the_ID(); ?>" <?php post_class('container container--c_search c_search'); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class('container c_search'); ?>>
 	<div class="container__inner">
 
 		<div class="c_search__wrapper">

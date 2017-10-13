@@ -1,7 +1,7 @@
 <?php
 /* *********************************************************************
 
- 		PAGE_SINGLE
+ 		PAGE-SINGLE.PHP
 			> GET_H_MAIN
 			> GET_CONTENT
             > GET_SIDEBAR

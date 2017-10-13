@@ -3,10 +3,10 @@
 
 		Template Name: Page: Contact
 
- 		PAGE_CONTACT
+ 		PAGE-CONTACT.PHP
  			> GET_H_MAIN
- 			> S_CONATCT
-			> S_FORM
+ 			> GET_S_CONTACT
+			> GET_S_FORM
 			> GET_F_MAIN
 
 ************************************************************************ */
@@ -32,35 +32,18 @@ get_header();
 
 		<?php
 		/* ************************************************************************
-					S_CONTACT
+					GET_S_CONTACT
 		*************************************************************************** */
 		?>
-		<section class="container container--s_contact s_contact">
-			<div class="container__inner container__inner--s_contact">
-
-				<div class="s_contact__content">
-					<h1 class="heading-1 s_contact_heading"><?php the_title(); ?></h1>
-					<p class="text s_contact__text">
-						<?php esc_html_e( 'Verwenden Sie dieses Formular, um uns eine Nachricht zu senden. Wir melden uns umgehend bei Ihnen!', 'dreiqbik'); ?>
-					</p>
-				</div>
-
-			</div><!-- end container__inner -->
-		</section>
+		<?php get_template_part( 'template-sections/s_contact'); ?>
 
 
 		<?php
 		/* ************************************************************************
-					S_FORM
+					GET_S_FORM
 		*************************************************************************** */
 		?>
-		<section class="container container--s_form s_form">
-			<div class="container__inner container__inner--s_form">
-
-				<?php echo do_shortcode('[contact-form-7 id="13" title="Kontaktformular 1"]'); ?>
-
-			</div><!-- end container__inner -->
-		</section>
+		<?php get_template_part( 'template-sections/s_form'); ?>
 
 	</main>
 

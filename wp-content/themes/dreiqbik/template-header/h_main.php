@@ -1,7 +1,7 @@
 <?php
 /* *********************************************************************
 
- 		HEADER_H_MAIN
+ 		H_MAIN.PHP
  		     > NAVIGATION
 
 ************************************************************************ */
@@ -12,7 +12,7 @@
 
 
 
-<header class="container container--h_main container--no-hgap h_main">
+<header class="container h_main">
     <div class="container__inner container__inner--h_main">
 
         <?php

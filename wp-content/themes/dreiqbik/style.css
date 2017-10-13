@@ -1999,39 +1999,6 @@ a.m_btn--dark {
 ******************************************************************/
 /******************************************************************
 
-    PAGE: P_ERROR_404
-
-******************************************************************/
-.p_error-404 {
-  text-align: center;
-}
-
-/******************************************************************
-
-    PAGE: P_IMPRINT
-
-******************************************************************/
-.p_imprint h1 {
-  color: #ec764d;
-  margin-bottom: 1em;
-}
-
-.p_imprint h2 {
-  font-size: 1.8rem;
-  color: #ec764d;
-  margin: 2em 0 0.5em;
-}
-
-.p_imprint h3 {
-  margin: 2em 0 1em;
-}
-
-.p_imprint p {
-  line-height: 1.8;
-}
-
-/******************************************************************
-
     NAVIGATION: N_MAIN
 
 ******************************************************************/
@@ -2149,6 +2116,11 @@ a.m_btn--dark {
   transform: rotate(-45deg);
 }
 
+/******************************************************************
+
+    OVERLAY: O_MAIN
+
+******************************************************************/
 /******************************************************************
 
     HEADER: H_MAIN
@@ -2279,33 +2251,6 @@ a.m_btn--dark {
 .widget_search .search-submit:hover {
   outline: 0;
   background-color: #ff855b;
-}
-
-/******************************************************************
-
-    MODULE: M_GRID_ITEM
-
-******************************************************************/
-.s_grid__wrapper {
-  background: #999999;
-}
-
-.s_grid__heading {
-  color: #000000;
-  padding: 2rem 0 0 2rem;
-}
-
-.s_grid__item {
-  display: flex;
-  width: 100%;
-  background: #cccccc;
-  padding: 2rem;
-  align-items: center;
-  justify-content: center;
-}
-
-.s_grid__item--dark {
-  background: #bbbbbb;
 }
 
 /*# sourceMappingURL=maps/style.css.map */

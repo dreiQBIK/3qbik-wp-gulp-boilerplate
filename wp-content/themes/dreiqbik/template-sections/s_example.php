@@ -1,14 +1,14 @@
 <?php
 /* ********************************************************************
 
-        SECTION_S_EXAMPLE
+        S_EXAMPLE.PHP
             > HEADING
             > CARDS
 
 *********************************************************************** */
 ?>
 
-<section class="container container--s_example s_example h-container--dom-rdy">
+<section class="container s_example">
     <div class="container__inner container__inner--s_example">
 
         <?php

@@ -31,12 +31,11 @@ This is the place where all scss files get imported.
 @import "modules/m_form";
 @import "modules/m_search";
 
-// Page
-@import "page/p_error-404";
-@import "page/p_imprint";
-
 // Navigation
 @import "navigation/n_main";
+
+// Overlays
+@import "overlays/o_main";
 
 // Header
 @import "header/h_main";
@@ -49,4 +48,3 @@ This is the place where all scss files get imported.
 @import "sections/s_comments";
 @import "sections/s_imprint";
 @import "sections/s_sidebar";
-@import "sections/s_grid";

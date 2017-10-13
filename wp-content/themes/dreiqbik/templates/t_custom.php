@@ -3,7 +3,7 @@
 
 		Template Name: Template: Custom
 
- 		TEMPLATE_CUSTOM
+ 		T_CUSTOM.PHP
  			> GET_H_MAIN
             > GET_S_EXAMPLE
             > GET_S_EXAMPLE

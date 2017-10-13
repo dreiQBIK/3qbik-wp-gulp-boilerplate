@@ -3,7 +3,7 @@
 
 		Template Name: Page: Home
 
- 		PAGE_HOME
+ 		PAGE-HOME.PHP
  			> GET_H_MAIN
  			> GET_S_EXAMPLE
 			> GET_SIDEBAR

@@ -1,7 +1,7 @@
 <?php
 /**
  * ***********************************************************************************************
- * FUNCTIONS
+ * FUNCTIONS.PHP
  *
  *  > CORE_WORDPRESS_SETUP
  *  > REGISTER_WIDGET_AREA
@@ -55,4 +55,5 @@ require get_template_directory() . '/inc/template-tags.php';
  * Custom functions that act independently of the theme templates.
  *********************************************************************************************** */
 
-require get_template_directory() . '/inc/extras.php';
+require get_template_directory() . '/inc/wp-extras.php';
+require get_template_directory() . '/inc/theme-extras.php';

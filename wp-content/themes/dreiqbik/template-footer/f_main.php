@@ -1,7 +1,7 @@
 <?php
 /* *********************************************************************
 
- 		FOOTER_F_MAIN
+ 		F_MAIN.PHP
  			> CONTENT
 
 ************************************************************************ */
@@ -14,11 +14,7 @@
 
 </div><!-- end page -->
 
-<?php if (is_front_page()) : ?>
-    <footer class="container container--f_main f_main container--no-hgap">
-<?php else : ?>
-    <footer class="container container--f_main f_main">
-<?php endif; ?>
+    <footer class="container f_main">
         <div class="container__inner container__inner--f_main">
 
             <?php

@@ -34,7 +34,11 @@ gulp.task('lint', function() {
 // Concatenate & Minify JS
 gulp.task('scripts', function() {
     return gulp
-        .src('src/js/**/*.js')
+        .src([
+            'src/js/globals/g_start.js',
+            'src/js/**.js',
+            'src/js/globals/g_end.js'
+        ])
         .pipe(concat('main.js'))
         .pipe(gulp.dest('js'))
         .pipe(rename('main.min.js'))

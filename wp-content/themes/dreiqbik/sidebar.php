@@ -1,7 +1,7 @@
 <?php
 /* *********************************************************************
 
- 		SECTION_S_SIDEABR
+ 		SIDEBAR.PHP
 
 ************************************************************************ */
 ?>
@@ -17,7 +17,7 @@
 
 
 
-<section class="container container--s_sidebar s_sidebar">
+<section class="container s_sidebar">
     <div class="container__inner container__inner--s_sidebar">
 
         <aside class="s_sidebar__content">
