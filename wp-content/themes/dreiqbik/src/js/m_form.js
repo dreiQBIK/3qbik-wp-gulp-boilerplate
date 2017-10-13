@@ -1,21 +1,11 @@
 /******************************************************************
 	FORM.JS
 
-        > RESET_AFTER_SENDING
         > VARS
+        > EVENTS
         > FUNCTIONS
 
 ******************************************************************/
-
-/******************************************************************
-    RESET_AFTER_SENDING
-******************************************************************/
-
-// remove label classes and return to initial state after form was sent successfully
-$(document).on('mailsent.wpcf7', function () {
-    returnToInitialState();
-});
-
 
 /******************************************************************
     VARS
@@ -23,6 +13,17 @@ $(document).on('mailsent.wpcf7', function () {
 
 // get all input fields and trigger float labels on focus
 var $formInputs = $('.m_form__input');
+
+
+/******************************************************************
+    EVENTS
+******************************************************************/
+
+// remove label classes and return to initial state after form was sent successfully
+$(document).on('mailsent.wpcf7', function () {
+    returnToInitialState();
+});
+
 $formInputs.on('focusin', makeLabelActive);
 $formInputs.on('focusout', makeLabelInactive);
 
