@@ -1,24 +1,17 @@
 /******************************************************************
-	GLOBAL.JS
+	_GLOBAL.JS
 
-        > GLOBAL_VARS
-        > GLOBAL_FUNCTIONS
+        > FUNCTIONS
+        > PUBLIC_FUNCTIONS
 
 ******************************************************************/
 
 
-(function($) {
-
-    /******************************************************************
-        GLOBAL_VARS
-    ******************************************************************/
-
-    var $window = $(window);
-    var $document = $(document);
+var global = (function($) {
 
 
     /******************************************************************
-        GLOBAL_FUNCTIONS
+        FUNCTIONS
     ******************************************************************/
 
     function debounce(func, wait, immediate) {
@@ -36,126 +29,183 @@
         };
     }
 
-/******************************************************************
-	FORM.JS
 
-        > RESET_AFTER_SENDING
+    /******************************************************************
+        PUBLIC_FUNCTIONS
+    ******************************************************************/
+
+    return {
+        debounce: debounce
+    };
+
+})(jQuery);
+
+/******************************************************************
+	M_FORM.JS
+
         > VARS
+        > EVENTS
         > FUNCTIONS
+        > PUBLIC_FUNCTIONS
 
 ******************************************************************/
 
-/******************************************************************
-    RESET_AFTER_SENDING
-******************************************************************/
 
-// remove label classes and return to initial state after form was sent successfully
-$(document).on('mailsent.wpcf7', function () {
-    returnToInitialState();
-});
+var mForm = (function($) {
 
 
-/******************************************************************
-    VARS
-******************************************************************/
+    /******************************************************************
+        VARS
+    ******************************************************************/
 
-// get all input fields and trigger float labels on focus
-var $formInputs = $('.m_form__input');
-$formInputs.on('focusin', makeLabelActive);
-$formInputs.on('focusout', makeLabelInactive);
+    // get all input fields and trigger float labels on focus
+    var $formInputs = $('.m_form__input');
 
 
-/******************************************************************
-    FUNCTIONS
-******************************************************************/
+    /******************************************************************
+        EVENTS
+    ******************************************************************/
 
-function makeLabelActive() {
+    // remove label classes and return to initial state after form was sent successfully
+    $(document).on('mailsent.wpcf7', function () {
+        returnToInitialState();
+    });
 
-    var $activeInput = $(this);
-    var $activeFormLabel = $activeInput.parents('p').find('.m_form__label');
+    $formInputs.on('focusin', makeLabelActive);
+    $formInputs.on('focusout', makeLabelInactive);
 
-    // add active state
-    $activeFormLabel.addClass('active');
-}
 
-function makeLabelInactive() {
+    /******************************************************************
+        FUNCTIONS
+    ******************************************************************/
 
-    var $activeInput = $(this);
-    var $activeFormLabel = $activeInput.parents('p').find('.m_form__label');
+    function makeLabelActive() {
 
-    // remove active state
-    $activeFormLabel.removeClass('active');
+        var $activeInput = $(this);
+        var $activeFormLabel = $activeInput.parents('p').find('.m_form__label');
 
-    // check if field isn't empty and add done state
-    if ( $activeInput.val() && $activeInput.val().length ) {
-        $activeFormLabel.addClass('done');
-
-    // return to initial state if field is empty
-    } else {
-        $activeFormLabel.removeClass('done');
+        // add active state
+        $activeFormLabel.addClass('active');
     }
-}
 
-function returnToInitialState() {
-    var $formLabels = $('.m_form__label');
-    $formLabels.removeClass('active done');
-}
+    function makeLabelInactive() {
+
+        var $activeInput = $(this);
+        var $activeFormLabel = $activeInput.parents('p').find('.m_form__label');
+
+        // remove active state
+        $activeFormLabel.removeClass('active');
+
+        // check if field isn't empty and add done state
+        if ( $activeInput.val() && $activeInput.val().length ) {
+            $activeFormLabel.addClass('done');
+
+        // return to initial state if field is empty
+        } else {
+            $activeFormLabel.removeClass('done');
+        }
+    }
+
+    function returnToInitialState() {
+        var $formLabels = $('.m_form__label');
+        $formLabels.removeClass('active done');
+    }
+
+
+    /******************************************************************
+        PUBLIC_FUNCTIONS
+    ******************************************************************/
+
+    return {
+        // your code here
+    };
+
+})(jQuery);
 
 /******************************************************************
-	NAV_BURGER.JS
+	N_MAIN.JS
 
-        > RESIZE_ON_CSS_BREAKPOINTS
-        > SETTINGS
-        > NAV_BURGER
+        > VARS
+        > EVENTS
+        > FUNCTIONS
+        > PUBLIC_FUNCTIONS
 
 ******************************************************************/
 
 
-/******************************************************************
-	RESIZE_ON_CSS_BREAKPOINTS
-******************************************************************/
-
-// get variables for setting js breakpoints equal to css breakpoints
-var breakpointJS = $('#h-breakpoint-js');
-var breakpointJSWidth = breakpointJS.width();
-// set js breakpoints equal to css breakpoints
-$(window).resize(function() {
-    breakpointJSWidth = breakpointJS.width();
-});
+var nMain = (function($) {
 
 
-/******************************************************************
-	SETTINGS
-******************************************************************/
+    /******************************************************************
+        VARS
+    ******************************************************************/
 
-var breakpoinCSStWidth = 961;
+    // get variables for setting js breakpoints equal to css breakpoints
+    var breakpointJS = $('#h-breakpoint-js');
+    var breakpointJSWidth = breakpointJS.width();
+    var breakpoinCSStWidth = 961;
+
+    // cache DOM elements
+    var $siteNavigation = $('.n_main');
+    var $siteNavigationBurger = $('.n_main-burger');
 
 
-/******************************************************************
-	NAV_BURGER
-******************************************************************/
+    /******************************************************************
+        EVENTS
+    ******************************************************************/
 
-var $siteNavigation = $('.n_main');
-var $siteNavigationBurger = $('.n_main-burger');
-
-$siteNavigationBurger.on('click', function() {
-    $siteNavigation.slideToggle('fast');
-    $siteNavigationBurger.toggleClass('active');
-});
-
-// if not a mobile device
-if( !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+    // set js breakpoints equal to css breakpoints
     $(window).resize(function() {
 
-        if (breakpointJSWidth >= breakpoinCSStWidth) {
-            $siteNavigation.css('display', 'block');
-            $siteNavigationBurger.css('display', 'none');
-        } else {
-            $siteNavigation.css('display', 'none');
-            $siteNavigationBurger.css('display', 'block');
+        // set breakpoint
+        breakpointJSWidth = breakpointJS.width();
+
+        // check for mobile device and hide/show nav
+        if( !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+
+            if (breakpointJSWidth >= breakpoinCSStWidth) {
+                showNav();
+
+            } else {
+                hideNav();
+            }
         }
     });
-}
+
+    // toggle nav on click on burger
+    $siteNavigationBurger.on('click', toggleNav);
+
+
+    /******************************************************************
+        FUNCTIONS
+    ******************************************************************/
+
+    function toggleNav() {
+        $siteNavigation.slideToggle('fast');
+        $siteNavigationBurger.toggleClass('active');
+    }
+
+    function showNav() {
+        $siteNavigation.show();
+        $siteNavigationBurger.hide();
+    }
+
+    function hideNav() {
+        $siteNavigation.hide();
+        $siteNavigationBurger.show();
+    }
+
+
+    /******************************************************************
+        PUBLIC_FUNCTIONS
+    ******************************************************************/
+
+    return {
+        showNav: showNav,
+        hideNav: hideNav
+    };
+
+})(jQuery);
 
 /******************************************************************
 	_CUSTOM.JS
@@ -163,9 +213,16 @@ if( !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navig
         > VARS
         > EVENTS
         > FUNCTIONS
+        > PUBLIC_FUNCTIONS
+
+        @USAGE
+        e.g. nMain.showNav();
+        e.g. $(window).on('scroll', global.debounce(nMain.hideNav, 1000));
 
 ******************************************************************/
 
+
+var custom = (function($) {
 
 
     /******************************************************************
@@ -188,82 +245,13 @@ if( !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navig
 
     // your code here
 
-/******************************************************************
-	EQUAL_HEIGHT.JS
 
-        > RESIZE_ON_CSS_BREAKPOINTS
-        > SETTINGS
-        > FUNCTIONS
+    /******************************************************************
+        PUBLIC_FUNCTIONS
+    ******************************************************************/
 
-******************************************************************/
+    return {
+        // your code here
+    };
 
-/******************************************************************
-	RESIZE_ON_CSS_BREAKPOINTS
-******************************************************************/
-
-// get variables for setting js breakpoints equal to css breakpoints
-var breakpointJS = $('#h-breakpoint-js');
-var breakpointJSWidth = breakpointJS.width();
-// set js breakpoints equal to css breakpoints
-$(window).resize(function() {
-    breakpointJSWidth = breakpointJS.width();
-});
-
-
-/******************************************************************
-	SETTINGS
-******************************************************************/
-
-var container = $('.container');
-
-if(!$(container).hasClass('h-container--dom-rdy')) {
-    // set card height on document.ready for fast results
-    equalHeight('.h-equal-01', 961);
-    equalHeight('.h-equal-02', 481);
-} else {
-    // BUGFIX: set height after fully loading the DOM including images
-    $(window).load(function() {
-        equalHeight('.h-equal-01', 961);
-        equalHeight('.h-equal-02', 481);
-    });
-}
-
-// set card height on resize
-$(window).resize(function() {
-    equalHeight('.h-equal-01', 961);
-    equalHeight('.h-equal-02', 481);
-});
-
-
-/******************************************************************
-	FUNCTIONS
-******************************************************************/
-
-function equalHeight(
-    equalHeightItem,                // set itemGroup-class for equalHeight     ['.class']
-    breakpoinCSStWidth              // set breakpoint for using equalHeight    [INT]
-) {
-
-    // BUGFIX: avoid overflowing Content on resize
-    $(equalHeightItem).css('height', 'auto');
-
-    if (breakpointJSWidth >= breakpoinCSStWidth) {
-        // Cache the highest
-        var highestBox = 0;
-
-        // Select and loop the elements you want to equalise
-        $(equalHeightItem).each(function(){
-
-            // If this box is higher than the cached highest then store it
-            if($(this).height() > highestBox) {
-                highestBox = $(this).height();
-            }
-        });
-        // Set the height of all those children to which was highest
-        $(equalHeightItem).height(highestBox);
-
-    } // end IF
-} // end equalHeight
-
-
-})( jQuery );
+})(jQuery);

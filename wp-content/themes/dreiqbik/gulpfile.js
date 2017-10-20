@@ -35,9 +35,8 @@ gulp.task('lint', function() {
 gulp.task('scripts', function() {
     return gulp
         .src([
-            'src/js/globals/g_start.js',
+            'src/js/globals/**.js',
             'src/js/**.js',
-            'src/js/globals/g_end.js'
         ])
         .pipe(concat('main.js'))
         .pipe(gulp.dest('js'))

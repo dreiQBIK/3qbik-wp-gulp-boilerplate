@@ -1,55 +1,84 @@
 /******************************************************************
-	NAV_BURGER.JS
+	N_MAIN.JS
 
-        > RESIZE_ON_CSS_BREAKPOINTS
-        > SETTINGS
-        > NAV_BURGER
+        > VARS
+        > EVENTS
+        > FUNCTIONS
+        > PUBLIC_FUNCTIONS
 
 ******************************************************************/
 
 
-/******************************************************************
-	RESIZE_ON_CSS_BREAKPOINTS
-******************************************************************/
-
-// get variables for setting js breakpoints equal to css breakpoints
-var breakpointJS = $('#h-breakpoint-js');
-var breakpointJSWidth = breakpointJS.width();
-// set js breakpoints equal to css breakpoints
-$(window).resize(function() {
-    breakpointJSWidth = breakpointJS.width();
-});
+var nMain = (function($) {
 
 
-/******************************************************************
-	SETTINGS
-******************************************************************/
+    /******************************************************************
+        VARS
+    ******************************************************************/
 
-var breakpoinCSStWidth = 961;
+    // get variables for setting js breakpoints equal to css breakpoints
+    var breakpointJS = $('#h-breakpoint-js');
+    var breakpointJSWidth = breakpointJS.width();
+    var breakpoinCSStWidth = 961;
+
+    // cache DOM elements
+    var $siteNavigation = $('.n_main');
+    var $siteNavigationBurger = $('.n_main-burger');
 
 
-/******************************************************************
-	NAV_BURGER
-******************************************************************/
+    /******************************************************************
+        EVENTS
+    ******************************************************************/
 
-var $siteNavigation = $('.n_main');
-var $siteNavigationBurger = $('.n_main-burger');
-
-$siteNavigationBurger.on('click', function() {
-    $siteNavigation.slideToggle('fast');
-    $siteNavigationBurger.toggleClass('active');
-});
-
-// if not a mobile device
-if( !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+    // set js breakpoints equal to css breakpoints
     $(window).resize(function() {
 
-        if (breakpointJSWidth >= breakpoinCSStWidth) {
-            $siteNavigation.css('display', 'block');
-            $siteNavigationBurger.css('display', 'none');
-        } else {
-            $siteNavigation.css('display', 'none');
-            $siteNavigationBurger.css('display', 'block');
+        // set breakpoint
+        breakpointJSWidth = breakpointJS.width();
+
+        // check for mobile device and hide/show nav
+        if( !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+
+            if (breakpointJSWidth >= breakpoinCSStWidth) {
+                showNav();
+
+            } else {
+                hideNav();
+            }
         }
     });
-}
+
+    // toggle nav on click on burger
+    $siteNavigationBurger.on('click', toggleNav);
+
+
+    /******************************************************************
+        FUNCTIONS
+    ******************************************************************/
+
+    function toggleNav() {
+        $siteNavigation.slideToggle('fast');
+        $siteNavigationBurger.toggleClass('active');
+    }
+
+    function showNav() {
+        $siteNavigation.show();
+        $siteNavigationBurger.hide();
+    }
+
+    function hideNav() {
+        $siteNavigation.hide();
+        $siteNavigationBurger.show();
+    }
+
+
+    /******************************************************************
+        PUBLIC_FUNCTIONS
+    ******************************************************************/
+
+    return {
+        showNav: showNav,
+        hideNav: hideNav
+    };
+
+})(jQuery);
