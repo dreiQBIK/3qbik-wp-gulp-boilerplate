@@ -9,7 +9,7 @@
 ******************************************************************/
 
 
-var nMain = (function($) {
+var nMain = (function ($) {
 
 
     /******************************************************************
@@ -31,13 +31,13 @@ var nMain = (function($) {
     ******************************************************************/
 
     // set js breakpoints equal to css breakpoints
-    $(window).resize(function() {
+    $(window).resize(function () {
 
         // set breakpoint
         breakpointJSWidth = breakpointJS.width();
 
         // check for mobile device and hide/show nav
-        if( !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+        if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
 
             if (breakpointJSWidth >= breakpoinCSStWidth) {
                 showNav();

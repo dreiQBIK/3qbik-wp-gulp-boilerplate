@@ -9,7 +9,7 @@
 ******************************************************************/
 
 
-var mForm = (function($) {
+var mForm = (function ($) {
 
 
     /******************************************************************
@@ -55,10 +55,10 @@ var mForm = (function($) {
         $activeFormLabel.removeClass('active');
 
         // check if field isn't empty and add done state
-        if ( $activeInput.val() && $activeInput.val().length ) {
+        if ($activeInput.val() && $activeInput.val().length) {
             $activeFormLabel.addClass('done');
 
-        // return to initial state if field is empty
+            // return to initial state if field is empty
         } else {
             $activeFormLabel.removeClass('done');
         }

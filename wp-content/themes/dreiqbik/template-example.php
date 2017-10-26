@@ -1,9 +1,9 @@
 <?php
 /* *********************************************************************
 
-		Template Name: Template: Custom
+		Template Name: Template: Example
 
- 		T_CUSTOM.PHP
+ 		TEMPLATE-EXAMPLE.PHP
  			> GET_H_MAIN
             > GET_S_EXAMPLE
             > GET_S_EXAMPLE
@@ -14,7 +14,7 @@
 get_header();
 ?>
 
-<div class="page t_custom">
+<div class="page t_example">
 
 	<?php
 	/* ************************************************************************

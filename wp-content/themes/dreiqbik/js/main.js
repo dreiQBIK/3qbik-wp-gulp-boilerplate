@@ -51,7 +51,7 @@ var global = (function($) {
 ******************************************************************/
 
 
-var mForm = (function($) {
+var mForm = (function ($) {
 
 
     /******************************************************************
@@ -97,10 +97,10 @@ var mForm = (function($) {
         $activeFormLabel.removeClass('active');
 
         // check if field isn't empty and add done state
-        if ( $activeInput.val() && $activeInput.val().length ) {
+        if ($activeInput.val() && $activeInput.val().length) {
             $activeFormLabel.addClass('done');
 
-        // return to initial state if field is empty
+            // return to initial state if field is empty
         } else {
             $activeFormLabel.removeClass('done');
         }
@@ -121,7 +121,6 @@ var mForm = (function($) {
     };
 
 })(jQuery);
-
 /******************************************************************
 	N_MAIN.JS
 
@@ -133,7 +132,7 @@ var mForm = (function($) {
 ******************************************************************/
 
 
-var nMain = (function($) {
+var nMain = (function ($) {
 
 
     /******************************************************************
@@ -155,13 +154,13 @@ var nMain = (function($) {
     ******************************************************************/
 
     // set js breakpoints equal to css breakpoints
-    $(window).resize(function() {
+    $(window).resize(function () {
 
         // set breakpoint
         breakpointJSWidth = breakpointJS.width();
 
         // check for mobile device and hide/show nav
-        if( !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+        if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
 
             if (breakpointJSWidth >= breakpoinCSStWidth) {
                 showNav();
@@ -206,9 +205,8 @@ var nMain = (function($) {
     };
 
 })(jQuery);
-
 /******************************************************************
-	_CUSTOM.JS
+	_EXAMPLE.JS
 
         > VARS
         > EVENTS
@@ -222,7 +220,7 @@ var nMain = (function($) {
 ******************************************************************/
 
 
-var custom = (function($) {
+var example = (function($) {
 
 
     /******************************************************************
