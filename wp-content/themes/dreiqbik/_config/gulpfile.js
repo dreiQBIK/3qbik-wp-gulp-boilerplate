@@ -53,7 +53,10 @@ gulp.task('scripts', function () {
 // Copy & Minify Vendor JS
 gulp.task('scripts-vendor', function () {
     return gulp
-        .src(['../src/js/vendor/**.js'])
+        .src([
+            '../src/js/vendor/**.js'
+        ])
+        .pipe(gulp.dest('../js/vendor'))
         .pipe(rename({
             suffix: '.min'
         }))
@@ -70,10 +73,10 @@ gulp.task('sass', function () {
         .pipe(sourcemaps.init())
         .pipe(plumber(errorHandler))
         .pipe(
-        sass({
-            outputStyle: 'expanded',
-            errLogToConsole: true
-        }).on('error', sass.logError)
+            sass({
+                outputStyle: 'expanded',
+                errLogToConsole: true
+            }).on('error', sass.logError)
         )
         .pipe(plumber.stop())
         .pipe(sourcemaps.write('maps'))
@@ -103,7 +106,7 @@ gulp.task('watch', function () {
         proxy: 'b-wp-gulp.dev'
     });
     gulp
-        .watch('../src/js/*.js', ['lint', 'scripts'])
+        .watch('../src/js/**/*.js', ['lint', 'scripts', 'scripts-vendor'])
         .on('change', browserSync.reload);
     gulp.watch('../src/scss/**/*.scss', ['sass']);
     gulp.watch('../**/*.php').on('change', browserSync.reload);
@@ -117,7 +120,7 @@ gulp.task('watch', function () {
 // });
 
 // Default Tasks
-gulp.task('default', ['sass', 'scripts', 'watch']);
+gulp.task('default', ['sass', 'scripts', 'scripts-vendor', 'watch']);
 
 // Build
 gulp.task('build', ['sass', 'css', 'lint', 'scripts', 'scripts-vendor']);

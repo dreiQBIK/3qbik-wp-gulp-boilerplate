@@ -34,7 +34,7 @@
                         <img class="m_card__img" src="http://placehold.it/600x400">
                     </figure>
                     <div class="m_card__content">
-                        <h3 class="m_card__heading">Card</h3>
+                        <h3 class="m_card__heading m_card__number">2500</h3>
                         <p class="m_card__text">
                             Aenean commodo ligula eget dolor. Aenean massa.
                         </p>
