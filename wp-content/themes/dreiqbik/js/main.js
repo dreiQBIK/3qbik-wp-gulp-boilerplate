@@ -1,5 +1,5 @@
 /******************************************************************
-	_GLOBAL.JS
+    _GLOBAL.JS
 
         > FUNCTIONS
         > PUBLIC_FUNCTIONS
@@ -7,7 +7,7 @@
 ******************************************************************/
 
 
-var global = (function($) {
+var global = (function ($) {
 
 
     /******************************************************************
@@ -16,9 +16,10 @@ var global = (function($) {
 
     function debounce(func, wait, immediate) {
         var timeout;
-        return function() {
-            var context = this, args = arguments;
-            var later = function() {
+        return function () {
+            var context = this,
+                args = arguments;
+            var later = function () {
                 timeout = null;
                 if (!immediate) func.apply(context, args);
             };
@@ -35,13 +36,13 @@ var global = (function($) {
     ******************************************************************/
 
     return {
-        debounce: debounce
+        debounce: debounce()
     };
 
 })(jQuery);
 
 /******************************************************************
-	M_FORM.JS
+    M_FORM.JS
 
         > VARS
         > EVENTS
@@ -121,8 +122,9 @@ var mForm = (function ($) {
     };
 
 })(jQuery);
+
 /******************************************************************
-	N_MAIN.JS
+    N_MAIN.JS
 
         > VARS
         > EVENTS
@@ -200,13 +202,14 @@ var nMain = (function ($) {
     ******************************************************************/
 
     return {
-        showNav: showNav,
-        hideNav: hideNav
+        showNav: showNav(),
+        hideNav: hideNav()
     };
 
 })(jQuery);
+
 /******************************************************************
-	_EXAMPLE.JS
+    _EXAMPLE.JS
 
         > VARS
         > EVENTS

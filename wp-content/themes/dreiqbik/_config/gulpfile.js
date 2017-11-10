@@ -26,9 +26,9 @@ function errorHandler() {
 // Lint JS-Files
 gulp.task('lint', function () {
     return gulp
-        .src('../src/js/*.js')
+        .src('../src/js/**.js')
         .pipe(eslint({
-            configFile: '.eslintrc'
+            configFile: '.eslintrc.js',
         }))
         .pipe(eslint.format())
         .pipe(eslint.failAfterError());
@@ -39,7 +39,7 @@ gulp.task('scripts', function () {
     return gulp
         .src([
             '../src/js/globals/**.js',
-            '../src/js/**.js'
+            '../src/js/**.js',
         ])
         .pipe(concat('main.js'))
         .pipe(gulp.dest('../js'))
@@ -54,11 +54,11 @@ gulp.task('scripts', function () {
 gulp.task('scripts-vendor', function () {
     return gulp
         .src([
-            '../src/js/vendor/**.js'
+            '../src/js/vendor/**.js',
         ])
         .pipe(gulp.dest('../js/vendor'))
         .pipe(rename({
-            suffix: '.min'
+            suffix: '.min',
         }))
         .pipe(plumber(errorHandler))
         .pipe(uglify())
@@ -72,12 +72,10 @@ gulp.task('sass', function () {
         .src('../src/scss/style.scss')
         .pipe(sourcemaps.init())
         .pipe(plumber(errorHandler))
-        .pipe(
-            sass({
-                outputStyle: 'expanded',
-                errLogToConsole: true
-            }).on('error', sass.logError)
-        )
+        .pipe(sass({
+            outputStyle: 'expanded',
+            errLogToConsole: true,
+        }).on('error', sass.logError))
         .pipe(plumber.stop())
         .pipe(sourcemaps.write('maps'))
         .pipe(gulp.dest('../'))
@@ -89,9 +87,9 @@ gulp.task('css', function () {
     var processors = [
         pixrem(),
         autoprefixer({
-            browsers: ['last 4 versions', 'android 4', 'opera 12']
+            browsers: ['last 4 versions', 'android 4', 'opera 12'],
         }),
-        cssnano()
+        cssnano(),
     ];
     return gulp
         .src('../style.css')
@@ -103,7 +101,7 @@ gulp.task('css', function () {
 // Watch Files For Changes
 gulp.task('watch', function () {
     browserSync.init({
-        proxy: 'b-wp-gulp.dev'
+        proxy: 'b-wp-gulp.dev',
     });
     gulp
         .watch('../src/js/**/*.js', ['lint', 'scripts', 'scripts-vendor'])

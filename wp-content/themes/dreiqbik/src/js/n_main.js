@@ -1,5 +1,5 @@
 /******************************************************************
-	N_MAIN.JS
+    N_MAIN.JS
 
         > VARS
         > EVENTS
@@ -77,8 +77,8 @@ var nMain = (function ($) {
     ******************************************************************/
 
     return {
-        showNav: showNav,
-        hideNav: hideNav
+        showNav: showNav(),
+        hideNav: hideNav()
     };
 
 })(jQuery);

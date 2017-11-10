@@ -1,5 +1,5 @@
 /******************************************************************
-	_GLOBAL.JS
+    _GLOBAL.JS
 
         > FUNCTIONS
         > PUBLIC_FUNCTIONS
@@ -7,7 +7,7 @@
 ******************************************************************/
 
 
-var global = (function($) {
+var global = (function ($) {
 
 
     /******************************************************************
@@ -16,9 +16,10 @@ var global = (function($) {
 
     function debounce(func, wait, immediate) {
         var timeout;
-        return function() {
-            var context = this, args = arguments;
-            var later = function() {
+        return function () {
+            var context = this,
+                args = arguments;
+            var later = function () {
                 timeout = null;
                 if (!immediate) func.apply(context, args);
             };
@@ -35,7 +36,7 @@ var global = (function($) {
     ******************************************************************/
 
     return {
-        debounce: debounce
+        debounce: debounce()
     };
 
 })(jQuery);
