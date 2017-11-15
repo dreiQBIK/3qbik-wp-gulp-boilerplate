@@ -19,15 +19,16 @@ var mForm = (function ($) {
     // get all input fields and trigger float labels on focus
     var $formInputs = $('.m_form__input');
 
+    // quit if element does not exist (on this page)
+    if (!$formInputs.length) return;
+
 
     /******************************************************************
         EVENTS
     ******************************************************************/
 
     // remove label classes and return to initial state after form was sent successfully
-    $(document).on('mailsent.wpcf7', function () {
-        returnToInitialState();
-    });
+    $(document).on('.btn', returnToInitialState);
 
     $formInputs.on('focusin', makeLabelActive);
     $formInputs.on('focusout', makeLabelInactive);
@@ -58,7 +59,7 @@ var mForm = (function ($) {
         if ($activeInput.val() && $activeInput.val().length) {
             $activeFormLabel.addClass('done');
 
-            // return to initial state if field is empty
+        // return to initial state if field is empty
         } else {
             $activeFormLabel.removeClass('done');
         }
@@ -68,14 +69,5 @@ var mForm = (function ($) {
         var $formLabels = $('.m_form__label');
         $formLabels.removeClass('active done');
     }
-
-
-    /******************************************************************
-        PUBLIC_FUNCTIONS
-    ******************************************************************/
-
-    return {
-        // your code here
-    };
 
 })(jQuery);

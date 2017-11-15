@@ -25,13 +25,7 @@ module.exports = {
             "never"
         ],
         "no-underscore-dangle": 0,
-        "no-unused-vars": [
-            "warn",
-            {
-                "vars": "local",
-                "args": "none"
-            }
-        ],
+        "no-unused-vars": 0,
         "wrap-iife": [
             "error",
             "inside"

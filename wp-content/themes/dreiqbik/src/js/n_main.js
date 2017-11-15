@@ -30,7 +30,6 @@ var nMain = (function ($) {
         EVENTS
     ******************************************************************/
 
-    showNav();
 
     // set js breakpoints equal to css breakpoints
     $(window).resize(function () {
