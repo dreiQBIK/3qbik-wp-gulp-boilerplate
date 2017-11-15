@@ -24,7 +24,7 @@ function dreiqbik_scripts()
     wp_enqueue_style('dreiqbik-style', get_template_directory_uri() . '/style.css');
 
     // JS files
-    wp_enqueue_script( 'dreiqbik-main', get_template_directory_uri() . '/js/main.js', array('jquery'), '16101901', true );
+    wp_enqueue_script( 'dreiqbik-main', get_template_directory_uri() . '/js/main.js', array('jquery'), '16111501', true );
 
     if (is_singular() && comments_open() && get_option( 'thread_comments' )) {
         wp_enqueue_script( 'comment-reply' );

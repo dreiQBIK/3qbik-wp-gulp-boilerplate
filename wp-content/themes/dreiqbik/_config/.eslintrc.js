@@ -13,6 +13,7 @@ module.exports = {
             "error",
             "single"
         ],
+        "linebreak-style": 0,
         "no-var": 0,
         "prefer-arrow-callback": 0,
         "func-names": 0,

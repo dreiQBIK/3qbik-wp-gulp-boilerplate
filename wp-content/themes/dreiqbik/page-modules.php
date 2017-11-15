@@ -27,12 +27,13 @@ get_header();
     <main class="page-main">
 
 
-        <?php
-        /* ************************************************************************
-					GET_M_EXAMPLE
-		*************************************************************************** */
-        ?>
-        <?php get_template_part( 'template-modules/m_example'); ?>
+        <div class="container">
+            <div class="container__inner">
+
+                <?php get_template_part( 'template-modules/m_example'); ?>
+
+            </div>
+        </div>
 
 
     </main><!-- end page__main -->

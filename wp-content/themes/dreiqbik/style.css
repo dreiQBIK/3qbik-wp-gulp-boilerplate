@@ -2131,6 +2131,7 @@ a.m_btn--dark {
   color: #ffffff;
   text-align: center;
   min-height: 70px;
+  margin-top: 0;
 }
 
 /******************************************************************
@@ -2217,6 +2218,7 @@ a.m_btn--dark {
 ******************************************************************/
 .s_sidebar {
   background-color: #fff191;
+  display: none;
 }
 
 .widget_search label > span {
