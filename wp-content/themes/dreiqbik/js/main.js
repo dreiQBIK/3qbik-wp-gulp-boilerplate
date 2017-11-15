@@ -36,7 +36,7 @@ var global = (function ($) {
     ******************************************************************/
 
     return {
-        debounce: debounce()
+        debounce: debounce
     };
 
 })(jQuery);
@@ -202,8 +202,8 @@ var nMain = (function ($) {
     ******************************************************************/
 
     return {
-        showNav: showNav(),
-        hideNav: hideNav()
+        showNav: showNav,
+        hideNav: hideNav
     };
 
 })(jQuery);

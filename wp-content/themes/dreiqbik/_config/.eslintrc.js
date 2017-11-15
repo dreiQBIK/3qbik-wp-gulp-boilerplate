@@ -34,6 +34,7 @@ module.exports = {
         "wrap-iife": [
             "error",
             "inside"
-        ]
+        ],
+        "object-shorthand": 0
     }
 };

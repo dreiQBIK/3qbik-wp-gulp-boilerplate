@@ -77,8 +77,8 @@ var nMain = (function ($) {
     ******************************************************************/
 
     return {
-        showNav: showNav(),
-        hideNav: hideNav()
+        showNav: showNav,
+        hideNav: hideNav
     };
 
 })(jQuery);

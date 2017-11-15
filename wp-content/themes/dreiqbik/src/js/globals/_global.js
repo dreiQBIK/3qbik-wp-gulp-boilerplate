@@ -36,7 +36,7 @@ var global = (function ($) {
     ******************************************************************/
 
     return {
-        debounce: debounce()
+        debounce: debounce
     };
 
 })(jQuery);
