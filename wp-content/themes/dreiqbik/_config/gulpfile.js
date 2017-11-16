@@ -14,7 +14,6 @@ var postcss = require('gulp-postcss');
 var autoprefixer = require('autoprefixer');
 var pixrem = require('pixrem');
 var cssnano = require('cssnano');
-// var tinify    = require('gulp-tinify');
 var browserSync = require('browser-sync').create();
 
 // make noise on js and scss errors
@@ -109,13 +108,6 @@ gulp.task('watch', function () {
     gulp.watch('../src/scss/**/*.scss', ['sass']);
     gulp.watch('../**/*.php').on('change', browserSync.reload);
 });
-
-// Compress JPG, PNG, GIF and SVG Images
-// gulp.task('tinify', function() {
-//     gulp.src('src/img/**/*')
-//         .pipe(tinify('5sbQH3B1Yvei62VfdgmbTQPcohUkTM8F'))
-//         .pipe(gulp.dest('img'));
-// });
 
 // Default Tasks
 gulp.task('default', ['sass', 'scripts', 'scripts-vendor', 'watch']);

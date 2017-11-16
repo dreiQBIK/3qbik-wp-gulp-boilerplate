@@ -1,9 +1,8 @@
 <?php
 /* *********************************************************************
 
-		Template Name: Template: Example
+		Template Name: Taxonomy: Example
 
- 		TEMPLATE-EXAMPLE.PHP
  			> GET_H_MAIN
             > GET_S_EXAMPLE
             > GET_F_MAIN
@@ -13,7 +12,7 @@
 get_header();
 ?>
 
-<div class="page t_example">
+<div class="page tax_example">
 
 	<?php
 	/* ************************************************************************
@@ -31,6 +30,7 @@ get_header();
 		*************************************************************************** */
 		?>
 		<?php get_template_part( 'template-sections/s_example'); ?>
+
 
 	</main><!-- end page__main -->
 
