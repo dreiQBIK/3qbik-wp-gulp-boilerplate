@@ -22,7 +22,7 @@ module.exports = {
         "no-use-before-define": 0,
         "comma-dangle": [
             "error",
-            "never"
+            "always"
         ],
         "no-underscore-dangle": 0,
         "no-unused-vars": 0,
@@ -30,6 +30,6 @@ module.exports = {
             "error",
             "inside"
         ],
-        "object-shorthand": 0
+        "object-shorthand": 0,
     }
 };

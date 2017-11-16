@@ -79,7 +79,7 @@ var nMain = (function ($) {
 
     return {
         showNav: showNav,
-        hideNav: hideNav
+        hideNav: hideNav,
     };
 
 })(jQuery);
