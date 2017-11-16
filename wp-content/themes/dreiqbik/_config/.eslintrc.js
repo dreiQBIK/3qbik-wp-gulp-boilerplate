@@ -30,6 +30,13 @@ module.exports = {
             "error",
             "inside"
         ],
-        "object-shorthand": 0
+        "object-shorthand": 0,
+        "no-unused-expressions": [
+            "error",
+            {
+                "allowTernary": true
+            }
+        ],
+        "space-before-function-paren": 0
     }
 };
