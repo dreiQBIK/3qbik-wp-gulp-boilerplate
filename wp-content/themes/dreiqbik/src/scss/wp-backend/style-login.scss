@@ -5,6 +5,7 @@ body {
     &.login {
         background-color: $c1-main;
 
+        //font -> for all elments
         div, p, a, label, input {
             font-family: $font-1;
             font-weight: 400;
@@ -14,6 +15,7 @@ body {
             transition: all 0.2s ease-in-out;
         }
 
+        //login-card-wrapper -> position
         #login {
             width: 95%;
             max-width: 400px;
@@ -21,6 +23,7 @@ body {
             margin-right: auto;
             padding-top: 4%;
 
+            //logo -> file/size
             h1 a {
                 background-image: url('img/dreiqbik-logo-bildmarke.svg');
                 height: 100px;
@@ -30,6 +33,7 @@ body {
             }
         }
 
+        //login-card -> background
         form {
             background-color: $c2-main;
             margin-top: 3em;
