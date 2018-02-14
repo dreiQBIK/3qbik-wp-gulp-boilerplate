@@ -1,0 +1,207 @@
+/******************************************************************
+
+	SETTINGS: SET_VARIABLES
+	    > COLORS
+	    > FONTS
+	    > GRID_GAPS
+		> GRID_WIDTH
+	    > BREAKPOINTS
+
+******************************************************************/
+/******************************************************************
+	COLORS
+******************************************************************/
+/* ====================================
+		GREYSCALE
+	==================================== */
+/* ====================================
+		PROJECT
+	==================================== */
+/* ====================================
+		SPECIALS
+	==================================== */
+/******************************************************************
+	FONTS
+******************************************************************/
+/* ====================================
+		INITIALIZE
+	==================================== */
+/* ====================================
+		DECLARATION
+	==================================== */
+/******************************************************************
+	GRID_GAPS
+******************************************************************/
+/******************************************************************
+	GRID_WIDTH
+******************************************************************/
+/******************************************************************
+	BREAKPOINTS
+******************************************************************/
+body.login {
+  background-color: #202A35;
+}
+
+body.login div, body.login p, body.login a, body.login label, body.login input {
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+}
+
+body.login a {
+  transition: all 0.2s ease-in-out;
+}
+
+body.login #login {
+  width: 95%;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 4%;
+}
+
+body.login #login h1 a {
+  background-image: url("img/dreiqbik-logo-bildmarke.svg");
+  height: 100px;
+  width: 100px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+body.login form {
+  background-color: #364250;
+  margin-top: 3em;
+  padding: 3em;
+}
+
+body.login label[for=user_login], body.login label[for=user_pass], body.login label[for=rememberme] {
+  color: #ffffff;
+}
+
+body.login label[for=user_login] input, body.login label[for=user_pass] input {
+  padding: 10px;
+  font-size: 18px;
+}
+
+body.login input[type=text], body.login input[type=password] {
+  background: #ffffff;
+}
+
+body.login input[type=text], body.login input[type=password] {
+  margin-top: 10px;
+}
+
+body.login .forgetmenot {
+  margin-top: 20px;
+  margin-bottom: 20px !important;
+}
+
+body.login .forgetmenot input[type=checkbox] {
+  background: #ffffff;
+}
+
+body.login .forgetmenot input[type=checkbox]:checked {
+  position: relative;
+}
+
+body.login .forgetmenot input[type=checkbox]:checked:before {
+  content: "\f147";
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #364250;
+}
+
+body.login .submit .button {
+  background: none;
+  background-color: #ec764d;
+  color: #ffffff;
+  display: inline-block;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: none;
+  border-bottom: 5px solid #d96a44;
+  border-radius: 5px;
+  padding: 1em 2em;
+  margin-top: 1em;
+  width: 100%;
+  height: auto;
+  text-shadow: none;
+  box-shadow: none;
+  float: none;
+  transition: all 0.2s ease-in-out;
+}
+
+body.login .submit .button:hover {
+  outline: 0;
+  background-color: #ff855b;
+}
+
+body.login #nav a,
+body.login #backtoblog a {
+  color: #B1C3D4;
+}
+
+body.login #nav a:link,
+body.login #backtoblog a:link {
+  color: #B1C3D4;
+}
+
+body.login #nav a:visited,
+body.login #backtoblog a:visited {
+  color: #B1C3D4;
+}
+
+body.login #nav a:hover,
+body.login #backtoblog a:hover {
+  color: #fff191;
+}
+
+body.login #nav a:active,
+body.login #backtoblog a:active {
+  color: #B1C3D4;
+}
+
+body.login .message {
+  margin-top: 3em;
+  padding: 2em;
+  border-left: 5px solid #B1C3D4;
+  background-color: #364250;
+  color: #ffffff;
+  font-size: 0.9rem;
+}
+
+body.login #login_error {
+  margin-top: 3em;
+  padding: 2em;
+  border-left: 5px solid #B1C3D4;
+  background-color: #364250;
+  color: #ffffff;
+  font-size: 0.9rem;
+  line-height: 1.4rem;
+}
+
+body.login #login_error strong {
+  font-weight: 700;
+}
+
+body.login #login_error a {
+  color: #B1C3D4;
+}
+
+body.login #login_error a:link {
+  color: #B1C3D4;
+}
+
+body.login #login_error a:visited {
+  color: #B1C3D4;
+}
+
+body.login #login_error a:hover {
+  color: #fff191;
+}
+
+body.login #login_error a:active {
+  color: #B1C3D4;
+}
+
+/*# sourceMappingURL=maps/style-login.css.map */

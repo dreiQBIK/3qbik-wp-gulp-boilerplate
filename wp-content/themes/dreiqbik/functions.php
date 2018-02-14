@@ -56,4 +56,4 @@ require get_template_directory() . '/inc/template-tags.php';
  *********************************************************************************************** */
 
 require get_template_directory() . '/inc/wp-extras.php';
-require get_template_directory() . '/inc/theme-extras.php';
+require get_template_directory() . '/inc/dreiqbik-theme.php';

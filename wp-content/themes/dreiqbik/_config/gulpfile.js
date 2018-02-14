@@ -97,6 +97,39 @@ gulp.task('css', function () {
         .pipe(gulp.dest('../'));
 });
 
+// Compile Login-Sass
+gulp.task('login-sass', function () {
+    return gulp
+        .src('../src/scss/wp-backend/style-login.scss')
+        .pipe(sourcemaps.init())
+        .pipe(plumber(errorHandler))
+        .pipe(sass({
+            outputStyle: 'expanded',
+            errLogToConsole: true
+        }).on('error', sass.logError))
+        .pipe(plumber.stop())
+        .pipe(sourcemaps.write('maps'))
+        .pipe(gulp.dest('../'))
+        .pipe(browserSync.stream());
+});
+
+// Minify & Autoprefix Login-CSS
+gulp.task('login-css', function () {
+    var processors = [
+        pixrem(),
+        autoprefixer({
+            browsers: ['last 4 versions', 'android 4', 'opera 12']
+        }),
+        cssnano()
+    ];
+    return gulp
+        .src('../style-login.css')
+        .pipe(postcss(processors))
+        .pipe(rename('style-login.min.css'))
+        .pipe(gulp.dest('../'))
+        .pipe(browserSync.stream());
+});
+
 // Watch Files For Changes
 gulp.task('watch', function () {
     browserSync.init({
@@ -105,12 +138,12 @@ gulp.task('watch', function () {
     gulp
         .watch('../src/js/**/*.js', ['lint', 'scripts', 'scripts-vendor'])
         .on('change', browserSync.reload);
-    gulp.watch('../src/scss/**/*.scss', ['sass']);
+    gulp.watch('../src/scss/**/*.scss', ['sass', 'login-sass']);
     gulp.watch('../**/*.php').on('change', browserSync.reload);
 });
 
 // Default Tasks
-gulp.task('default', ['sass', 'scripts', 'scripts-vendor', 'watch']);
+gulp.task('default', ['sass', 'login-sass', 'scripts', 'scripts-vendor', 'watch']);
 
 // Build
-gulp.task('build', ['sass', 'css', 'lint', 'scripts', 'scripts-vendor']);
+gulp.task('build', ['sass', 'login-sass', 'css', 'login-css', 'lint', 'scripts', 'scripts-vendor']);

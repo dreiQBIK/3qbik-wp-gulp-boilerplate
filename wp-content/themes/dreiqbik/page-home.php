@@ -25,9 +25,8 @@ get_header();
 				GET_H_MAIN
 	*************************************************************************** */
 	?>
-	<?php get_template_part( 'template-header/h_main'); ?>
-
-
+    <?php get_template_part( 'template-header/h_main'); ?>
+	
 	<main class="page-main">
 
 		<?php
