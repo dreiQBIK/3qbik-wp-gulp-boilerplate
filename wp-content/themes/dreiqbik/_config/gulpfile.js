@@ -130,6 +130,39 @@ gulp.task('login-css', function () {
         .pipe(browserSync.stream());
 });
 
+// Compile Tinymce-Sass
+gulp.task('tinymce-sass', function () {
+    return gulp
+        .src('../src/scss/wp-backend/style-tinymce.scss')
+        .pipe(sourcemaps.init())
+        .pipe(plumber(errorHandler))
+        .pipe(sass({
+            outputStyle: 'expanded',
+            errLogToConsole: true
+        }).on('error', sass.logError))
+        .pipe(plumber.stop())
+        .pipe(sourcemaps.write('maps'))
+        .pipe(gulp.dest('../'))
+        .pipe(browserSync.stream());
+});
+
+// Minify & Autoprefix Tinymce-CSS
+gulp.task('tinymce-css', function () {
+    var processors = [
+        pixrem(),
+        autoprefixer({
+            browsers: ['last 4 versions', 'android 4', 'opera 12']
+        }),
+        cssnano()
+    ];
+    return gulp
+        .src('../style-tinymce.css')
+        .pipe(postcss(processors))
+        .pipe(rename('style-tinymce.min.css'))
+        .pipe(gulp.dest('../'))
+        .pipe(browserSync.stream());
+});
+
 // Watch Files For Changes
 gulp.task('watch', function () {
     browserSync.init({
@@ -138,12 +171,12 @@ gulp.task('watch', function () {
     gulp
         .watch('../src/js/**/*.js', ['lint', 'scripts', 'scripts-vendor'])
         .on('change', browserSync.reload);
-    gulp.watch('../src/scss/**/*.scss', ['sass', 'login-sass']);
+    gulp.watch('../src/scss/**/*.scss', ['sass', 'login-sass', 'tinymce-sass']);
     gulp.watch('../**/*.php').on('change', browserSync.reload);
 });
 
 // Default Tasks
-gulp.task('default', ['sass', 'login-sass', 'scripts', 'scripts-vendor', 'watch']);
+gulp.task('default', ['sass', 'login-sass', 'tinymce-sass', 'scripts', 'scripts-vendor', 'watch']);
 
 // Build
-gulp.task('build', ['sass', 'login-sass', 'css', 'login-css', 'lint', 'scripts', 'scripts-vendor']);
+gulp.task('build', ['sass', 'login-sass', 'tinymce-sass', 'css', 'login-css', 'tinymce-css', 'lint', 'scripts', 'scripts-vendor']);

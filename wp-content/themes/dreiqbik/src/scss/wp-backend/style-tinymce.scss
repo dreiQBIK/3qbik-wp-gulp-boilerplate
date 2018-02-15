@@ -1,0 +1,35 @@
+@import "../settings/set_variables";
+
+body#tinymce {
+    max-width: 1024px;
+    margin: 20px 30px 40px;
+    font-family: $font-2;
+    font-size: 16px;
+
+    h2, h3, h4 {
+        font-size: 40px;
+        font-weight: 700;
+        color: $c1-third;
+    }
+
+    p {
+        color: $c1-main;
+    }
+
+    a {
+        color: $c1-third;
+
+        &:link {
+            color: $c1-third;
+        }
+        &:visited {
+            color: $c1-third;
+        }
+        &:hover {
+            color: $c3-third;
+        }
+        &:active {
+            color: $c1-third;
+        }
+    }
+}

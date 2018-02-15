@@ -26,7 +26,7 @@ get_header();
 	*************************************************************************** */
 	?>
     <?php get_template_part( 'template-header/h_main'); ?>
-	
+
 	<main class="page-main">
 
 		<?php
@@ -34,7 +34,7 @@ get_header();
 					GET_S_EXAMPLE
 		*************************************************************************** */
 		?>
-		<?php get_template_part( 'template-sections/s_example'); ?>
+		<?php get_template_part( 'template-sections/_example'); ?>
 
 	</main><!-- end page__main -->
 

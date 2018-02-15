@@ -19,7 +19,7 @@
     				MODULE_01
     	*************************************************************************** */
         ?>
-        <?php get_template_part( 'template-modules/_example.php'); ?>
+        <?php get_template_part( 'template-modules/_example'); ?>
 
 
         <?php
@@ -27,7 +27,7 @@
     				MODULE_02
     	*************************************************************************** */
         ?>
-        <?php get_template_part( 'template-modules/_example.php'); ?>
+        <?php get_template_part( 'template-modules/_example'); ?>
 
 
     </div><!-- end container__inner -->

@@ -31,6 +31,7 @@ function dreiqbik_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'dreiqbik_scripts' );
 
+
 // Enqueue CSS file
 function dreiqbik_login_stylesheet() {
     if (WP_DEBUG) {
@@ -40,3 +41,14 @@ function dreiqbik_login_stylesheet() {
     }
 }
 add_action( 'login_enqueue_scripts', 'dreiqbik_login_stylesheet' );
+
+
+// Connect the WordPress post editor to your custom stylesheet
+function my_theme_add_editor_styles() {
+  if (WP_DEBUG) {
+      add_editor_style( 'style-tinymce.css' );
+  } else {
+      add_editor_style( 'style-tinymce.min.css' );
+  }
+}
+add_action( 'admin_init', 'my_theme_add_editor_styles' );
