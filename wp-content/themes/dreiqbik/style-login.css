@@ -108,10 +108,11 @@ body.login .forgetmenot input[type=checkbox]:checked:before {
   position: absolute;
   top: 0;
   left: 0;
-  color: #364250;
+  color: #ec764d;
 }
 
 body.login .submit .button {
+  transition: all 0.2s ease-in-out;
   background: none;
   background-color: #ec764d;
   color: #ffffff;
@@ -119,7 +120,7 @@ body.login .submit .button {
   font-weight: 700;
   text-transform: uppercase;
   border: none;
-  border-bottom: 5px solid #d96a44;
+  border-bottom: 5px solid #ea6436;
   border-radius: 5px;
   padding: 1em 2em;
   margin-top: 1em;
@@ -128,12 +129,12 @@ body.login .submit .button {
   text-shadow: none;
   box-shadow: none;
   float: none;
-  transition: all 0.2s ease-in-out;
 }
 
 body.login .submit .button:hover {
   outline: 0;
   background-color: #ff855b;
+  border-bottom: 5px solid #ec764d;
 }
 
 body.login #nav a,
@@ -164,7 +165,7 @@ body.login #backtoblog a:active {
 body.login .message {
   margin-top: 3em;
   padding: 2em;
-  border-left: 5px solid #B1C3D4;
+  border-left: 5px solid #fff191;
   background-color: #364250;
   color: #ffffff;
   font-size: 0.9rem;
@@ -173,7 +174,7 @@ body.login .message {
 body.login #login_error {
   margin-top: 3em;
   padding: 2em;
-  border-left: 5px solid #B1C3D4;
+  border-left: 5px solid #fff191;
   background-color: #364250;
   color: #ffffff;
   font-size: 0.9rem;

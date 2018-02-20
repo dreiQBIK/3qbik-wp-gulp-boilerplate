@@ -2,19 +2,19 @@
 var gulp = require('gulp');
 
 // Include Plugins
-var eslint = require('gulp-eslint');
-var sass = require('gulp-sass');
-var concat = require('gulp-concat');
-var uglify = require('gulp-uglify');
-var plumber = require('gulp-plumber');
-var gulpUtil = require('gulp-util');
-var rename = require('gulp-rename');
-var sourcemaps = require('gulp-sourcemaps');
-var postcss = require('gulp-postcss');
+var eslint       = require('gulp-eslint');
+var sass         = require('gulp-sass');
+var concat       = require('gulp-concat');
+var uglify       = require('gulp-uglify');
+var plumber      = require('gulp-plumber');
+var gulpUtil     = require('gulp-util');
+var rename       = require('gulp-rename');
+var sourcemaps   = require('gulp-sourcemaps');
+var postcss      = require('gulp-postcss');
 var autoprefixer = require('autoprefixer');
-var pixrem = require('pixrem');
-var cssnano = require('cssnano');
-var browserSync = require('browser-sync').create();
+var pixrem       = require('pixrem');
+var cssnano      = require('cssnano');
+var browserSync  = require('browser-sync').create();
 
 // make noise on js and scss errors
 function errorHandler() {
@@ -65,7 +65,7 @@ gulp.task('scripts-vendor', function () {
         .pipe(gulp.dest('../js/vendor'));
 });
 
-// Compile Sass
+// Compile Main-Sass and create CSS-File
 gulp.task('sass', function () {
     return gulp
         .src('../src/scss/style.scss')
@@ -97,10 +97,10 @@ gulp.task('css', function () {
         .pipe(gulp.dest('../'));
 });
 
-// Compile Login-Sass
+// Compile Login-Sass and create CSS-File
 gulp.task('login-sass', function () {
     return gulp
-        .src('../src/scss/wp-backend/style-login.scss')
+        .src('../src/scss/wp-backend/login/style-login.scss')
         .pipe(sourcemaps.init())
         .pipe(plumber(errorHandler))
         .pipe(sass({
@@ -130,7 +130,7 @@ gulp.task('login-css', function () {
         .pipe(browserSync.stream());
 });
 
-// Compile Tinymce-Sass
+// Compile Tinymce-Sass and create CSS-File
 gulp.task('tinymce-sass', function () {
     return gulp
         .src('../src/scss/wp-backend/style-tinymce.scss')
@@ -163,6 +163,39 @@ gulp.task('tinymce-css', function () {
         .pipe(browserSync.stream());
 });
 
+// Compile Backend-Sass and create CSS-File
+gulp.task('theme-sass', function () {
+    return gulp
+        .src('../src/scss/wp-backend/theme/style-theme.scss')
+        .pipe(sourcemaps.init())
+        .pipe(plumber(errorHandler))
+        .pipe(sass({
+            outputStyle: 'expanded',
+            errLogToConsole: true
+        }).on('error', sass.logError))
+        .pipe(plumber.stop())
+        .pipe(sourcemaps.write('maps'))
+        .pipe(gulp.dest('../'))
+        .pipe(browserSync.stream());
+});
+
+// Minify & Autoprefix Backend-CSS
+gulp.task('theme-css', function () {
+    var processors = [
+        pixrem(),
+        autoprefixer({
+            browsers: ['last 4 versions', 'android 4', 'opera 12']
+        }),
+        cssnano()
+    ];
+    return gulp
+        .src('../style-theme.css')
+        .pipe(postcss(processors))
+        .pipe(rename('style-theme.min.css'))
+        .pipe(gulp.dest('../'))
+        .pipe(browserSync.stream());
+});
+
 // Watch Files For Changes
 gulp.task('watch', function () {
     browserSync.init({
@@ -171,12 +204,12 @@ gulp.task('watch', function () {
     gulp
         .watch('../src/js/**/*.js', ['lint', 'scripts', 'scripts-vendor'])
         .on('change', browserSync.reload);
-    gulp.watch('../src/scss/**/*.scss', ['sass', 'login-sass', 'tinymce-sass']);
+    gulp.watch('../src/scss/**/*.scss', ['sass', 'login-sass', 'tinymce-sass', 'theme-sass']);
     gulp.watch('../**/*.php').on('change', browserSync.reload);
 });
 
 // Default Tasks
-gulp.task('default', ['sass', 'login-sass', 'tinymce-sass', 'scripts', 'scripts-vendor', 'watch']);
+gulp.task('default', ['sass', 'login-sass', 'tinymce-sass', 'theme-sass', 'scripts', 'scripts-vendor', 'watch']);
 
 // Build
-gulp.task('build', ['sass', 'login-sass', 'tinymce-sass', 'css', 'login-css', 'tinymce-css', 'lint', 'scripts', 'scripts-vendor']);
+gulp.task('build', ['sass', 'login-sass', 'tinymce-sass','theme-sass', 'css', 'login-css', 'tinymce-css', 'theme-css', 'lint', 'scripts', 'scripts-vendor']);

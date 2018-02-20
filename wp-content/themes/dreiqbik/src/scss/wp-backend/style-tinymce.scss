@@ -1,6 +1,7 @@
 @import "../settings/set_variables";
 
-body#tinymce {
+body#tinymce,
+.textblock {
     max-width: 1024px;
     margin: 20px 30px 40px;
     font-family: $font-2;

@@ -38,40 +38,50 @@
 /******************************************************************
 	BREAKPOINTS
 ******************************************************************/
-body#tinymce {
+body#tinymce,
+.textblock {
   max-width: 1024px;
   margin: 20px 30px 40px;
   font-family: "Merriweather", "Times New Roman", Times, serif;
   font-size: 16px;
 }
 
-body#tinymce h2, body#tinymce h3, body#tinymce h4 {
+body#tinymce h2, body#tinymce h3, body#tinymce h4,
+.textblock h2,
+.textblock h3,
+.textblock h4 {
   font-size: 40px;
   font-weight: 700;
   color: #ec764d;
 }
 
-body#tinymce p {
+body#tinymce p,
+.textblock p {
   color: #202A35;
 }
 
-body#tinymce a {
+body#tinymce a,
+.textblock a {
   color: #ec764d;
 }
 
-body#tinymce a:link {
+body#tinymce a:link,
+.textblock a:link {
   color: #ec764d;
 }
 
-body#tinymce a:visited {
+body#tinymce a:visited,
+.textblock a:visited {
   color: #ec764d;
 }
 
-body#tinymce a:hover {
+body#tinymce a:hover,
+.textblock a:hover {
   color: #ff855b;
 }
 
-body#tinymce a:active {
+body#tinymce a:active,
+.textblock a:active {
   color: #ec764d;
 }
 
